@@ -19,5 +19,5 @@ let another = [...even] //copies of the existing array
 even[2] = 90
 console.log(even,nums,another)
 
-another = [...another, ...odd]
+another = [...another, ...odd] // 'another' array is recreated and added all elements of 'odd' array as well
 

@@ -1,0 +1,23 @@
+//3
+let even = [10,20,30]
+let odd = [11, 21, 31]
+let all = []
+for(let e of even){
+    all.push(e)
+}
+for(let e of odd){
+    all.push(e)
+}
+
+console.log(even,odd,all)
+
+let nums = even
+even [1] = 60
+console.log(nums,even)
+
+let another = [...even] //copies of the existing array
+even[2] = 90
+console.log(even,nums,another)
+
+another = [...another, ...odd]
+

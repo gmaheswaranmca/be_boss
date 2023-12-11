@@ -21,3 +21,9 @@ console.log(even,nums,another)
 
 another = [...another, ...odd] // 'another' array is recreated and added all elements of 'odd' array as well
 
+let bottle = {type:'water-bottle', capacity:2.0}
+console.log(bottle)
+bottle = {type:'water-bottle', capacity:2.5}
+console.log(bottle)
+bottle = {...bottle, capacity: 3.5}
+console.log(bottle)

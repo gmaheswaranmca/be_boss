@@ -35,5 +35,8 @@ CREATE TABLE emp(
   bonus_per float not null,
   country varchar(125) not null,
   city varchar(125) not null,
-  exit_date datetime null);
+  exit_date datetime null,
+  photo longblob null);
+
+  $npm install express cors sequelize mysql2 multer
   */

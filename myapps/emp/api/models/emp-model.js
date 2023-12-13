@@ -1,6 +1,6 @@
 const defineEmpModel = (Sequelize, sequelize) => {
     const columns = {
-        id: { type: Sequelize.INTEGER},
+        id: { type: Sequelize.INTEGER, primaryKey: true},
         name: {type: Sequelize.STRING},
         job_title: {type: Sequelize.STRING},
         dept: {type: Sequelize.STRING},
@@ -16,9 +16,14 @@ const defineEmpModel = (Sequelize, sequelize) => {
         exit_date: { type: Sequelize.DATE},
         photo: { type: Sequelize.BLOB}
     };
-    const options = {timestamps: false};
+    const options = {timestamps: false,   freezeTableName: true    };
     const EmpModel = sequelize.define("emp", columns, options);
     return EmpModel;
 };
 
 module.exports = defineEmpModel;
+
+/**
+ * freezeTableName:true !table name and model name are singular ie emp not emps
+ * timestamps: true     !no extra timestamps columns [createdAt / updatedAt] will be created 
+ */

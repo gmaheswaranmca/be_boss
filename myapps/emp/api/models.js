@@ -21,7 +21,8 @@ class AppOrm{
       operatorsAliases: false,
       pool: pool
     };
-    this.sequelize = new Sequelize(appConfig.db.db, appConfig.db.user, appConfig.db.password, config);
+    this.sequelize = new Sequelize(appConfig.db.db, appConfig.db.user, 
+        appConfig.db.password, config);
   }
   getEmpModel(){
     const defineEmpModel = require('./models/emp-model');

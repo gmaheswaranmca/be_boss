@@ -1,6 +1,7 @@
 const { EmpModel } = require('./models')
 
 
+
 let create = (newEmp) => {
     const handler = (savedEmp) => {
         console.log('success',savedEmp)
@@ -14,7 +15,7 @@ let create = (newEmp) => {
 };
 
 const newEmp = {
-    id: 2002,
+    id: 2003,
     name: 'Kai Le',
     job_title: 'Controls Engineer',
     dept: 'Engineering',
@@ -29,4 +30,24 @@ const newEmp = {
     city: 'Columbus'
   }
 
-create(newEmp)
+  let findById = (id, newEmp) => {
+    
+    const handler = (emp) => {
+        
+        console.log(emp)
+        if(emp === null){
+            create(newEmp);
+        }
+        else{
+            console.log(`${id} exists`)
+        }
+    };
+
+    const errorHandler = (error) => {
+        console.log(error)
+        
+    };
+
+    EmpModel.findByPk(id).then(handler).catch(errorHandler);
+};
+findById(newEmp.id, newEmp)

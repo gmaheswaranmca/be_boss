@@ -39,4 +39,22 @@ CREATE TABLE emp(
   photo longblob null);
 
   $npm install express cors sequelize mysql2 multer
+
+  Init Data:
+  {id: 2002,
+      name: 'Kai Le',
+      job_title: 'Controls Engineer',
+      dept: 'Engineering',
+      business_unit: 'Manufacturing',
+      gender: 'Male',
+      ethnicity: 'Asian',
+      age: 47,
+      hire_date: 2022-02-05T00:00:00.000Z,
+      salary: 92368,
+      bonus_per: 0,
+      country: 'United States',
+      city: 'Columbus',
+      exit_date: null,
+      photo: 
+    }
   */

@@ -15,7 +15,9 @@ const db = {
 const appConfig = {
     port : 8080,
     frontEnd : 'http://localhost:3000',
-    db: db
+    db: db,
+    maxCsvFileSize : 2 * 1024 * 1024 /* 2 mb */,
+    maxPhotoFileSize: 2 * 1024 * 1024 /* 2 mb */
 };
 
 module.exports = appConfig;

@@ -34,4 +34,4 @@ class AppOrm{
 const appOrm = new AppOrm();
 const EmpModel = appOrm.getEmpModel();
 
-module.exports = {EmpModel}
+module.exports = {EmpModel, sequelize:appOrm.sequelize, Sequelize}

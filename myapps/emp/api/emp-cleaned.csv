@@ -1,0 +1,924 @@
+id,name,job_title,dept,business_unit,gender,ethnicity,age,hire_date,salary,bonus_per,country,city,exit_date,photo
+2002,"Kai Le","Controls Engineer",Engineering,Manufacturing,Male,Asian,47,"2022-02-05 00:00:00",92368,0,"United States",Columbus,NULL,NULL
+2003,"Robert Patel",Analyst,Sales,Corporate,Male,Asian,58,"2013-10-23 00:00:00",45703,0,"United States",Chicago,NULL,NULL
+2004,"Cameron Lo","Network Administrator",IT,"Research & Development",Male,Asian,34,"2019-03-24 00:00:00",83576,0,China,Shanghai,NULL,NULL
+2005,"Harper Castillo","IT Systems Architect",IT,Corporate,Female,Latino,39,"2018-04-07 00:00:00",98062,0,"United States",Seattle,NULL,NULL
+2006,"Harper Dominguez",Director,Engineering,Corporate,Female,Latino,42,"2005-06-18 00:00:00",175391,24,"United States",Austin,NULL,NULL
+2007,"Ezra Vu","Network Administrator",IT,Manufacturing,Male,Asian,62,"2004-04-22 00:00:00",66227,0,"United States",Phoenix,"2014-02-14 00:00:00",NULL
+2008,"Jade Hu","Sr. Analyst",Accounting,"Specialty Products",Female,Asian,58,"2009-06-27 00:00:00",89744,0,China,Chongqing,NULL,NULL
+2009,"Miles Chang","Analyst II",Finance,Corporate,Male,Asian,62,"1999-02-19 00:00:00",69674,0,China,Chengdu,NULL,NULL
+2010,"Gianna Holmes","System Administrator�",IT,Manufacturing,Female,Caucasian,38,"2011-09-09 00:00:00",97630,0,"United States",Seattle,NULL,NULL
+2011,"Jameson Thomas",Manager,Finance,"Specialty Products",Male,Caucasian,52,"2015-02-05 00:00:00",105879,10,"United States",Miami,NULL,NULL
+2012,"Jameson Pena","Systems Analyst",IT,Manufacturing,Male,Latino,49,"2003-10-12 00:00:00",40499,0,"United States",Miami,NULL,NULL
+2013,"Bella Wu","Sr. Analyst",Finance,"Specialty Products",Female,Asian,63,"2014-08-03 00:00:00",71418,0,"United States",Phoenix,NULL,NULL
+2014,"Jose Wong",Director,IT,Manufacturing,Male,Asian,45,"2017-11-15 00:00:00",150558,23,China,Chongqing,NULL,NULL
+2015,"Lucas Richardson",Manager,Marketing,Corporate,Male,Caucasian,36,"2018-07-22 00:00:00",118912,8,"United States",Miami,NULL,NULL
+2016,"Jacob Moore","Sr. Manager",Marketing,Corporate,Male,Black,42,"2021-03-24 00:00:00",131422,15,"United States",Phoenix,NULL,NULL
+2017,"Luna Lu","IT Systems Architect",IT,Corporate,Female,Asian,62,"1997-07-26 00:00:00",64208,0,"United States",Miami,NULL,NULL
+2018,"Bella Tran","Vice President",Engineering,"Specialty Products",Female,Asian,45,"2010-08-05 00:00:00",254486,33,China,Chengdu,NULL,NULL
+2019,"Ivy Chau",Analyst,Sales,"Specialty Products",Female,Asian,61,"2019-03-03 00:00:00",54811,0,China,Chongqing,NULL,NULL
+2020,"Jordan Kumar","Service Desk Analyst",IT,"Specialty Products",Male,Asian,29,"2017-11-11 00:00:00",95729,0,"United States",Seattle,NULL,NULL
+2021,"Sophia Gutierrez",Manager,Accounting,"Specialty Products",Female,Latino,63,"2009-02-08 00:00:00",102649,6,"United States",Austin,NULL,NULL
+2022,"Eli Dang","Sr. Manager",Accounting,"Specialty Products",Male,Asian,45,"2015-11-16 00:00:00",122875,12,"United States",Chicago,NULL,NULL
+2023,"Lillian Lewis","Technical Architect",IT,"Research & Development",Female,Black,43,"2013-08-14 00:00:00",83323,0,"United States",Phoenix,"2019-03-31 00:00:00",NULL
+2024,"Serenity Cao","Account Representative",Sales,Manufacturing,Female,Asian,31,"2018-10-21 00:00:00",66721,0,China,Shanghai,NULL,NULL
+2025,"Parker Lai","Vice President",Accounting,"Specialty Products",Male,Asian,48,"2006-11-29 00:00:00",246400,36,China,Chongqing,NULL,NULL
+2026,"Charles Simmons",Manager,Sales,"Specialty Products",Male,Caucasian,55,"1997-10-27 00:00:00",113525,6,"United States",Miami,NULL,NULL
+2027,"Jayden Luu",Director,Accounting,Manufacturing,Male,Asian,64,"2004-05-13 00:00:00",184342,22,China,Beijing,NULL,NULL
+2028,"Brooks Richardson",Director,Marketing,"Specialty Products",Male,Caucasian,58,"2020-11-24 00:00:00",151341,22,"United States",Seattle,NULL,NULL
+2029,"Ivy Thompson",Manager,Marketing,Manufacturing,Female,Caucasian,50,"2004-08-11 00:00:00",118900,5,"United States",Seattle,NULL,NULL
+2030,"Peyton Wright","Sr. Manager",Marketing,Corporate,Female,Black,41,"2017-05-13 00:00:00",153370,10,"United States",Chicago,NULL,NULL
+2031,"Wyatt Dinh","System Administrator�",IT,"Specialty Products",Male,Asian,50,"2002-03-15 00:00:00",72860,0,China,Shanghai,NULL,NULL
+2032,"Ruby Alexander","Vice President",Finance,"Research & Development",Female,Caucasian,59,"2001-08-13 00:00:00",255610,36,"United States",Phoenix,NULL,NULL
+2033,"Axel Oh","Sr. Analyst",Sales,Corporate,Male,Asian,26,"2020-10-24 00:00:00",84962,0,China,Chengdu,NULL,NULL
+2034,"Axel Ramirez",Manager,"Human Resources","Specialty Products",Male,Latino,55,"2017-12-04 00:00:00",103795,7,"United States",Seattle,NULL,NULL
+2035,"Liliana Chang","Service Desk Analyst",IT,Corporate,Female,Asian,32,"2018-01-11 00:00:00",97509,0,China,Shanghai,NULL,NULL
+2036,"Leonardo Carter","Business Partner","Human Resources","Specialty Products",Male,Caucasian,50,"2022-09-07 00:00:00",54931,0,"United States",Austin,NULL,NULL
+2037,"Landon Gonzales","Test Engineer",Engineering,"Specialty Products",Male,Latino,54,"2009-08-30 00:00:00",88689,0,"United States",Phoenix,NULL,NULL
+2038,"Amelia Dominguez","Sr. Manager",Accounting,Corporate,Female,Latino,31,"2015-09-23 00:00:00",158184,15,Brazil,"Rio de Janeiro","2018-07-27 00:00:00",NULL
+2039,"Silas Ross",Analyst,Marketing,"Research & Development",Male,Caucasian,47,"2016-02-10 00:00:00",48523,0,"United States",Austin,NULL,NULL
+2040,"Jeremiah Cheng","Sr. Analyst",Marketing,"Specialty Products",Male,Asian,26,"2022-02-05 00:00:00",70946,0,China,Shanghai,NULL,NULL
+2041,"Chloe Chin","Sr. Manager",Finance,"Specialty Products",Female,Asian,62,"2021-11-13 00:00:00",134487,10,"United States",Seattle,NULL,NULL
+2042,"Ella Martinez","Sr. Analyst",Finance,"Research & Development",Female,Latino,35,"2012-04-06 00:00:00",76111,0,"United States",Chicago,NULL,NULL
+2043,"Gianna Jones",Manager,Accounting,"Research & Development",Female,Caucasian,48,"1998-09-26 00:00:00",119220,9,"United States",Columbus,"2016-11-02 00:00:00",NULL
+2044,"Austin Chow","Vice President",Accounting,Manufacturing,Male,Asian,35,"2021-04-11 00:00:00",180858,32,China,Chongqing,NULL,NULL
+2045,"Ella Chen",Manager,Accounting,"Specialty Products",Female,Asian,45,"2005-11-10 00:00:00",114072,8,"United States",Phoenix,NULL,NULL
+2046,"Ruby Kaur","Test Engineer",Engineering,"Research & Development",Female,Asian,26,"2021-06-26 00:00:00",91672,0,China,Beijing,NULL,NULL
+2047,"Savannah Morales","Analyst II",Marketing,Corporate,Female,Latino,48,"2005-01-26 00:00:00",71542,0,"United States",Chicago,NULL,NULL
+2048,"Luca Powell","IT Coordinator",IT,"Specialty Products",Male,Caucasian,33,"2016-12-18 00:00:00",54700,0,"United States",Miami,NULL,NULL
+2049,"Parker Thao","Analyst II",Sales,Corporate,Male,Asian,55,"2011-05-08 00:00:00",65022,0,China,Chongqing,NULL,NULL
+2050,"Ryan Vo","Cloud Infrastructure Architect",IT,"Research & Development",Male,Asian,38,"2011-04-12 00:00:00",65109,0,"United States",Phoenix,NULL,NULL
+2051,"Isabella Ngo",Manager,Accounting,"Specialty Products",Female,Asian,49,"2022-01-01 00:00:00",126598,9,"United States",Miami,NULL,NULL
+2052,"Leah Vega","Cloud Infrastructure Architect",IT,Corporate,Female,Latino,52,"2018-06-07 00:00:00",72388,0,"United States",Miami,NULL,NULL
+2053,"Jaxson Liu","Vice President",Finance,Corporate,Male,Asian,27,"2021-05-18 00:00:00",205216,36,"United States",Chicago,NULL,NULL
+2054,"Santiago f Ross","Enterprise Architect",IT,"Specialty Products",Male,Caucasian,34,"2012-12-13 00:00:00",74004,0,"United States",Columbus,NULL,NULL
+2055,"Layla Bell","Vice President",Engineering,Corporate,Female,Caucasian,65,"2001-07-26 00:00:00",203030,31,"United States",Chicago,NULL,NULL
+2056,"Bella Morales",Director,Sales,"Specialty Products",Female,Latino,38,"2016-05-10 00:00:00",194864,24,"United States",Austin,NULL,NULL
+2057,"Eliza Kang","Computer Systems Manager",IT,Manufacturing,Female,Asian,63,"2002-01-27 00:00:00",76659,5,"United States",Phoenix,NULL,NULL
+2058,"Gabriel Reyes",Manager,Sales,Corporate,Male,Latino,42,"2005-06-10 00:00:00",101630,8,Brazil,"Sao Paulo",NULL,NULL
+2059,"Piper Garcia","Sr. Manager",Sales,"Research & Development",Female,Latino,60,"1993-11-24 00:00:00",126929,12,Brazil,"Sao Paulo",NULL,NULL
+2060,"Jacob Cheng",Director,Sales,Manufacturing,Male,Asian,47,"1999-11-26 00:00:00",155890,17,"United States",Columbus,"2003-11-27 00:00:00",NULL
+2061,"Nathan Hong",Director,Finance,Corporate,Male,Asian,50,"2019-10-02 00:00:00",150631,17,"United States",Phoenix,NULL,NULL
+2062,"Chloe Kim","Sr. Analyst",Sales,"Specialty Products",Female,Asian,39,"2012-07-06 00:00:00",72850,0,"United States",Miami,NULL,NULL
+2063,"Isaac Guzman","Account Representative",Sales,Corporate,Male,Latino,46,"2010-08-18 00:00:00",57951,0,"United States",Phoenix,NULL,NULL
+2064,"Julian Ford","Analyst II",Sales,Manufacturing,Male,Caucasian,50,"2010-07-29 00:00:00",70340,0,"United States",Miami,NULL,NULL
+2065,"Kinsley Liang","Automation Engineer",Engineering,Manufacturing,Female,Asian,55,"2008-08-25 00:00:00",98221,0,China,Shanghai,NULL,NULL
+2066,"Wesley Yu","Sr. Manager",Sales,"Specialty Products",Male,Asian,43,"2003-09-24 00:00:00",127175,12,"United States",Seattle,NULL,NULL
+2067,"Serenity Martin","Sr. Analyst",Finance,Manufacturing,Female,Black,26,"2021-05-16 00:00:00",97542,0,"United States",Phoenix,NULL,NULL
+2068,"Ethan Sanchez","Sr. Analyst",Marketing,"Research & Development",Male,Latino,34,"2019-05-15 00:00:00",81646,0,"United States",Phoenix,NULL,NULL
+2069,"David Sanchez",Director,Sales,"Specialty Products",Male,Latino,38,"2009-07-05 00:00:00",182055,27,Brazil,"Rio de Janeiro",NULL,NULL
+2070,"Elias Hsu","Sr. Analyst",Marketing,"Specialty Products",Male,Asian,35,"2022-01-23 00:00:00",86777,0,China,Chengdu,NULL,NULL
+2071,"Luca Phan",Manager,Marketing,Corporate,Male,Asian,39,"2015-06-17 00:00:00",129949,9,China,Beijing,NULL,NULL
+2072,"Olivia Xi",Manager,Sales,"Specialty Products",Female,Asian,26,"2020-08-19 00:00:00",124535,6,"United States",Chicago,NULL,NULL
+2073,"Alice Luu","System Administrator�",IT,"Research & Development",Female,Asian,60,"1993-07-17 00:00:00",81083,0,"United States",Columbus,NULL,NULL
+2074,"Leonardo Ng",Analyst,Marketing,Corporate,Male,Asian,32,"2019-06-10 00:00:00",57727,0,China,Chengdu,NULL,NULL
+2075,"Peyton Edwards","Analyst II",Finance,Manufacturing,Female,Caucasian,65,"2020-07-11 00:00:00",59344,0,"United States",Columbus,NULL,NULL
+2076,"Axel Patel","Sr. Analyst",Sales,"Research & Development",Male,Asian,27,"2022-09-13 00:00:00",73203,0,"United States",Miami,NULL,NULL
+2077,"Eva Chavez","IT Systems Architect",IT,"Specialty Products",Female,Latino,63,"2004-01-17 00:00:00",83070,0,Brazil,"Sao Paulo",NULL,NULL
+2078,"Savannah Lee",Manager,"Human Resources","Research & Development",Female,Asian,51,"2020-07-22 00:00:00",104008,10,China,Beijing,NULL,NULL
+2079,"Mia Grant","Solutions Architect",IT,Corporate,Female,Caucasian,43,"2007-02-16 00:00:00",70923,0,"United States",Columbus,NULL,NULL
+2080,"Eli Richardson","Sr. Manager",Marketing,"Specialty Products",Male,Black,31,"2018-04-08 00:00:00",159121,14,"United States",Phoenix,NULL,NULL
+2081,"Eloise Perry","Sr. Business Partner","Human Resources","Research & Development",Female,Caucasian,26,"2020-12-02 00:00:00",88921,0,"United States",Chicago,NULL,NULL
+2082,"Ian Cheng","Sr. Manager",Sales,"Specialty Products",Male,Asian,46,"2015-08-30 00:00:00",126704,14,"United States",Phoenix,NULL,NULL
+2083,"Penelope Chan","Analyst II",Accounting,Manufacturing,Female,Asian,59,"2012-05-20 00:00:00",57704,0,China,Shanghai,"2019-11-21 00:00:00",NULL
+2084,"Sofia Vasquez",Director,Sales,"Research & Development",Female,Latino,52,"1996-07-29 00:00:00",191455,24,Brazil,"Sao Paulo",NULL,NULL
+2085,"Anthony Baker","Solutions Architect",IT,Manufacturing,Male,Caucasian,31,"2021-06-03 00:00:00",99937,0,"United States",Phoenix,NULL,NULL
+2086,"Lucas Luong",Analyst,Marketing,"Specialty Products",Male,Asian,42,"2008-03-12 00:00:00",40778,0,China,Chengdu,NULL,NULL
+2087,"Xavier Patel",Director,Marketing,"Specialty Products",Male,Asian,53,"2021-11-16 00:00:00",187740,16,"United States",Columbus,NULL,NULL
+2088,"Robert Soto","HRIS Analyst","Human Resources","Research & Development",Male,Latino,47,"2008-09-10 00:00:00",72384,0,Brazil,"Rio de Janeiro",NULL,NULL
+2089,"Nevaeh Jiang","Sr. Manager",Marketing,Corporate,Female,Asian,45,"2016-08-05 00:00:00",143318,12,China,Chengdu,NULL,NULL
+2090,"Chloe Reyes",Director,"Human Resources","Specialty Products",Female,Latino,45,"2008-06-18 00:00:00",191304,17,"United States",Phoenix,NULL,NULL
+2091,"Lucy Edwards",Director,"Human Resources","Specialty Products",Female,Black,33,"2015-03-16 00:00:00",175875,21,"United States",Columbus,"2022-05-16 00:00:00",NULL
+2092,"Luna Edwards",Manager,Sales,"Research & Development",Female,Black,42,"2014-04-13 00:00:00",106726,9,"United States",Seattle,NULL,NULL
+2093,"Stella Daniels","Cloud Infrastructure Architect",IT,Manufacturing,Female,Black,37,"2011-10-30 00:00:00",72637,0,"United States",Columbus,NULL,NULL
+2094,"Ayla Ma",Manager,Marketing,Corporate,Female,Asian,27,"2022-12-05 00:00:00",118304,7,China,Shanghai,NULL,NULL
+2095,"Matthew Avila","Computer Systems Manager",IT,Manufacturing,Male,Latino,55,"2003-06-17 00:00:00",68592,8,Brazil,"Sao Paulo",NULL,NULL
+2096,"Gianna Lim",Analyst,Accounting,"Research & Development",Female,Asian,46,"2006-04-01 00:00:00",42532,0,China,Chongqing,NULL,NULL
+2097,"Joseph Tan","Technical Architect",IT,"Research & Development",Male,Asian,37,"2015-08-20 00:00:00",65073,0,China,Shanghai,NULL,NULL
+2098,"Connor Lai","Engineering Manager",Engineering,Corporate,Male,Asian,32,"2019-09-22 00:00:00",111035,12,"United States",Chicago,NULL,NULL
+2099,"Ava Owens","Analyst II",Finance,"Specialty Products",Female,Caucasian,28,"2020-02-07 00:00:00",63066,0,"United States",Seattle,NULL,NULL
+2100,"Dylan Aguilar",Director,Engineering,Corporate,Male,Latino,49,"2007-03-27 00:00:00",186192,27,Brazil,"Sao Paulo",NULL,NULL
+2101,"Leah Zheng",Director,Engineering,Corporate,Female,Asian,52,"2016-06-18 00:00:00",182938,23,China,Chengdu,NULL,NULL
+2102,"Jade Pham",Analyst,Accounting,Manufacturing,Female,Asian,61,"2017-12-12 00:00:00",53931,0,China,Shanghai,NULL,NULL
+2103,"Theodore Bui","Vice President",Sales,"Specialty Products",Male,Asian,53,"2012-05-13 00:00:00",252140,38,China,Beijing,NULL,NULL
+2104,"Asher Chan","Sr. Business Partner","Human Resources",Corporate,Male,Asian,40,"2018-08-18 00:00:00",73041,0,China,Shanghai,NULL,NULL
+2105,"Ezekiel Brown",Manager,Finance,Corporate,Male,Caucasian,27,"2022-03-14 00:00:00",120315,8,"United States",Miami,"2022-07-17 00:00:00",NULL
+2106,"Peyton Allen",Manager,Marketing,"Specialty Products",Female,Caucasian,26,"2020-11-23 00:00:00",112264,5,"United States",Chicago,NULL,NULL
+2107,"Parker Joseph","Systems Analyst",IT,"Specialty Products",Male,Caucasian,53,"2000-01-21 00:00:00",55039,0,"United States",Seattle,NULL,NULL
+2108,"Kayden Ortiz","Sr. Manager",Accounting,"Specialty Products",Male,Latino,33,"2013-07-29 00:00:00",134782,15,Brazil,Manaus,NULL,NULL
+2109,"Lillian Desai","Field Engineer",Engineering,Manufacturing,Female,Asian,27,"2022-12-12 00:00:00",92806,0,China,Chengdu,NULL,NULL
+2110,"Avery Gutierrez","Vice President",Marketing,Corporate,Female,Latino,56,"2016-07-02 00:00:00",181028,38,"United States",Phoenix,NULL,NULL
+2111,"Caroline Sandoval",Analyst,Sales,Corporate,Female,Latino,36,"2013-10-03 00:00:00",48117,0,Brazil,"Sao Paulo",NULL,NULL
+2112,"Hailey Lim",Director,Marketing,Corporate,Female,Asian,47,"2005-01-06 00:00:00",192753,17,China,Chongqing,NULL,NULL
+2113,"Roman Liang","Sr. Analyst",Sales,Manufacturing,Male,Asian,28,"2021-03-04 00:00:00",85206,0,China,Chongqing,"2022-07-08 00:00:00",NULL
+2114,"Elias Rojas","Account Representative",Sales,Manufacturing,Male,Latino,30,"2018-01-07 00:00:00",58290,0,"United States",Chicago,NULL,NULL
+2115,"Quinn Lai","Systems Analyst",IT,"Research & Development",Female,Asian,58,"2003-08-28 00:00:00",41946,0,"United States",Phoenix,NULL,NULL
+2116,"Clara Le","Service Desk Analyst",IT,Corporate,Female,Asian,56,"2021-03-15 00:00:00",79388,0,China,Beijing,NULL,NULL
+2117,"Chloe Yoon","Network Administrator",IT,Corporate,Female,Asian,65,"2002-02-25 00:00:00",83854,0,"United States",Seattle,NULL,NULL
+2118,"Abigail Simmons","Sr. Manager",IT,"Specialty Products",Female,Caucasian,29,"2018-04-24 00:00:00",126550,15,"United States",Miami,NULL,NULL
+2119,"Ayla Espinoza",Director,"Human Resources","Research & Development",Female,Latino,60,"1993-10-01 00:00:00",199705,26,Brazil,"Rio de Janeiro",NULL,NULL
+2120,"Nova Lin","Vice President",Sales,"Specialty Products",Female,Asian,31,"2019-04-09 00:00:00",201235,32,"United States",Austin,NULL,NULL
+2121,"Sadie Singh",Director,Engineering,"Specialty Products",Female,Asian,45,"2022-03-16 00:00:00",182717,26,"United States",Columbus,NULL,NULL
+2122,"Aaron Powell","Enterprise Architect",IT,"Research & Development",Male,Black,30,"2017-09-11 00:00:00",79975,0,"United States",Chicago,NULL,NULL
+2123,"Jameson Vargas",Director,"Human Resources","Specialty Products",Male,Latino,36,"2011-07-24 00:00:00",196554,20,Brazil,"Rio de Janeiro",NULL,NULL
+2124,"Logan Young","Vice President",IT,Corporate,Male,Black,39,"2010-08-16 00:00:00",239395,33,"United States",Seattle,NULL,NULL
+2125,"Wyatt Cheung","Analyst II",Sales,"Specialty Products",Male,Asian,44,"2013-07-25 00:00:00",53703,0,China,Beijing,NULL,NULL
+2126,"Lucas Zhu",Manager,IT,Manufacturing,Male,Asian,53,"2011-03-14 00:00:00",123480,8,China,Beijing,NULL,NULL
+2127,"Emily Hong","IT Coordinator",IT,"Specialty Products",Female,Asian,46,"2021-01-09 00:00:00",41197,0,China,Beijing,NULL,NULL
+2128,"Luke Ramos","Account Representative",Sales,Corporate,Male,Latino,30,"2018-07-28 00:00:00",72463,0,Brazil,Manaus,NULL,NULL
+2129,"Maya Gupta","Field Engineer",Engineering,Corporate,Female,Asian,28,"2019-08-04 00:00:00",87675,0,China,Beijing,NULL,NULL
+2130,"Eliana Ha",Analyst,Accounting,"Specialty Products",Female,Asian,35,"2020-12-15 00:00:00",55833,0,China,Chengdu,NULL,NULL
+2131,"Lillian Cheng","Analyst II",Finance,"Research & Development",Female,Asian,58,"1996-08-20 00:00:00",58208,0,China,Chengdu,NULL,NULL
+2132,"Alexander Pena","Sr. Analyst",Sales,"Specialty Products",Male,Latino,47,"2002-05-24 00:00:00",75633,0,"United States",Chicago,NULL,NULL
+2133,"Leonardo Mai","Sr. Analyst",Marketing,"Specialty Products",Male,Asian,43,"2007-01-28 00:00:00",79090,0,China,Chengdu,NULL,NULL
+2134,"Jack Phillips","Analyst II",Finance,Manufacturing,Male,Black,47,"2015-07-27 00:00:00",66138,0,"United States",Phoenix,NULL,NULL
+2135,"Scarlett Delgado","Cloud Infrastructure Architect",IT,"Research & Development",Female,Latino,57,"2013-08-28 00:00:00",80728,0,Brazil,"Rio de Janeiro",NULL,NULL
+2136,"Jack Rogers","Systems Analyst",IT,Corporate,Male,Black,47,"2005-02-01 00:00:00",46202,0,"United States",Phoenix,NULL,NULL
+2137,"Violet Huynh",Manager,Sales,"Research & Development",Female,Asian,50,"2008-02-29 00:00:00",123096,10,China,Shanghai,NULL,NULL
+2138,"Victoria Park",Analyst,Marketing,"Research & Development",Female,Asian,27,"2020-03-18 00:00:00",45989,0,"United States",Chicago,NULL,NULL
+2139,"Elizabeth Rodriguez","Sr. Manager",Accounting,Corporate,Female,Latino,26,"2021-08-13 00:00:00",140756,13,Brazil,"Sao Paulo",NULL,NULL
+2140,"Samuel Kumar","Network Engineer",IT,Corporate,Male,Asian,43,"2009-03-09 00:00:00",85261,0,China,Chengdu,NULL,NULL
+2141,"Zoe Maldonado","Vice President",Accounting,Corporate,Female,Latino,49,"1998-09-25 00:00:00",198222,34,Brazil,"Sao Paulo",NULL,NULL
+2142,"Natalia Richardson","Sr. Manager",Sales,"Research & Development",Female,Caucasian,36,"2017-06-02 00:00:00",150825,10,"United States",Columbus,NULL,NULL
+2143,"Madeline Contreras",Analyst,Accounting,Corporate,Female,Latino,51,"1995-10-31 00:00:00",59311,0,Brazil,"Sao Paulo",NULL,NULL
+2144,"Raelynn Espinoza",Analyst,Accounting,Corporate,Female,Latino,46,"2002-09-12 00:00:00",44411,0,Brazil,Manaus,NULL,NULL
+2145,"Noah Rojas","Analyst II",Finance,Manufacturing,Male,Latino,37,"2019-11-14 00:00:00",69408,0,"United States",Chicago,NULL,NULL
+2146,"Jack Ramos","Sr. Analyst",Finance,Manufacturing,Male,Latino,43,"2018-06-17 00:00:00",96759,0,Brazil,Manaus,NULL,NULL
+2147,"Riley King",Director,Marketing,"Specialty Products",Female,Black,53,"2013-08-10 00:00:00",163480,15,"United States",Columbus,NULL,NULL
+2148,"Naomi Lee","System Administrator�",IT,"Research & Development",Female,Asian,58,"2014-04-15 00:00:00",91132,0,China,Beijing,NULL,NULL
+2149,"Caleb Jones",Manager,Marketing,Corporate,Male,Caucasian,57,"1996-07-10 00:00:00",122825,8,"United States",Miami,NULL,NULL
+2150,"Peyton Alvarado","Service Desk Analyst",IT,Manufacturing,Female,Latino,31,"2015-10-24 00:00:00",73612,0,Brazil,"Rio de Janeiro",NULL,NULL
+2151,"Luca Liu","Account Representative",Sales,Manufacturing,Male,Asian,40,"2007-06-22 00:00:00",70561,0,China,Chongqing,NULL,NULL
+2152,"Christian Johnson","Network Architect",IT,"Research & Development",Male,Black,47,"2008-05-25 00:00:00",60331,0,"United States",Miami,NULL,NULL
+2153,"Kinsley Gonzales","Systems Analyst",IT,Manufacturing,Female,Latino,51,"2007-05-05 00:00:00",48772,0,Brazil,"Rio de Janeiro",NULL,NULL
+2154,"Hunter Yoon","Network Administrator",IT,"Research & Development",Male,Asian,57,"2020-10-02 00:00:00",90599,0,China,Chongqing,NULL,NULL
+2155,"Elias Dixon","IT Coordinator",IT,Corporate,Male,Caucasian,46,"2021-11-22 00:00:00",55643,0,"United States",Columbus,NULL,NULL
+2156,"Owen Guerrero","Field Engineer",Engineering,Corporate,Male,Latino,40,"2022-09-03 00:00:00",97938,0,"United States",Chicago,NULL,NULL
+2157,"Lucas Lo",Analyst,Accounting,"Research & Development",Male,Asian,43,"2004-01-18 00:00:00",49627,0,China,Beijing,NULL,NULL
+2158,"Hunter Mitchell","IT Coordinator",IT,"Research & Development",Male,Caucasian,54,"2021-04-17 00:00:00",58137,0,"United States",Columbus,NULL,NULL
+2159,"Eliana Bailey","Sr. Manager",Sales,"Research & Development",Female,Black,27,"2021-01-02 00:00:00",120586,15,"United States",Seattle,NULL,NULL
+2160,"Gabriella Choi","Analyst II",Accounting,Manufacturing,Female,Asian,56,"1999-08-15 00:00:00",72925,0,"United States",Seattle,NULL,NULL
+2161,"Evelyn Alvarado","Network Administrator",IT,"Specialty Products",Female,Latino,36,"2022-08-12 00:00:00",83548,0,"United States",Miami,NULL,NULL
+2162,"Wyatt Chan",Manager,Finance,Manufacturing,Male,Asian,53,"2005-06-28 00:00:00",128226,8,China,Shanghai,NULL,NULL
+2163,"Sarah Johnson",Director,Engineering,"Research & Development",Female,Caucasian,31,"2018-03-06 00:00:00",150653,24,"United States",Austin,"2019-09-01 00:00:00",NULL
+2164,"Brooks Evans","Sr. Account Representative",Sales,"Specialty Products",Male,Caucasian,45,"2016-05-04 00:00:00",80989,0,"United States",Columbus,NULL,NULL
+2165,"Isaiah Dixon","Development Engineer",Engineering,Corporate,Male,Caucasian,29,"2022-02-27 00:00:00",74901,0,"United States",Austin,NULL,NULL
+2166,"Addison Lo","Cloud Infrastructure Architect",IT,"Research & Development",Female,Asian,27,"2020-08-28 00:00:00",68712,0,"United States",Columbus,NULL,NULL
+2167,"Nolan Howard","Quality Engineer",Engineering,"Research & Development",Male,Caucasian,26,"2022-04-18 00:00:00",82963,0,"United States",Austin,"2022-06-23 00:00:00",NULL
+2168,"Paisley Dominguez","Engineering Manager",Engineering,"Research & Development",Female,Latino,53,"2009-06-14 00:00:00",123203,10,"United States",Austin,NULL,NULL
+2169,"Eliana Ho",Director,Accounting,Corporate,Female,Asian,64,"2012-09-05 00:00:00",195416,22,China,Chengdu,NULL,NULL
+2170,"Charles Miller",Director,Marketing,Manufacturing,Male,Black,32,"2018-06-07 00:00:00",156418,23,"United States",Columbus,NULL,NULL
+2171,"Mia Jiang","Vice President",Accounting,Manufacturing,Female,Asian,42,"2015-06-19 00:00:00",255892,38,"United States",Miami,NULL,NULL
+2172,"Skylar Parker","Technical Architect",IT,Corporate,Female,Caucasian,31,"2018-08-05 00:00:00",96195,0,"United States",Phoenix,NULL,NULL
+2173,"Zoey Leung","Network Administrator",IT,"Research & Development",Female,Asian,40,"2007-09-27 00:00:00",77637,0,China,Chongqing,"2017-02-04 00:00:00",NULL
+2174,"Austin Moua","Test Engineer",Engineering,"Research & Development",Male,Asian,46,"2003-05-27 00:00:00",79294,0,China,Chengdu,NULL,NULL
+2175,"Christopher Robinson","Vice President",Finance,"Specialty Products",Male,Caucasian,35,"2016-07-11 00:00:00",254287,31,"United States",Austin,"2022-10-17 00:00:00",NULL
+2176,"Jayden Zhang","Enterprise Architect",IT,"Specialty Products",Male,Asian,64,"1994-06-27 00:00:00",70516,0,China,Chengdu,NULL,NULL
+2177,"Cora Mejia","Sr. Analyst",Accounting,"Research & Development",Female,Latino,58,"2014-06-07 00:00:00",98296,0,Brazil,Manaus,NULL,NULL
+2178,"Julian Harris","Operations Engineer",Engineering,Manufacturing,Male,Caucasian,61,"2015-12-30 00:00:00",98565,0,"United States",Phoenix,NULL,NULL
+2179,"Anthony Espinoza","Analyst II",Finance,Manufacturing,Male,Latino,41,"2020-11-16 00:00:00",59149,0,Brazil,"Rio de Janeiro",NULL,NULL
+2180,"Aubrey Ruiz","Analyst II",Marketing,"Specialty Products",Female,Latino,25,"2021-01-11 00:00:00",70126,0,Brazil,"Sao Paulo",NULL,NULL
+2181,"Piper Tang","Vice President","Human Resources",Manufacturing,Female,Asian,50,"2011-07-28 00:00:00",216787,33,China,Beijing,NULL,NULL
+2182,"Colton Delgado","Sr. Manager",Accounting,"Research & Development",Male,Latino,61,"2006-10-22 00:00:00",156512,13,Brazil,"Rio de Janeiro",NULL,NULL
+2183,"Madeline Chung",Analyst,Finance,"Research & Development",Female,Asian,63,"2011-05-26 00:00:00",44444,0,"United States",Miami,"2015-07-12 00:00:00",NULL
+2184,"Ariana Sharma","Vice President",Sales,"Research & Development",Female,Asian,45,"2014-01-24 00:00:00",257725,34,"United States",Seattle,"2022-06-29 00:00:00",NULL
+2185,"Julian Marquez","Sr. Manager",Accounting,"Specialty Products",Male,Latino,33,"2013-09-14 00:00:00",122408,11,Brazil,"Rio de Janeiro",NULL,NULL
+2186,"Logan Reyes","Quality Engineer",Engineering,Corporate,Male,Latino,62,"1995-04-10 00:00:00",78251,0,Brazil,"Sao Paulo","2020-03-19 00:00:00",NULL
+2187,"Penelope Mai","Vice President",Sales,Corporate,Female,Asian,43,"2004-05-02 00:00:00",252938,35,"United States",Austin,NULL,NULL
+2188,"Ryan Reed","Sr. Analyst",Sales,Manufacturing,Male,Black,48,"2019-10-28 00:00:00",90296,0,"United States",Austin,NULL,NULL
+2189,"Grayson Hwang","Sr. Analyst",Finance,Corporate,Male,Asian,42,"2013-04-23 00:00:00",91689,0,China,Chongqing,NULL,NULL
+2190,"Ezra Tan","Sr. Manager",Finance,Corporate,Male,Asian,49,"1999-12-22 00:00:00",158028,12,China,Chengdu,NULL,NULL
+2191,"David Ha","Sr. Account Representative",Sales,Corporate,Male,Asian,33,"2022-07-27 00:00:00",89759,0,China,Chongqing,NULL,NULL
+2192,"Lillian Vang","Technical Architect",IT,"Research & Development",Female,Asian,39,"2015-09-13 00:00:00",78640,0,China,Chongqing,NULL,NULL
+2193,"Sofia Zhang",Analyst,Finance,"Specialty Products",Female,Asian,51,"2005-01-11 00:00:00",55368,0,"United States",Chicago,NULL,NULL
+2194,"Athena Daniels","Network Administrator",IT,"Specialty Products",Female,Caucasian,49,"2021-05-23 00:00:00",78164,0,"United States",Seattle,NULL,NULL
+2195,"Jameson Shin","Sr. Analyst",Marketing,"Research & Development",Male,Asian,30,"2020-05-14 00:00:00",76014,0,China,Chengdu,NULL,NULL
+2196,"Everly Avila","Account Representative",Sales,Manufacturing,Female,Latino,41,"2015-11-13 00:00:00",61403,0,"United States",Miami,NULL,NULL
+2197,"Liam Nelson","Technical Architect",IT,"Research & Development",Male,Black,58,"2010-12-17 00:00:00",80720,0,"United States",Columbus,NULL,NULL
+2198,"Theodore Lai","System Administrator�",IT,"Specialty Products",Male,Asian,55,"2008-12-27 00:00:00",94026,0,China,Shanghai,NULL,NULL
+2199,"Caroline Do",Analyst,Marketing,"Research & Development",Female,Asian,40,"2016-03-06 00:00:00",56963,0,"United States",Chicago,NULL,NULL
+2200,"Josiah Ramos",Manager,Finance,"Specialty Products",Male,Latino,41,"2014-01-08 00:00:00",113246,6,"United States",Chicago,NULL,NULL
+2201,"Colton Alexander","Field Engineer",Engineering,"Research & Development",Male,Caucasian,45,"2005-08-09 00:00:00",76416,0,"United States",Phoenix,NULL,NULL
+2202,"Charles Ramos","Sr. Analyst",Accounting,Corporate,Male,Latino,57,"2010-04-04 00:00:00",74597,0,"United States",Austin,"2016-01-30 00:00:00",NULL
+2203,"Ellie Wilson",Director,IT,Manufacturing,Female,Caucasian,65,"1996-08-31 00:00:00",164102,30,"United States",Columbus,NULL,NULL
+2204,"Peyton Powell","System Administrator�",IT,"Research & Development",Female,Caucasian,44,"2003-02-16 00:00:00",74431,0,"United States",Phoenix,NULL,NULL
+2205,"Hailey Rojas",Analyst,Finance,"Specialty Products",Female,Latino,52,"2014-07-15 00:00:00",43378,0,"United States",Miami,NULL,NULL
+2206,"Kai Singh",Analyst,Finance,Corporate,Male,Asian,52,"2001-04-19 00:00:00",47587,0,"United States",Chicago,NULL,NULL
+2207,"Ryan Rivera",Director,"Human Resources","Specialty Products",Male,Latino,53,"2001-11-29 00:00:00",179983,16,"United States",Phoenix,NULL,NULL
+2208,"Everett Lu",Manager,Marketing,"Research & Development",Male,Asian,31,"2021-11-28 00:00:00",115565,6,"United States",Phoenix,NULL,NULL
+2209,"Layla Nunez",Manager,Finance,Manufacturing,Female,Latino,63,"2017-09-10 00:00:00",126064,5,"United States",Miami,NULL,NULL
+2210,"Liliana Collins","Sr. Manager","Human Resources","Specialty Products",Female,Black,39,"2013-01-18 00:00:00",151666,13,"United States",Chicago,"2018-06-30 00:00:00",NULL
+2211,"Ezekiel Jenkins","Service Desk Analyst",IT,"Specialty Products",Male,Caucasian,63,"2000-04-11 00:00:00",99215,0,"United States",Seattle,NULL,NULL
+2212,"Christopher Wang","Cloud Infrastructure Architect",IT,Manufacturing,Male,Asian,27,"2020-08-23 00:00:00",71502,0,China,Chongqing,NULL,NULL
+2213,"Savannah Rodriguez",Director,Sales,Corporate,Female,Latino,30,"2022-11-18 00:00:00",168050,24,Brazil,Manaus,NULL,NULL
+2214,"Lyla Turner","Sr. Manager",Sales,"Specialty Products",Female,Caucasian,51,"2003-11-07 00:00:00",130862,12,"United States",Seattle,NULL,NULL
+2215,"Adrian Ngo","Enterprise Architect",IT,"Research & Development",Male,Asian,58,"2021-09-19 00:00:00",85716,0,China,Chongqing,NULL,NULL
+2216,"Aria Juarez",Director,Finance,Corporate,Female,Latino,62,"2011-07-30 00:00:00",185026,24,Brazil,Manaus,NULL,NULL
+2217,"Audrey Ramos","Vice President",Sales,Manufacturing,Female,Latino,27,"2021-12-09 00:00:00",182403,30,Brazil,"Sao Paulo",NULL,NULL
+2218,"Hazel Cho","Vice President",Accounting,Corporate,Female,Asian,63,"2004-08-12 00:00:00",193531,40,China,Shanghai,NULL,NULL
+2219,"Iris Chung",Manager,IT,"Research & Development",Female,Asian,52,"2013-03-12 00:00:00",128301,6,China,Beijing,"2021-09-17 00:00:00",NULL
+2220,"Thomas Rodriguez",Analyst,Finance,Manufacturing,Male,Latino,36,"2019-10-09 00:00:00",51669,0,Brazil,"Rio de Janeiro","2022-09-29 00:00:00",NULL
+2221,"Avery Lo","Automation Engineer",Engineering,"Research & Development",Female,Asian,47,"2001-01-26 00:00:00",104289,0,"United States",Seattle,NULL,NULL
+2222,"Gabriel Bell","Cloud Infrastructure Architect",IT,"Specialty Products",Male,Caucasian,27,"2021-03-21 00:00:00",70181,0,"United States",Phoenix,NULL,NULL
+2223,"Gianna Walker","Computer Systems Manager",IT,Corporate,Female,Caucasian,45,"2021-03-23 00:00:00",92317,6,"United States",Austin,NULL,NULL
+2224,"Axel Bailey","Sr. Analyst",Marketing,Corporate,Male,Black,47,"2022-12-07 00:00:00",99382,0,"United States",Chicago,NULL,NULL
+2225,"Scarlett Green","Network Engineer",IT,"Specialty Products",Female,Caucasian,26,"2020-04-21 00:00:00",67702,0,"United States",Seattle,NULL,NULL
+2226,"Jackson Wong","Analyst II",Finance,"Research & Development",Male,Asian,58,"2006-12-26 00:00:00",53133,0,China,Chengdu,NULL,NULL
+2227,"Eva Jimenez","Operations Engineer",Engineering,Corporate,Female,Latino,60,"1998-04-13 00:00:00",110554,0,Brazil,"Sao Paulo",NULL,NULL
+2228,"Ian Ma",Manager,Finance,Corporate,Male,Asian,45,"2010-07-09 00:00:00",109221,9,"United States",Austin,NULL,NULL
+2229,"Luna Castro","IT Systems Architect",IT,"Specialty Products",Female,Latino,45,"2007-02-01 00:00:00",88933,0,"United States",Columbus,NULL,NULL
+2230,"Nolan Brooks","Business Partner","Human Resources",Manufacturing,Male,Caucasian,40,"2014-11-08 00:00:00",49342,0,"United States",Seattle,"2019-08-27 00:00:00",NULL
+2231,"Jayden Jones","Cloud Infrastructure Architect",IT,Manufacturing,Male,Caucasian,27,"2022-07-09 00:00:00",74587,0,"United States",Austin,NULL,NULL
+2232,"Asher Hsu","Sr. Analyst",Accounting,Manufacturing,Male,Asian,36,"2020-03-13 00:00:00",80757,0,China,Chongqing,NULL,NULL
+2233,"Greyson Lim",Director,Finance,Corporate,Male,Asian,28,"2022-10-12 00:00:00",198662,25,China,Beijing,NULL,NULL
+2234,"Chloe Miller","Sr. Manager",Marketing,Manufacturing,Female,Black,57,"2021-08-12 00:00:00",142506,11,"United States",Austin,NULL,NULL
+2235,"Jaxson Brooks","Network Architect",IT,Manufacturing,Male,Black,57,"2022-07-15 00:00:00",77028,0,"United States",Seattle,NULL,NULL
+2236,"Jack Perez","Cloud Infrastructure Architect",IT,"Research & Development",Male,Latino,30,"2017-01-09 00:00:00",80389,0,Brazil,Manaus,"2017-09-10 00:00:00",NULL
+2237,"Ruby Reed","Vice President",Engineering,"Specialty Products",Female,Caucasian,26,"2022-01-23 00:00:00",249062,39,"United States",Miami,NULL,NULL
+2238,"Ivy Rojas","IT Coordinator",IT,Corporate,Female,Latino,53,"2013-01-08 00:00:00",52675,0,Brazil,Manaus,NULL,NULL
+2239,"Hudson Wong","Sr. Account Representative",Sales,Manufacturing,Male,Asian,59,"2014-05-11 00:00:00",83365,0,China,Chongqing,NULL,NULL
+2240,"Ryan Yi","Solutions Architect",IT,"Specialty Products",Male,Asian,56,"2003-08-17 00:00:00",82758,0,"United States",Seattle,NULL,NULL
+2241,"Carter Simmons",Manager,IT,Corporate,Male,Caucasian,41,"2012-05-30 00:00:00",126406,10,"United States",Chicago,NULL,NULL
+2242,"Emilia Xu",Manager,Marketing,Corporate,Female,Asian,46,"2017-01-24 00:00:00",103147,6,"United States",Miami,NULL,NULL
+2243,"Adam Medina","IT Systems Architect",IT,Manufacturing,Male,Latino,49,"2020-10-04 00:00:00",81622,0,"United States",Chicago,NULL,NULL
+2244,"Connor Howard","Systems Analyst",IT,"Specialty Products",Male,Caucasian,42,"2021-03-15 00:00:00",44265,0,"United States",Austin,"2022-06-27 00:00:00",NULL
+2245,"Audrey Duong","Vice President",Sales,"Specialty Products",Female,Asian,55,"1999-03-03 00:00:00",213998,34,"United States",Miami,NULL,NULL
+2246,"Landon Reyes",Director,IT,"Research & Development",Male,Latino,44,"2014-08-23 00:00:00",171823,27,"United States",Columbus,NULL,NULL
+2247,"Noah Ma","Vice President",Accounting,Manufacturing,Male,Asian,28,"2018-11-06 00:00:00",201013,31,"United States",Phoenix,NULL,NULL
+2248,"Lucas Alexander",Director,IT,Manufacturing,Male,Black,41,"2013-09-20 00:00:00",192944,22,"United States",Miami,NULL,NULL
+2249,"Henry Vo","Controls Engineer",Engineering,Manufacturing,Male,Asian,60,"1996-09-13 00:00:00",81699,0,China,Beijing,NULL,NULL
+2250,"Mila Han",Manager,Sales,Manufacturing,Female,Asian,54,"2009-11-14 00:00:00",128791,6,"United States",Miami,NULL,NULL
+2251,"Genesis Herrera",Manager,IT,"Research & Development",Female,Latino,34,"2015-10-03 00:00:00",126898,10,Brazil,Manaus,NULL,NULL
+2252,"Olivia Vazquez","Network Engineer",IT,"Specialty Products",Female,Latino,53,"2020-04-13 00:00:00",93053,0,Brazil,"Sao Paulo",NULL,NULL
+2253,"Leilani Ng","Systems Analyst",IT,Corporate,Female,Asian,48,"2011-09-19 00:00:00",50513,0,"United States",Seattle,"2019-10-30 00:00:00",NULL
+2254,"Olivia Mendoza","Sr. Account Representative",Sales,Corporate,Female,Latino,43,"2017-05-07 00:00:00",86533,0,"United States",Columbus,NULL,NULL
+2255,"Skylar Xu","Test Engineer",Engineering,"Research & Development",Female,Asian,60,"1997-10-16 00:00:00",72806,0,China,Chongqing,NULL,NULL
+2256,"Eloise Williams","Vice President",Sales,"Specialty Products",Female,Black,42,"2019-02-12 00:00:00",258115,36,"United States",Austin,NULL,NULL
+2257,"Jackson Maldonado","Cloud Infrastructure Architect",IT,Manufacturing,Male,Latino,52,"2008-05-01 00:00:00",63444,0,"United States",Miami,NULL,NULL
+2258,"Christian Harris","Engineering Manager",Engineering,"Specialty Products",Male,Caucasian,50,"1999-02-21 00:00:00",96099,11,"United States",Chicago,NULL,NULL
+2259,"Penelope Santos","IT Systems Architect",IT,Manufacturing,Female,Latino,37,"2009-03-01 00:00:00",92849,0,"United States",Chicago,NULL,NULL
+2260,"Nicholas Zhou","Sr. Account Representative",Sales,Manufacturing,Male,Asian,58,"2014-10-28 00:00:00",85094,0,China,Chengdu,NULL,NULL
+2261,"Ayla Garza","Sr. Manager",Marketing,Corporate,Female,Latino,39,"2017-06-15 00:00:00",156224,14,Brazil,Manaus,NULL,NULL
+2262,"Carson Mai","Vice President",Accounting,Corporate,Male,Asian,50,"1996-04-15 00:00:00",245920,36,"United States",Columbus,"1996-05-16 00:00:00",NULL
+2263,"Luna Lu","Analyst II",Marketing,"Research & Development",Female,Asian,51,"2007-03-06 00:00:00",50214,0,China,Beijing,NULL,NULL
+2264,"Anthony Ho","Sr. Analyst",Marketing,"Specialty Products",Male,Asian,31,"2015-01-11 00:00:00",79713,0,China,Beijing,NULL,NULL
+2265,"Clara Lopez",Director,IT,"Research & Development",Female,Latino,52,"1999-08-09 00:00:00",166699,27,Brazil,"Sao Paulo",NULL,NULL
+2266,"Melody Woods","Network Administrator",IT,"Research & Development",Female,Caucasian,63,"2010-12-20 00:00:00",78788,0,"United States",Seattle,NULL,NULL
+2267,"Matthew Simmons","Sr. Manager",Accounting,"Research & Development",Male,Black,28,"2022-12-19 00:00:00",142797,10,"United States",Seattle,NULL,NULL
+2268,"Gabriella Carrillo","Vice President",Finance,"Research & Development",Female,Latino,39,"2012-07-16 00:00:00",187516,35,Brazil,"Sao Paulo",NULL,NULL
+2269,"Lydia Juarez",Director,Finance,"Specialty Products",Female,Latino,36,"2013-09-21 00:00:00",156029,15,"United States",Columbus,NULL,NULL
+2270,"Ava Carrillo","Sr. Manager",Accounting,"Specialty Products",Female,Latino,63,"1999-01-01 00:00:00",149582,14,"United States",Seattle,"2021-03-03 00:00:00",NULL
+2271,"Elena Sharma",Director,Marketing,Corporate,Female,Asian,47,"2014-10-24 00:00:00",163922,21,"United States",Phoenix,NULL,NULL
+2272,"Julia Ahmed","Vice President",Accounting,"Research & Development",Female,Asian,43,"2004-11-14 00:00:00",240860,37,"United States",Chicago,NULL,NULL
+2273,"Iris Vo",Manager,"Human Resources","Specialty Products",Female,Asian,39,"2018-09-27 00:00:00",128497,7,China,Chengdu,NULL,NULL
+2274,"Hunter Yi","Automation Engineer",Engineering,Corporate,Male,Asian,55,"2015-05-10 00:00:00",121976,0,China,Chongqing,NULL,NULL
+2275,"Valentina Oh","Sr. Manager",Sales,Corporate,Female,Asian,32,"2022-07-12 00:00:00",126464,15,"United States",Miami,NULL,NULL
+2276,"Kinsley Tran","Vice President",Accounting,Manufacturing,Female,Asian,53,"2005-09-05 00:00:00",234064,33,China,Chengdu,NULL,NULL
+2277,"Christian Hong","Sr. Analyst",Finance,Manufacturing,Male,Asian,59,"2008-01-16 00:00:00",81829,0,China,Chongqing,NULL,NULL
+2278,"Amelia Mehta",Director,"Human Resources",Corporate,Female,Asian,26,"2022-04-21 00:00:00",193971,22,"United States",Chicago,NULL,NULL
+2279,"Axel Leung","Business Partner","Human Resources",Corporate,Male,Asian,55,"2001-08-17 00:00:00",47696,0,"United States",Seattle,NULL,NULL
+2280,"Lucas Lam",Manager,Accounting,"Specialty Products",Male,Asian,34,"2013-07-17 00:00:00",116676,10,China,Chengdu,NULL,NULL
+2281,"Jose Thompson",Manager,Marketing,Corporate,Male,Caucasian,45,"2012-04-05 00:00:00",104162,9,"United States",Austin,NULL,NULL
+2282,"Wesley Duong","Sr. Business Partner","Human Resources","Specialty Products",Male,Asian,29,"2022-04-14 00:00:00",86226,0,"United States",Seattle,NULL,NULL
+2283,"Adeline Maldonado",Director,Marketing,"Specialty Products",Female,Latino,45,"2011-05-30 00:00:00",172206,29,Brazil,"Sao Paulo",NULL,NULL
+2284,"Elias Diaz","HRIS Analyst","Human Resources","Specialty Products",Male,Latino,34,"2012-04-06 00:00:00",55985,0,"United States",Seattle,NULL,NULL
+2285,"Wyatt Aguilar","Technical Architect",IT,Corporate,Male,Latino,26,"2021-06-06 00:00:00",61481,0,"United States",Miami,NULL,NULL
+2286,"Josephine Espinoza",Manager,Sales,"Research & Development",Female,Latino,30,"2017-11-26 00:00:00",124295,7,Brazil,Manaus,NULL,NULL
+2287,"Adeline Lai","Sr. Manager",Sales,"Research & Development",Female,Asian,55,"1999-02-08 00:00:00",132894,15,"United States",Chicago,NULL,NULL
+2288,"Christopher Vu","Computer Systems Manager",IT,Corporate,Male,Asian,47,"2002-03-16 00:00:00",88839,5,"United States",Phoenix,"2014-10-28 00:00:00",NULL
+2289,"Kai Vega","Automation Engineer",Engineering,Manufacturing,Male,Latino,51,"2005-06-16 00:00:00",78107,0,Brazil,Manaus,NULL,NULL
+2290,"Hailey Chin","Sr. Manager",IT,Corporate,Female,Asian,54,"1993-07-10 00:00:00",135642,10,China,Beijing,NULL,NULL
+2291,"Eleanor Xi","Sr. Manager",Sales,Corporate,Female,Asian,64,"1997-01-10 00:00:00",147853,11,"United States",Austin,NULL,NULL
+2292,"Lily Molina",Manager,IT,Manufacturing,Female,Latino,40,"2009-09-15 00:00:00",125900,7,"United States",Seattle,"2018-04-16 00:00:00",NULL
+2293,"Levi Vasquez","IT Coordinator",IT,Manufacturing,Male,Latino,27,"2020-02-10 00:00:00",42969,0,"United States",Phoenix,NULL,NULL
+2294,"Elijah Washington","Vice President",Marketing,Manufacturing,Male,Caucasian,47,"2022-02-13 00:00:00",214303,40,"United States",Seattle,NULL,NULL
+2295,"Gianna Park","Vice President",Accounting,"Specialty Products",Female,Asian,28,"2020-12-19 00:00:00",199406,38,China,Chengdu,NULL,NULL
+2296,"Melody Leung","Vice President","Human Resources","Research & Development",Female,Asian,35,"2015-03-20 00:00:00",182436,37,"United States",Austin,NULL,NULL
+2297,"Liliana Valdez","Computer Systems Manager",IT,Corporate,Female,Latino,59,"1996-10-01 00:00:00",96507,9,"United States",Seattle,NULL,NULL
+2298,"Ezekiel Kumar","Field Engineer",Engineering,Manufacturing,Male,Asian,33,"2015-11-19 00:00:00",82906,0,China,Chengdu,"2016-10-11 00:00:00",NULL
+2299,"Ruby Rahman","Business Partner","Human Resources",Manufacturing,Female,Asian,62,"2005-12-05 00:00:00",41616,0,"United States",Seattle,NULL,NULL
+2300,"Natalie Stewart","Network Engineer",IT,Corporate,Female,Caucasian,50,"2003-06-30 00:00:00",92344,0,"United States",Phoenix,"2022-01-26 00:00:00",NULL
+2301,"Charlotte Lim","Vice President",Accounting,Manufacturing,Female,Asian,55,"2006-06-27 00:00:00",196614,37,"United States",Chicago,NULL,NULL
+2302,"Elena Campos",Manager,IT,"Research & Development",Female,Latino,47,"2022-02-06 00:00:00",104253,9,"United States",Seattle,NULL,NULL
+2303,"Vivian Lim","IT Coordinator",IT,"Specialty Products",Female,Asian,34,"2021-01-22 00:00:00",44677,0,China,Chongqing,NULL,NULL
+2304,"Madison Xu","Network Engineer",IT,"Research & Development",Female,Asian,39,"2017-12-13 00:00:00",66463,0,China,Chongqing,NULL,NULL
+2305,"Ava Aguilar","Business Partner","Human Resources",Corporate,Female,Latino,35,"2015-12-17 00:00:00",53285,0,"United States",Columbus,NULL,NULL
+2306,"Kayden Patel","Development Engineer",Engineering,"Research & Development",Male,Asian,54,"1997-03-22 00:00:00",67683,0,China,Beijing,NULL,NULL
+2307,"Penelope Desai","Vice President",Finance,Manufacturing,Female,Asian,41,"2018-10-29 00:00:00",238155,38,China,Shanghai,NULL,NULL
+2308,"Henry Vang",Director,Sales,Corporate,Male,Asian,37,"2019-06-21 00:00:00",173630,24,China,Chongqing,NULL,NULL
+2309,"Eliana Turner","Sr. Analyst",Finance,"Research & Development",Female,Black,29,"2020-01-27 00:00:00",98992,0,"United States",Miami,NULL,NULL
+2310,"Charlotte Tran","Vice President",IT,Corporate,Female,Asian,64,"2017-04-11 00:00:00",253330,39,"United States",Austin,NULL,NULL
+2311,"Everly Coleman","Sr. Manager",Sales,Corporate,Female,Caucasian,54,"2011-08-14 00:00:00",158403,14,"United States",Seattle,"2019-08-02 00:00:00",NULL
+2312,"Matthew Harris","Sr. Manager",Accounting,Corporate,Male,Caucasian,36,"2021-03-27 00:00:00",156085,12,"United States",Miami,NULL,NULL
+2313,"Emilia Barnes","Enterprise Architect",IT,"Specialty Products",Female,Black,54,"2013-04-18 00:00:00",80129,0,"United States",Miami,NULL,NULL
+2314,"Sophie Griffin","Account Representative",Sales,"Research & Development",Female,Caucasian,56,"2017-01-09 00:00:00",60517,0,"United States",Columbus,NULL,NULL
+2315,"Kai Phillips","Test Engineer",Engineering,"Research & Development",Male,Caucasian,48,"2016-12-13 00:00:00",72315,0,"United States",Austin,"2017-05-20 00:00:00",NULL
+2316,"Dylan Khan",Director,"Human Resources",Manufacturing,Male,Asian,35,"2015-07-11 00:00:00",153815,19,"United States",Miami,"2016-05-31 00:00:00",NULL
+2317,"Nevaeh Clark","Sr. Manager",Marketing,"Specialty Products",Female,Black,32,"2018-08-16 00:00:00",139552,15,"United States",Miami,NULL,NULL
+2318,"Carter Luu","Vice President",Marketing,Corporate,Male,Asian,25,"2022-10-20 00:00:00",257296,35,"United States",Austin,NULL,NULL
+2319,"Jordan Ngo","Sr. Analyst",Finance,Manufacturing,Male,Asian,26,"2020-05-04 00:00:00",91372,0,"United States",Miami,NULL,NULL
+2320,"Jackson Hu","Sr. Business Partner","Human Resources",Corporate,Male,Asian,53,"2017-06-05 00:00:00",73601,0,China,Chengdu,NULL,NULL
+2321,"Madelyn Kang","IT Systems Architect",IT,Corporate,Female,Asian,37,"2013-04-29 00:00:00",71871,0,China,Chengdu,NULL,NULL
+2322,"Everleigh Bell","Sr. Account Representative",Sales,"Specialty Products",Female,Caucasian,31,"2016-02-07 00:00:00",84925,0,"United States",Austin,NULL,NULL
+2323,"Eliana Trinh","Sr. Manager",IT,Manufacturing,Female,Asian,47,"2010-01-07 00:00:00",155600,14,China,Chongqing,NULL,NULL
+2324,"Oliver Ford",Manager,Sales,"Research & Development",Male,Black,32,"2018-12-15 00:00:00",101564,6,"United States",Austin,NULL,NULL
+2325,"Ryan Huang","Controls Engineer",Engineering,"Research & Development",Male,Asian,40,"2009-10-12 00:00:00",80150,0,"United States",Phoenix,NULL,NULL
+2326,"Gabriel Ahmed","HRIS Analyst","Human Resources",Corporate,Male,Asian,65,"2021-10-09 00:00:00",73996,0,China,Chengdu,"2022-09-04 00:00:00",NULL
+2327,"Ivy Rios","Network Architect",IT,Manufacturing,Female,Latino,25,"2022-01-18 00:00:00",90109,0,"United States",Seattle,NULL,NULL
+2328,"Luca Hunter","Field Engineer",Engineering,Corporate,Male,Caucasian,39,"2022-06-27 00:00:00",67216,0,"United States",Phoenix,NULL,NULL
+2329,"Claire Owens","Network Engineer",IT,"Research & Development",Female,Caucasian,52,"1998-06-07 00:00:00",75402,0,"United States",Phoenix,NULL,NULL
+2330,"Aubrey Maldonado","Automation Engineer",Engineering,Manufacturing,Female,Latino,38,"2022-06-13 00:00:00",120795,0,Brazil,"Sao Paulo",NULL,NULL
+2331,"Elias Vasquez","Systems Analyst",IT,"Specialty Products",Male,Latino,33,"2015-07-27 00:00:00",44012,0,Brazil,Manaus,NULL,NULL
+2332,"Melody Luu","Vice President",Finance,"Research & Development",Female,Asian,28,"2021-04-03 00:00:00",219180,33,China,Chongqing,NULL,NULL
+2333,"Christopher Luu","Vice President",Engineering,"Research & Development",Male,Asian,61,"2005-10-27 00:00:00",258700,32,"United States",Austin,NULL,NULL
+2334,"James Han","Test Engineer",Engineering,"Specialty Products",Male,Asian,32,"2018-01-07 00:00:00",97496,0,"United States",Miami,NULL,NULL
+2335,"Jaxson Ayala","Vice President","Human Resources","Research & Development",Male,Latino,28,"2020-08-01 00:00:00",239270,38,Brazil,Manaus,NULL,NULL
+2336,"Levi James",Manager,IT,"Specialty Products",Male,Caucasian,39,"2012-03-02 00:00:00",103466,5,"United States",Chicago,NULL,NULL
+2337,"Grayson Carrillo","Sr. Analyst",Accounting,Corporate,Male,Latino,57,"2001-06-27 00:00:00",74662,0,Brazil,"Sao Paulo",NULL,NULL
+2338,"Maverick Hwang","Vice President","Human Resources","Research & Development",Male,Asian,40,"2015-04-20 00:00:00",227816,33,"United States",Chicago,NULL,NULL
+2339,"Noah Truong","Vice President",Sales,Manufacturing,Male,Asian,47,"2013-12-08 00:00:00",246680,39,China,Beijing,NULL,NULL
+2340,"Willow Guzman","Enterprise Architect",IT,Manufacturing,Female,Latino,43,"2010-06-26 00:00:00",85164,0,Brazil,"Sao Paulo",NULL,NULL
+2341,"Rylee Howard","Sr. Manager",Finance,Manufacturing,Female,Black,33,"2014-08-18 00:00:00",135215,12,"United States",Miami,NULL,NULL
+2342,"Ian Marquez","HRIS Analyst","Human Resources",Corporate,Male,Latino,31,"2019-01-14 00:00:00",72542,0,"United States",Chicago,NULL,NULL
+2343,"Layla Owens","Vice President",IT,"Research & Development",Female,Caucasian,47,"2018-02-07 00:00:00",246303,34,"United States",Columbus,NULL,NULL
+2344,"Chloe Dixon","Vice President",Engineering,Corporate,Female,Caucasian,60,"2021-05-11 00:00:00",186400,40,"United States",Chicago,NULL,NULL
+2345,"Emily Zheng","Solutions Architect",IT,Corporate,Female,Asian,50,"2022-12-06 00:00:00",91004,0,China,Shanghai,NULL,NULL
+2346,"Jayden Rogers",Manager,Sales,"Research & Development",Male,Caucasian,41,"2016-12-14 00:00:00",101411,8,"United States",Seattle,NULL,NULL
+2347,"Elizabeth Vasquez","Controls Engineer",Engineering,"Specialty Products",Female,Latino,28,"2020-08-09 00:00:00",111779,0,"United States",Chicago,NULL,NULL
+2348,"Samantha Ford","Technical Architect",IT,Manufacturing,Female,Caucasian,25,"2022-01-19 00:00:00",86075,0,"United States",Miami,NULL,NULL
+2349,"Thomas Silva",Analyst,Finance,"Specialty Products",Male,Latino,45,"2015-08-13 00:00:00",52798,0,"United States",Miami,"2018-01-30 00:00:00",NULL
+2350,"Charlotte Park","Network Architect",IT,"Specialty Products",Female,Asian,63,"2020-12-17 00:00:00",96136,0,China,Shanghai,NULL,NULL
+2351,"Liam Jimenez","Sr. Analyst",Marketing,"Research & Development",Male,Latino,52,"2002-08-11 00:00:00",95682,0,"United States",Seattle,"2012-05-17 00:00:00",NULL
+2352,"Ivy Liu","Analyst II",Marketing,Manufacturing,Female,Asian,59,"1993-05-29 00:00:00",55476,0,China,Chongqing,NULL,NULL
+2353,"Jayden Dixon","Vice President",Finance,Manufacturing,Male,Caucasian,30,"2018-01-14 00:00:00",197792,34,"United States",Austin,NULL,NULL
+2354,"Nevaeh Butler","Field Engineer",Engineering,"Research & Development",Female,Caucasian,55,"2009-07-10 00:00:00",82271,0,"United States",Chicago,NULL,NULL
+2355,"Leonardo Li","Sr. Manager",Accounting,"Specialty Products",Male,Asian,65,"2009-04-23 00:00:00",155716,12,"United States",Seattle,NULL,NULL
+2356,"Kinsley Woods","HRIS Analyst","Human Resources",Corporate,Female,Caucasian,34,"2014-06-19 00:00:00",71699,0,"United States",Phoenix,NULL,NULL
+2357,"Abigail Chu","Sr. Manager","Human Resources",Manufacturing,Female,Asian,51,"2006-04-17 00:00:00",147436,11,"United States",Austin,NULL,NULL
+2358,"Ava Xiong","Sr. Business Partner","Human Resources",Manufacturing,Female,Asian,52,"2019-07-21 00:00:00",88220,0,China,Shanghai,NULL,NULL
+2359,"Olivia Marquez","Account Representative",Sales,"Specialty Products",Female,Latino,44,"2020-04-06 00:00:00",54295,0,"United States",Columbus,NULL,NULL
+2360,"Claire Vazquez","Vice President","Human Resources",Corporate,Female,Latino,44,"2004-06-12 00:00:00",246538,35,"United States",Miami,NULL,NULL
+2361,"Christian Castro","IT Coordinator",IT,"Specialty Products",Male,Latino,40,"2006-04-15 00:00:00",43645,0,"United States",Austin,"2008-05-09 00:00:00",NULL
+2362,"Mason Oh",Manager,"Human Resources",Manufacturing,Male,Asian,25,"2022-04-11 00:00:00",125644,7,"United States",Seattle,NULL,NULL
+2363,"Violet Santiago","Service Desk Analyst",IT,"Research & Development",Female,Latino,32,"2018-01-14 00:00:00",78414,0,"United States",Seattle,NULL,NULL
+2364,"Lily Rios","Sr. Analyst",Marketing,"Specialty Products",Female,Latino,45,"2013-01-25 00:00:00",88016,0,Brazil,"Rio de Janeiro",NULL,NULL
+2365,"Kinsley Stewart","Computer Systems Manager",IT,Corporate,Female,Caucasian,56,"2021-09-07 00:00:00",66561,6,"United States",Chicago,NULL,NULL
+2366,"Aria Molina","Development Engineer",Engineering,"Research & Development",Female,Latino,52,"2001-10-24 00:00:00",89811,0,Brazil,"Rio de Janeiro","2022-08-20 00:00:00",NULL
+2367,"James Cheng",Manager,IT,Manufacturing,Male,Asian,49,"2010-05-26 00:00:00",125506,9,"United States",Seattle,NULL,NULL
+2368,"Mila Vang","Analyst II",Finance,Manufacturing,Female,Asian,46,"2009-08-25 00:00:00",56409,0,"United States",Columbus,NULL,NULL
+2369,"Alice Liu","Sr. Manager",Sales,"Research & Development",Female,Asian,39,"2012-02-22 00:00:00",122058,14,China,Beijing,NULL,NULL
+2370,"Delilah Gonzalez","Sr. Analyst",Sales,Manufacturing,Female,Latino,55,"1998-03-29 00:00:00",82550,0,"United States",Chicago,NULL,NULL
+2371,"Samuel Tang","System Administrator�",IT,Manufacturing,Male,Asian,34,"2012-09-15 00:00:00",93760,0,"United States",Miami,NULL,NULL
+2372,"Serenity Gray",Analyst,Sales,"Research & Development",Female,Black,56,"2012-06-19 00:00:00",55008,0,"United States",Austin,NULL,NULL
+2373,"Benjamin Estrada","Analyst II",Marketing,"Research & Development",Male,Latino,56,"2012-09-28 00:00:00",65368,0,"United States",Seattle,NULL,NULL
+2374,"Wesley Han","Test Engineer",Engineering,"Research & Development",Male,Asian,62,"2017-04-20 00:00:00",83955,0,"United States",Phoenix,NULL,NULL
+2375,"Nora Herrera","Vice President",Marketing,"Specialty Products",Female,Latino,60,"1997-12-24 00:00:00",231907,38,"United States",Austin,NULL,NULL
+2376,"Lincoln Harris","IT Systems Architect",IT,Manufacturing,Male,Caucasian,42,"2009-09-16 00:00:00",97628,0,"United States",Phoenix,NULL,NULL
+2377,"Charles Gonzales","IT Systems Architect",IT,Manufacturing,Male,Latino,27,"2020-09-22 00:00:00",88142,0,"United States",Columbus,NULL,NULL
+2378,"Athena Cheng","Test Engineer",Engineering,Corporate,Female,Asian,37,"2020-03-02 00:00:00",83465,0,China,Beijing,NULL,NULL
+2379,"David Garza",Director,IT,Manufacturing,Male,Latino,29,"2022-01-09 00:00:00",197731,15,"United States",Seattle,NULL,NULL
+2380,"Hunter Doan","Sr. Manager",Accounting,"Research & Development",Male,Asian,32,"2014-12-15 00:00:00",151758,12,China,Beijing,NULL,NULL
+2381,"Julian Lam",Director,Finance,"Research & Development",Male,Asian,33,"2013-09-08 00:00:00",164340,15,"United States",Chicago,NULL,NULL
+2382,"Sofia Estrada","Controls Engineer",Engineering,"Specialty Products",Female,Latino,42,"2006-03-26 00:00:00",104916,0,Brazil,Manaus,NULL,NULL
+2383,"Jordan Chen",Analyst,Finance,"Specialty Products",Male,Asian,60,"1997-01-22 00:00:00",42536,0,"United States",Columbus,NULL,NULL
+2384,"Eloise Huang","Vice President",Finance,"Research & Development",Female,Asian,51,"2009-04-05 00:00:00",195171,33,"United States",Seattle,NULL,NULL
+2385,"Ivy Mehta","Business Partner","Human Resources",Manufacturing,Female,Asian,50,"2020-05-26 00:00:00",45290,0,China,Chongqing,"2021-08-04 00:00:00",NULL
+2386,"Eli Castillo","Vice President",Finance,"Specialty Products",Male,Latino,50,"2009-12-11 00:00:00",203306,38,"United States",Seattle,NULL,NULL
+2387,"Nolan Garcia","Analyst II",Sales,"Specialty Products",Male,Latino,26,"2022-06-16 00:00:00",66865,0,Brazil,"Rio de Janeiro",NULL,NULL
+2388,"Alexander Zhu","Network Architect",IT,Corporate,Male,Asian,30,"2022-10-17 00:00:00",89164,0,"United States",Phoenix,NULL,NULL
+2389,"Victoria Wu","Sr. Analyst",Sales,Manufacturing,Female,Asian,35,"2021-10-28 00:00:00",75602,0,"United States",Miami,NULL,NULL
+2390,"Mateo Jordan","Network Administrator",IT,"Specialty Products",Male,Caucasian,44,"2021-02-13 00:00:00",92939,0,"United States",Austin,NULL,NULL
+2391,"Everly Martin","Analyst II",Marketing,"Specialty Products",Female,Black,26,"2020-05-28 00:00:00",64278,0,"United States",Columbus,NULL,NULL
+2392,"Athena Castro","Solutions Architect",IT,"Research & Development",Female,Latino,44,"2013-10-04 00:00:00",72176,0,Brazil,"Rio de Janeiro",NULL,NULL
+2393,"Josephine White","Computer Systems Manager",IT,Corporate,Female,Caucasian,61,"2010-02-05 00:00:00",87758,9,"United States",Seattle,NULL,NULL
+2394,"Nicholas Vo","Analyst II",Accounting,Corporate,Male,Asian,50,"2002-06-01 00:00:00",54646,0,"United States",Seattle,NULL,NULL
+2395,"Jackson Sandoval","HRIS Analyst","Human Resources",Corporate,Male,Latino,61,"2011-01-26 00:00:00",73323,0,"United States",Austin,NULL,NULL
+2396,"Olivia Turner",Director,Marketing,"Specialty Products",Female,Caucasian,29,"2021-01-07 00:00:00",151492,21,"United States",Columbus,NULL,NULL
+2397,"Cooper Rivera","Sr. Manager",Finance,Corporate,Male,Latino,42,"2005-12-26 00:00:00",138215,12,Brazil,Manaus,NULL,NULL
+2398,"Hailey Washington","Sr. Manager",Finance,"Specialty Products",Female,Black,51,"2013-07-03 00:00:00",135578,10,"United States",Miami,"2018-07-06 00:00:00",NULL
+2399,"Mia Vasquez","Test Engineer",Engineering,"Research & Development",Female,Latino,27,"2019-12-02 00:00:00",64297,0,Brazil,Manaus,NULL,NULL
+2400,"Jose Grant","Development Engineer",Engineering,Corporate,Male,Caucasian,52,"2021-06-28 00:00:00",94857,0,"United States",Miami,"2023-02-12 00:00:00",NULL
+2401,"Nathan Yee","Development Engineer",Engineering,"Research & Development",Male,Asian,58,"2009-10-24 00:00:00",77196,0,"United States",Austin,NULL,NULL
+2402,"Isabella Munoz",Director,Sales,"Research & Development",Female,Latino,45,"2002-12-25 00:00:00",193154,18,Brazil,"Sao Paulo",NULL,NULL
+2403,"Michael Turner",Manager,"Human Resources","Specialty Products",Male,Black,28,"2019-12-29 00:00:00",115916,9,"United States",Chicago,NULL,NULL
+2404,"Oliver Jones","Vice President",Accounting,Manufacturing,Male,Caucasian,56,"2016-03-20 00:00:00",192374,30,"United States",Chicago,NULL,NULL
+2405,"Charles Taylor",Director,"Human Resources","Specialty Products",Male,Caucasian,32,"2019-07-15 00:00:00",186869,16,"United States",Miami,NULL,NULL
+2406,"Gianna Alvarez","Business Partner","Human Resources",Manufacturing,Female,Latino,58,"1993-05-11 00:00:00",49293,0,"United States",Columbus,NULL,NULL
+2407,"Nova Martin",Manager,"Human Resources","Research & Development",Female,Caucasian,39,"2013-04-13 00:00:00",129087,5,"United States",Seattle,NULL,NULL
+2408,"Julia Gonzalez",Analyst,Finance,"Research & Development",Female,Latino,46,"2005-02-15 00:00:00",54831,0,Brazil,"Sao Paulo",NULL,NULL
+2409,"Athena Vu",Analyst,Marketing,"Specialty Products",Female,Asian,26,"2020-11-28 00:00:00",51825,0,"United States",Phoenix,NULL,NULL
+2410,"Caroline Bui","Field Engineer",Engineering,Manufacturing,Female,Asian,36,"2019-09-15 00:00:00",67457,0,China,Shanghai,NULL,NULL
+2411,"Daniel Ali","Cloud Infrastructure Architect",IT,Corporate,Male,Asian,43,"2019-09-28 00:00:00",94555,0,"United States",Austin,NULL,NULL
+2412,"Iris Huang",Director,"Human Resources",Corporate,Female,Asian,45,"2008-03-28 00:00:00",163686,25,China,Chengdu,NULL,NULL
+2413,"Natalia Cheng","Systems Analyst",IT,Corporate,Female,Asian,65,"2002-07-29 00:00:00",47919,0,China,Beijing,NULL,NULL
+2414,"Owen Evans","Enterprise Architect",IT,Manufacturing,Male,Caucasian,34,"2021-05-28 00:00:00",68972,0,"United States",Austin,"2022-10-29 00:00:00",NULL
+2415,"Angel Dixon",Analyst,Sales,Manufacturing,Male,Caucasian,52,"2002-04-01 00:00:00",50775,0,"United States",Seattle,NULL,NULL
+2416,"Aubrey Guerrero","Sr. Manager",Marketing,Corporate,Female,Latino,39,"2013-02-12 00:00:00",122713,13,Brazil,"Sao Paulo",NULL,NULL
+2417,"Ivy Do","Analyst II",Accounting,Corporate,Female,Asian,57,"1993-05-13 00:00:00",57230,0,"United States",Austin,NULL,NULL
+2418,"Kai Gutierrez","Sr. Manager",Marketing,"Specialty Products",Male,Latino,63,"1997-12-17 00:00:00",148794,10,Brazil,Manaus,NULL,NULL
+2419,"Caroline Ahmed","Sr. Manager",Marketing,"Research & Development",Female,Asian,32,"2016-12-23 00:00:00",155884,13,"United States",Miami,NULL,NULL
+2420,"Alice Sharma","Account Representative",Sales,"Research & Development",Female,Asian,51,"2018-10-05 00:00:00",50975,0,China,Chengdu,NULL,NULL
+2421,"Leo Simmons",Analyst,Accounting,"Research & Development",Male,Black,38,"2017-12-13 00:00:00",52200,0,"United States",Phoenix,NULL,NULL
+2422,"Asher Hong",Director,Finance,"Research & Development",Male,Asian,53,"2018-04-17 00:00:00",154141,26,China,Chongqing,NULL,NULL
+2423,"Gianna Ramirez","Field Engineer",Engineering,"Specialty Products",Female,Latino,59,"1993-07-25 00:00:00",69245,0,"United States",Phoenix,NULL,NULL
+2424,"Thomas Smith","Field Engineer",Engineering,"Specialty Products",Male,Caucasian,57,"1999-04-02 00:00:00",78212,0,"United States",Miami,"2010-09-05 00:00:00",NULL
+2425,"Carter Hunter","Sr. Analyst",Accounting,Corporate,Male,Caucasian,41,"2019-10-07 00:00:00",72650,0,"United States",Austin,"2020-08-21 00:00:00",NULL
+2426,"Charlotte Green","Automation Engineer",Engineering,"Research & Development",Female,Caucasian,33,"2020-11-10 00:00:00",124681,0,"United States",Phoenix,NULL,NULL
+2427,"Lincoln Holmes","Network Administrator",IT,"Research & Development",Male,Black,35,"2013-08-21 00:00:00",89051,0,"United States",Chicago,NULL,NULL
+2428,"Hudson Hu","Automation Engineer",Engineering,"Research & Development",Male,Asian,36,"2019-12-02 00:00:00",121049,0,"United States",Seattle,"2023-01-08 00:00:00",NULL
+2429,"Noah Mitchell","Network Engineer",IT,"Research & Development",Male,Caucasian,54,"2007-06-15 00:00:00",70519,0,"United States",Columbus,NULL,NULL
+2430,"Liliana Choi",Manager,IT,"Research & Development",Female,Asian,55,"2007-01-25 00:00:00",106302,8,"United States",Austin,NULL,NULL
+2431,"Leonardo Cho","Engineering Manager",Engineering,"Specialty Products",Male,Asian,38,"2008-08-25 00:00:00",119960,15,"United States",Columbus,NULL,NULL
+2432,"Oliver Delgado","Test Engineer",Engineering,"Research & Development",Male,Latino,45,"2017-02-22 00:00:00",84309,0,Brazil,Manaus,NULL,NULL
+2433,"Isabella Roberts","Vice President",Engineering,Manufacturing,Female,Caucasian,53,"2007-08-20 00:00:00",228494,33,"United States",Austin,NULL,NULL
+2434,"Luca Desai",Manager,Sales,"Specialty Products",Male,Asian,45,"2017-05-23 00:00:00",112076,6,China,Chengdu,NULL,NULL
+2435,"William Juarez","Technical Architect",IT,"Specialty Products",Male,Latino,65,"2016-07-29 00:00:00",88533,0,Brazil,"Rio de Janeiro",NULL,NULL
+2436,"Ryan Alvarez","HRIS Analyst","Human Resources","Research & Development",Male,Latino,62,"2018-11-29 00:00:00",72025,0,Brazil,Manaus,NULL,NULL
+2437,"Hudson Ha","Field Engineer",Engineering,Manufacturing,Male,Asian,59,"2004-02-06 00:00:00",67947,0,China,Shanghai,NULL,NULL
+2438,"Hannah Brown","Cloud Infrastructure Architect",IT,Manufacturing,Female,Caucasian,42,"2020-07-12 00:00:00",79764,0,"United States",Austin,"2021-02-05 00:00:00",NULL
+2439,"Hadley Le","Cloud Infrastructure Architect",IT,"Research & Development",Female,Asian,33,"2015-03-18 00:00:00",60690,0,China,Chongqing,NULL,NULL
+2440,"Jaxson Shah",Analyst,Accounting,Corporate,Male,Asian,29,"2018-08-25 00:00:00",44520,0,"United States",Chicago,NULL,NULL
+2441,"Christopher Delgado","Network Architect",IT,Corporate,Male,Latino,33,"2022-06-24 00:00:00",84317,0,Brazil,"Rio de Janeiro",NULL,NULL
+2442,"Hannah Ng",Director,Sales,Manufacturing,Female,Asian,36,"2015-05-14 00:00:00",151055,19,"United States",Columbus,NULL,NULL
+2443,"Austin Ngo","Network Architect",IT,"Research & Development",Male,Asian,43,"2020-03-27 00:00:00",62492,0,"United States",Columbus,NULL,NULL
+2444,"Gianna Han","HRIS Analyst","Human Resources","Research & Development",Female,Asian,51,"2011-02-27 00:00:00",72589,0,"United States",Austin,NULL,NULL
+2445,"Isaac Choi","Operations Engineer",Engineering,Corporate,Male,Asian,27,"2021-01-21 00:00:00",82286,0,"United States",Chicago,"2022-11-02 00:00:00",NULL
+2446,"Madeline Smith","Cloud Infrastructure Architect",IT,"Research & Development",Female,Caucasian,55,"2011-11-23 00:00:00",66660,0,"United States",Phoenix,"2017-11-16 00:00:00",NULL
+2447,"Ellie Fernandez","Quality Engineer",Engineering,"Specialty Products",Female,Latino,62,"2009-08-18 00:00:00",86805,0,"United States",Austin,NULL,NULL
+2448,"Lyla Lai",Manager,"Human Resources","Specialty Products",Female,Asian,46,"2004-08-11 00:00:00",125878,10,"United States",Austin,"2009-01-29 00:00:00",NULL
+2449,"Emily Moore",Analyst,Accounting,"Research & Development",Female,Black,47,"2009-11-08 00:00:00",50290,0,"United States",Columbus,NULL,NULL
+2450,"Aubrey Moreno","Computer Systems Manager",IT,"Research & Development",Female,Latino,57,"2000-06-30 00:00:00",97083,6,"United States",Austin,"2008-11-26 00:00:00",NULL
+2451,"Nova Xiong","Network Administrator",IT,Corporate,Female,Asian,49,"2019-04-10 00:00:00",93306,0,China,Beijing,NULL,NULL
+2452,"Eva Lam","Field Engineer",Engineering,Manufacturing,Female,Asian,42,"2022-03-08 00:00:00",73404,0,"United States",Austin,NULL,NULL
+2453,"Caroline Chau","IT Systems Architect",IT,"Specialty Products",Female,Asian,55,"2022-12-07 00:00:00",91179,0,"United States",Columbus,"2023-02-01 00:00:00",NULL
+2454,"Sofia Chen",Manager,Finance,"Specialty Products",Female,Asian,46,"2006-08-27 00:00:00",108003,5,China,Chengdu,NULL,NULL
+2455,"Christopher Sharma","System Administrator�",IT,Corporate,Male,Asian,45,"2004-04-16 00:00:00",81384,0,China,Beijing,NULL,NULL
+2456,"Lucas Grant","Sr. Business Partner","Human Resources",Manufacturing,Male,Caucasian,53,"2012-03-28 00:00:00",97218,0,"United States",Austin,NULL,NULL
+2457,"Delilah Washington",Analyst,Sales,"Research & Development",Female,Caucasian,46,"2006-09-17 00:00:00",42944,0,"United States",Miami,NULL,NULL
+2458,"Eloise Molina",Analyst,Finance,"Research & Development",Female,Latino,48,"2015-01-18 00:00:00",43980,0,"United States",Columbus,NULL,NULL
+2459,"Clara Desai",Manager,Marketing,Corporate,Female,Asian,33,"2014-11-20 00:00:00",109533,5,China,Chengdu,NULL,NULL
+2460,"Audrey Campbell","Vice President",Accounting,"Research & Development",Female,Caucasian,56,"2008-07-30 00:00:00",226952,39,"United States",Miami,NULL,NULL
+2461,"Delilah Alvarez","System Administrator�",IT,Manufacturing,Female,Latino,59,"2007-11-27 00:00:00",71580,0,"United States",Seattle,NULL,NULL
+2462,"Luke Luna","Analyst II",Finance,Manufacturing,Male,Latino,55,"2012-11-16 00:00:00",66172,0,Brazil,Manaus,NULL,NULL
+2463,"Elizabeth Tan","Vice President",Marketing,"Research & Development",Female,Asian,46,"2018-07-27 00:00:00",237489,30,"United States",Chicago,NULL,NULL
+2464,"Sophia Wang",Analyst,Marketing,"Specialty Products",Female,Asian,50,"2000-05-20 00:00:00",48733,0,"United States",Seattle,NULL,NULL
+2465,"Nova Park",Analyst,Sales,Corporate,Female,Asian,29,"2017-07-23 00:00:00",48563,0,China,Shanghai,NULL,NULL
+2466,"Josiah Khan","Cloud Infrastructure Architect",IT,Manufacturing,Male,Asian,57,"2004-10-26 00:00:00",86592,0,China,Chongqing,NULL,NULL
+2467,"Madison Gray","Vice President",Finance,"Research & Development",Female,Caucasian,39,"2011-08-29 00:00:00",189823,38,"United States",Columbus,NULL,NULL
+2468,"Luca Washington","Enterprise Architect",IT,Corporate,Male,Black,40,"2022-06-27 00:00:00",65075,0,"United States",Phoenix,NULL,NULL
+2469,"Isaac Cruz","Vice President","Human Resources","Specialty Products",Male,Latino,33,"2018-05-09 00:00:00",187917,35,"United States",Chicago,NULL,NULL
+2470,"Ellie Ortega",Analyst,Sales,"Specialty Products",Female,Latino,49,"2020-10-20 00:00:00",42242,0,Brazil,"Sao Paulo",NULL,NULL
+2471,"Ian Huang",Analyst,Sales,"Research & Development",Male,Asian,54,"1998-02-07 00:00:00",53931,0,"United States",Columbus,NULL,NULL
+2472,"Jayden Ahmed","Sr. Manager",IT,Corporate,Male,Asian,51,"2006-03-28 00:00:00",140668,12,China,Chengdu,NULL,NULL
+2473,"Violet Simmons",Analyst,Marketing,"Research & Development",Female,Caucasian,33,"2017-10-23 00:00:00",53948,0,"United States",Phoenix,NULL,NULL
+2474,"William Roberts",Director,IT,"Research & Development",Male,Caucasian,34,"2017-04-12 00:00:00",174257,30,"United States",Miami,NULL,NULL
+2475,"Penelope Sandoval","Sr. Manager",Sales,Corporate,Female,Latino,28,"2019-12-18 00:00:00",132209,14,Brazil,"Rio de Janeiro",NULL,NULL
+2476,"Emilia Ortiz","Vice President",Marketing,"Research & Development",Female,Latino,34,"2017-07-16 00:00:00",208883,38,"United States",Miami,NULL,NULL
+2477,"Layla Gutierrez","Computer Systems Manager",IT,"Specialty Products",Female,Latino,39,"2022-05-05 00:00:00",65957,5,Brazil,"Rio de Janeiro",NULL,NULL
+2478,"Dylan Vu",Manager,"Human Resources","Specialty Products",Male,Asian,63,"2004-07-22 00:00:00",106481,5,China,Beijing,NULL,NULL
+2479,"Peyton Wong","Vice President",Accounting,Manufacturing,Female,Asian,35,"2020-08-05 00:00:00",218127,37,"United States",Chicago,NULL,NULL
+2480,"Santiago f Banks","Sr. Manager",IT,"Specialty Products",Male,Caucasian,44,"2019-08-16 00:00:00",151481,11,"United States",Chicago,NULL,NULL
+2481,"Caroline Wong",Analyst,Sales,"Research & Development",Female,Asian,37,"2017-03-08 00:00:00",40508,0,China,Beijing,NULL,NULL
+2482,"Quinn Ho","Vice President",Accounting,"Research & Development",Female,Asian,45,"2002-07-20 00:00:00",200481,30,"United States",Columbus,NULL,NULL
+2483,"Caroline Nunez","Vice President",Finance,Manufacturing,Female,Latino,65,"2002-12-20 00:00:00",224872,39,Brazil,"Sao Paulo",NULL,NULL
+2484,"Carson Brown","Sr. Manager","Human Resources","Research & Development",Male,Black,65,"2007-11-05 00:00:00",149474,14,"United States",Phoenix,NULL,NULL
+2485,"Olivia Maldonado","Test Engineer",Engineering,"Research & Development",Female,Latino,63,"2002-02-18 00:00:00",86820,0,"United States",Chicago,NULL,NULL
+2486,"Emilia Chung",Director,Finance,Manufacturing,Female,Asian,55,"1994-11-08 00:00:00",184078,28,China,Shanghai,NULL,NULL
+2487,"Leilani Shin",Analyst,Accounting,Corporate,Female,Asian,58,"2013-12-18 00:00:00",55174,0,"United States",Austin,NULL,NULL
+2488,"Abigail Zhu",Director,Finance,Corporate,Female,Asian,31,"2022-01-17 00:00:00",152474,27,"United States",Austin,NULL,NULL
+2489,"Autumn Xiong","Network Administrator",IT,"Specialty Products",Female,Asian,28,"2020-02-13 00:00:00",75172,0,China,Shanghai,NULL,NULL
+2490,"Hailey Cruz","Business Partner","Human Resources",Manufacturing,Female,Latino,50,"2008-08-10 00:00:00",56002,0,"United States",Austin,NULL,NULL
+2491,"Piper Cruz",Director,Sales,"Research & Development",Female,Latino,61,"2013-04-13 00:00:00",195636,21,Brazil,"Rio de Janeiro",NULL,NULL
+2492,"Jaxson Jackson","Enterprise Architect",IT,"Specialty Products",Male,Caucasian,53,"1997-03-01 00:00:00",63165,0,"United States",Seattle,NULL,NULL
+2493,"Serenity Mehta",Analyst,Sales,"Research & Development",Female,Asian,51,"1998-07-21 00:00:00",57277,0,China,Shanghai,NULL,NULL
+2494,"Peyton Gomez",Analyst,Finance,"Specialty Products",Female,Latino,56,"2020-01-14 00:00:00",42950,0,Brazil,"Rio de Janeiro",NULL,NULL
+2495,"Ethan Vargas",Director,IT,"Research & Development",Male,Latino,38,"2018-10-09 00:00:00",168410,30,"United States",Chicago,NULL,NULL
+2496,"Serenity Morris",Manager,IT,Corporate,Female,Caucasian,41,"2008-04-12 00:00:00",114588,5,"United States",Miami,NULL,NULL
+2497,"Vivian Chan","Sr. Analyst",Sales,"Specialty Products",Female,Asian,61,"1997-05-12 00:00:00",72546,0,China,Beijing,"2021-03-29 00:00:00",NULL
+2498,"Lincoln Singh",Analyst,Sales,Corporate,Male,Asian,33,"2021-01-09 00:00:00",55397,0,China,Shanghai,NULL,NULL
+2499,"Ayla Lim",Director,Marketing,Corporate,Female,Asian,41,"2021-09-05 00:00:00",192266,23,China,Chengdu,NULL,NULL
+2500,"Leilani Hong","System Administrator�",IT,Manufacturing,Female,Asian,36,"2013-12-20 00:00:00",79876,0,"United States",Seattle,"2023-02-02 00:00:00",NULL
+2501,"Victoria Doan",Manager,Sales,Corporate,Female,Asian,42,"2018-03-06 00:00:00",112593,5,"United States",Seattle,NULL,NULL
+2502,"Naomi Wright","System Administrator�",IT,Manufacturing,Female,Caucasian,36,"2016-11-03 00:00:00",99249,0,"United States",Miami,NULL,NULL
+2503,"Scarlett Howard",Manager,Finance,Manufacturing,Female,Caucasian,55,"2012-08-12 00:00:00",117421,5,"United States",Austin,"2017-08-28 00:00:00",NULL
+2504,"Victoria Vo","Field Engineer",Engineering,Corporate,Female,Asian,44,"2017-12-18 00:00:00",82241,0,China,Shanghai,NULL,NULL
+2505,"Oliver Fernandez",Manager,Marketing,"Research & Development",Male,Latino,31,"2022-05-15 00:00:00",125664,5,Brazil,Manaus,NULL,NULL
+2506,"Luca Jiang","Account Representative",Sales,"Research & Development",Male,Asian,47,"2013-09-08 00:00:00",57386,0,China,Beijing,NULL,NULL
+2507,"Charlotte Owens","Vice President",Engineering,Corporate,Female,Black,59,"2001-05-11 00:00:00",196740,31,"United States",Miami,NULL,NULL
+2508,"Stella Tan",Director,"Human Resources","Specialty Products",Female,Asian,48,"2009-08-22 00:00:00",168202,22,China,Chengdu,NULL,NULL
+2509,"Ellie Yoon","Vice President","Human Resources","Specialty Products",Female,Asian,44,"2006-07-11 00:00:00",242004,38,China,Chongqing,NULL,NULL
+2510,"Ella Do","Account Representative",Sales,Manufacturing,Female,Asian,52,"1998-02-28 00:00:00",57433,0,China,Shanghai,NULL,NULL
+2511,"Lucas Cruz","Sr. Analyst",Accounting,"Specialty Products",Male,Latino,54,"2009-07-11 00:00:00",74656,0,"United States",Seattle,NULL,NULL
+2512,"Sarah Mehta","HRIS Analyst","Human Resources","Research & Development",Female,Asian,31,"2016-08-23 00:00:00",62848,0,China,Chengdu,NULL,NULL
+2513,"Anthony Phan","Enterprise Architect",IT,"Research & Development",Male,Asian,39,"2011-04-11 00:00:00",92523,0,"United States",Miami,NULL,NULL
+2514,"David Chu","Sr. Manager",IT,"Specialty Products",Male,Asian,40,"2012-12-16 00:00:00",142844,11,"United States",Miami,NULL,NULL
+2515,"Sebastian Sanders",Manager,Sales,Corporate,Male,Caucasian,39,"2009-01-23 00:00:00",100718,5,"United States",Austin,NULL,NULL
+2516,"Jayden Phillips",Director,IT,"Research & Development",Male,Caucasian,25,"2022-10-13 00:00:00",154186,26,"United States",Austin,NULL,NULL
+2517,"Caleb Chan","Operations Engineer",Engineering,"Research & Development",Male,Asian,48,"2003-06-24 00:00:00",107586,0,China,Shanghai,NULL,NULL
+2518,"Ariana Santiago","Network Architect",IT,"Research & Development",Female,Latino,54,"2003-10-28 00:00:00",88906,0,"United States",Phoenix,NULL,NULL
+2519,"Quinn Owens","Field Engineer",Engineering,Manufacturing,Female,Caucasian,40,"2018-05-09 00:00:00",74329,0,"United States",Chicago,NULL,NULL
+2520,"Eli James","Network Engineer",IT,Manufacturing,Male,Caucasian,32,"2021-04-15 00:00:00",86523,0,"United States",Columbus,"2021-11-07 00:00:00",NULL
+2521,"Ezra Aguilar","Vice President",IT,Manufacturing,Male,Latino,60,"2014-11-05 00:00:00",239868,40,"United States",Miami,NULL,NULL
+2522,"Anna Castro","Analyst II",Finance,"Specialty Products",Female,Latino,29,"2018-05-21 00:00:00",65010,0,"United States",Seattle,NULL,NULL
+2523,"Liliana Lewis","Network Administrator",IT,Corporate,Female,Caucasian,25,"2021-02-23 00:00:00",82140,0,"United States",Miami,NULL,NULL
+2524,"Maverick Alvarado","Solutions Architect",IT,Manufacturing,Male,Latino,34,"2016-06-11 00:00:00",75511,0,Brazil,Manaus,NULL,NULL
+2525,"Nora Butler","Vice President",IT,"Research & Development",Female,Black,26,"2022-05-06 00:00:00",188880,36,"United States",Phoenix,NULL,NULL
+2526,"Landon Rodriguez","Sr. Account Representative",Sales,Manufacturing,Male,Latino,39,"2017-11-19 00:00:00",87155,0,"United States",Chicago,NULL,NULL
+2527,"Grace Harris","Enterprise Architect",IT,"Research & Development",Female,Caucasian,34,"2018-10-28 00:00:00",75518,0,"United States",Seattle,NULL,NULL
+2528,"Jeremiah Medina","Sr. Manager",IT,"Research & Development",Male,Latino,54,"1997-09-28 00:00:00",129311,13,Brazil,Manaus,NULL,NULL
+2529,"Charles Bryant",Analyst,Sales,Manufacturing,Male,Caucasian,27,"2022-07-12 00:00:00",56919,0,"United States",Miami,"2023-01-10 00:00:00",NULL
+2530,"Elizabeth Dixon","Sr. Manager",Finance,Manufacturing,Female,Caucasian,26,"2020-11-15 00:00:00",153832,14,"United States",Phoenix,NULL,NULL
+2531,"Riley Phillips","Vice President",Engineering,"Specialty Products",Female,Caucasian,26,"2022-08-05 00:00:00",211121,35,"United States",Phoenix,NULL,NULL
+2532,"Gianna Cruz",Manager,Sales,Corporate,Female,Latino,29,"2019-07-02 00:00:00",106456,10,"United States",Columbus,NULL,NULL
+2533,"Lincoln Cruz","Network Architect",IT,Corporate,Male,Latino,64,"1997-07-15 00:00:00",72772,0,Brazil,Manaus,NULL,NULL
+2534,"Ezekiel Contreras","Sr. Manager",Accounting,"Research & Development",Male,Latino,45,"2001-08-10 00:00:00",143146,14,"United States",Chicago,NULL,NULL
+2535,"Amelia Do","Analyst II",Marketing,Manufacturing,Female,Asian,45,"2018-12-24 00:00:00",74776,0,"United States",Seattle,NULL,NULL
+2536,"Anthony Perez","Sr. Account Representative",Sales,"Specialty Products",Male,Latino,51,"2021-09-13 00:00:00",92305,0,"United States",Chicago,NULL,NULL
+2537,"Elias Maldonado","IT Systems Architect",IT,Manufacturing,Male,Latino,56,"2005-04-01 00:00:00",94724,0,"United States",Chicago,NULL,NULL
+2538,"Liam Luong","Technical Architect",IT,"Specialty Products",Male,Asian,58,"1995-11-13 00:00:00",88019,0,"United States",Austin,NULL,NULL
+2539,"Jordan Ford",Manager,"Human Resources",Corporate,Male,Black,43,"2016-09-19 00:00:00",108000,10,"United States",Columbus,NULL,NULL
+2540,"Mateo Chung","Network Architect",IT,Corporate,Male,Asian,52,"2018-07-27 00:00:00",81438,0,China,Beijing,NULL,NULL
+2541,"Jameson Vang","Computer Systems Manager",IT,Corporate,Male,Asian,41,"2018-05-23 00:00:00",95669,10,China,Shanghai,"2021-06-09 00:00:00",NULL
+2542,"Samuel Thomas","Vice President",Accounting,"Specialty Products",Male,Caucasian,43,"2016-02-15 00:00:00",180385,33,"United States",Columbus,NULL,NULL
+2543,"Gabriel Rodriguez","IT Coordinator",IT,"Research & Development",Male,Latino,36,"2016-01-30 00:00:00",45184,0,Brazil,"Sao Paulo",NULL,NULL
+2544,"Wyatt Robinson","Development Engineer",Engineering,"Research & Development",Male,Caucasian,55,"2007-08-08 00:00:00",70451,0,"United States",Seattle,NULL,NULL
+2545,"Anna Huynh","Technical Architect",IT,"Specialty Products",Female,Asian,39,"2009-04-05 00:00:00",63259,0,"United States",Chicago,NULL,NULL
+2546,"Lucy Simmons","Analyst II",Accounting,Corporate,Female,Caucasian,56,"2001-03-01 00:00:00",73778,0,"United States",Miami,NULL,NULL
+2547,"Austin Ng","Sr. Manager",Sales,"Research & Development",Male,Asian,45,"2009-03-03 00:00:00",126697,13,China,Beijing,NULL,NULL
+2548,"Madeline Cruz","System Administrator�",IT,"Specialty Products",Female,Latino,63,"2008-05-19 00:00:00",75396,0,Brazil,"Rio de Janeiro",NULL,NULL
+2549,"Layla Munoz",Director,"Human Resources",Corporate,Female,Latino,39,"2014-09-24 00:00:00",182595,29,Brazil,"Rio de Janeiro","2017-09-14 00:00:00",NULL
+2550,"Alexander Tang",Analyst,Finance,Corporate,Male,Asian,32,"2015-01-29 00:00:00",45424,0,"United States",Austin,NULL,NULL
+2551,"Carson Chen","Analyst II",Finance,Manufacturing,Male,Asian,45,"2012-12-03 00:00:00",70661,0,China,Chongqing,NULL,NULL
+2552,"Kai Duong","IT Coordinator",IT,"Research & Development",Male,Asian,41,"2018-11-16 00:00:00",57166,0,China,Shanghai,NULL,NULL
+2553,"Ayla Cooper","Operations Engineer",Engineering,Corporate,Female,Caucasian,56,"2017-02-15 00:00:00",101637,0,"United States",Chicago,"2019-12-26 00:00:00",NULL
+2554,"Eliza Espinoza",Manager,Marketing,"Specialty Products",Female,Latino,30,"2017-12-28 00:00:00",103646,7,"United States",Phoenix,NULL,NULL
+2555,"Axel King","Automation Engineer",Engineering,Manufacturing,Male,Caucasian,46,"2010-02-21 00:00:00",100757,0,"United States",Chicago,NULL,NULL
+2556,"Alexander Carter","Network Administrator",IT,"Specialty Products",Male,Caucasian,47,"2008-10-04 00:00:00",60963,0,"United States",Seattle,NULL,NULL
+2557,"Robert Rogers","Vice President",Engineering,Manufacturing,Male,Caucasian,53,"2011-08-26 00:00:00",258734,34,"United States",Seattle,NULL,NULL
+2558,"Anthony Gupta","Cloud Infrastructure Architect",IT,"Specialty Products",Male,Asian,38,"2021-09-23 00:00:00",70612,0,China,Chongqing,NULL,NULL
+2559,"Jackson Gupta","Service Desk Analyst",IT,"Research & Development",Male,Asian,65,"1993-06-27 00:00:00",77065,0,"United States",Seattle,NULL,NULL
+2560,"Sophia Rodriguez","Development Engineer",Engineering,"Specialty Products",Female,Latino,58,"2007-10-31 00:00:00",96256,0,"United States",Chicago,NULL,NULL
+2561,"Cora Patel","Analyst II",Accounting,Manufacturing,Female,Asian,36,"2011-05-13 00:00:00",65794,0,"United States",Austin,NULL,NULL
+2562,"Piper Hsu",Analyst,Accounting,"Research & Development",Female,Asian,45,"2015-08-23 00:00:00",48491,0,"United States",Austin,"2015-10-08 00:00:00",NULL
+2563,"Hunter Marquez","Operations Engineer",Engineering,"Research & Development",Male,Latino,34,"2019-08-07 00:00:00",83220,0,"United States",Chicago,NULL,NULL
+2564,"Addison Li","HRIS Analyst","Human Resources","Research & Development",Female,Asian,37,"2010-03-04 00:00:00",61680,0,China,Beijing,"2015-06-04 00:00:00",NULL
+2565,"Carson Hoang","Sr. Analyst",Sales,Manufacturing,Male,Asian,43,"2021-10-09 00:00:00",72482,0,"United States",Chicago,NULL,NULL
+2566,"Julian Fernandez","Development Engineer",Engineering,"Research & Development",Male,Latino,27,"2022-02-07 00:00:00",81713,0,Brazil,"Rio de Janeiro",NULL,NULL
+2567,"Caleb Rojas","Analyst II",Sales,Manufacturing,Male,Latino,38,"2021-12-04 00:00:00",68281,0,"United States",Miami,"2022-03-09 00:00:00",NULL
+2568,"Elizabeth Griffin","Cloud Infrastructure Architect",IT,Corporate,Female,Caucasian,60,"1993-09-10 00:00:00",63979,0,"United States",Miami,NULL,NULL
+2569,"Nolan Han","Business Partner","Human Resources",Corporate,Male,Asian,29,"2017-11-19 00:00:00",53090,0,"United States",Miami,NULL,NULL
+2570,"Cameron Romero",Manager,Sales,"Specialty Products",Male,Latino,49,"1997-09-15 00:00:00",108325,10,Brazil,Manaus,NULL,NULL
+2571,"Angel Patterson","Sr. Analyst",Marketing,Corporate,Male,Black,45,"2018-01-07 00:00:00",98289,0,"United States",Columbus,NULL,NULL
+2572,"Ryan Foster","IT Coordinator",IT,"Specialty Products",Male,Caucasian,44,"2004-02-22 00:00:00",41275,0,"United States",Austin,"2007-06-14 00:00:00",NULL
+2573,"Leonardo Patterson","Sr. Analyst",Finance,"Specialty Products",Male,Caucasian,46,"2012-02-06 00:00:00",93642,0,"United States",Columbus,NULL,NULL
+2574,"William Song",Director,"Human Resources","Research & Development",Male,Asian,36,"2010-10-25 00:00:00",162957,18,China,Chongqing,NULL,NULL
+2575,"Axel Aguilar","Sr. Analyst",Accounting,Manufacturing,Male,Latino,45,"2022-04-10 00:00:00",96029,0,Brazil,"Rio de Janeiro",NULL,NULL
+2576,"Liam Valdez","Vice President","Human Resources","Research & Development",Male,Latino,55,"1999-03-01 00:00:00",227148,33,Brazil,"Sao Paulo",NULL,NULL
+2577,"Hudson Washington","Cloud Infrastructure Architect",IT,"Specialty Products",Male,Caucasian,43,"2008-09-17 00:00:00",76819,0,"United States",Phoenix,"2022-10-20 00:00:00",NULL
+2578,"Owen Han","Analyst II",Sales,"Specialty Products",Male,Asian,30,"2022-09-01 00:00:00",66892,0,"United States",Seattle,NULL,NULL
+2579,"Harper Washington","Vice President",Marketing,Manufacturing,Female,Caucasian,48,"1999-06-24 00:00:00",256084,34,"United States",Columbus,NULL,NULL
+2580,"Brooklyn Parker","Sr. Analyst",Marketing,"Specialty Products",Female,Black,60,"2005-03-19 00:00:00",85669,0,"United States",Phoenix,NULL,NULL
+2581,"Hudson Oh","IT Coordinator",IT,"Research & Development",Male,Asian,30,"2021-09-09 00:00:00",44454,0,China,Beijing,NULL,NULL
+2582,"Maverick Howard","IT Coordinator",IT,"Specialty Products",Male,Caucasian,25,"2021-04-13 00:00:00",54353,0,"United States",Chicago,NULL,NULL
+2583,"Alexander Dominguez","Analyst II",Sales,"Specialty Products",Male,Latino,58,"2014-11-27 00:00:00",58867,0,Brazil,"Rio de Janeiro",NULL,NULL
+2584,"Jack Garcia",Manager,"Human Resources",Corporate,Male,Latino,37,"2022-03-21 00:00:00",123918,8,Brazil,"Rio de Janeiro",NULL,NULL
+2585,"Aiden Hu","IT Coordinator",IT,"Research & Development",Male,Asian,44,"2010-05-07 00:00:00",56680,0,"United States",Chicago,NULL,NULL
+2586,"Cora Espinoza","Business Partner","Human Resources","Research & Development",Female,Latino,53,"2019-10-09 00:00:00",55206,0,"United States",Miami,NULL,NULL
+2587,"Naomi Moua",Director,Sales,"Specialty Products",Female,Asian,58,"2010-01-13 00:00:00",150633,19,"United States",Phoenix,NULL,NULL
+2588,"Liam Baker","Network Administrator",IT,"Specialty Products",Male,Caucasian,65,"2020-01-26 00:00:00",97379,0,"United States",Seattle,NULL,NULL
+2589,"Christian Liu",Director,Accounting,"Research & Development",Male,Asian,57,"2000-03-29 00:00:00",178447,22,China,Chengdu,NULL,NULL
+2590,"Aaron Munoz","Network Administrator",IT,Manufacturing,Male,Latino,31,"2021-06-13 00:00:00",60827,0,"United States",Phoenix,NULL,NULL
+2591,"Levi Kang","Engineering Manager",Engineering,Manufacturing,Male,Asian,32,"2019-04-28 00:00:00",96951,13,China,Chengdu,NULL,NULL
+2592,"Isaac Foster",Manager,Accounting,"Specialty Products",Male,Caucasian,48,"2001-01-06 00:00:00",103051,9,"United States",Phoenix,NULL,NULL
+2593,"Samantha Zhu","Vice President",IT,"Specialty Products",Female,Asian,55,"2001-10-27 00:00:00",256592,30,China,Beijing,"2010-05-19 00:00:00",NULL
+2594,"Vivian Watson","Development Engineer",Engineering,"Specialty Products",Female,Caucasian,52,"2017-07-07 00:00:00",79323,0,"United States",Chicago,NULL,NULL
+2595,"Emery Hernandez","Development Engineer",Engineering,"Research & Development",Female,Latino,27,"2021-07-12 00:00:00",75583,0,Brazil,Manaus,NULL,NULL
+2596,"Camila Baker","Account Representative",Sales,"Specialty Products",Female,Caucasian,36,"2012-09-08 00:00:00",73646,0,"United States",Austin,NULL,NULL
+2597,"David Bryant","Solutions Architect",IT,"Specialty Products",Male,Caucasian,36,"2022-08-07 00:00:00",64937,0,"United States",Miami,NULL,NULL
+2598,"Miles Perez",Manager,Sales,Manufacturing,Male,Latino,42,"2019-06-11 00:00:00",112146,6,"United States",Miami,NULL,NULL
+2599,"Elijah Hill","Sr. Analyst",Marketing,"Research & Development",Male,Caucasian,48,"2018-12-16 00:00:00",83332,0,"United States",Austin,NULL,NULL
+2600,"Sofia Shin","Computer Systems Manager",IT,"Specialty Products",Female,Asian,42,"2008-04-11 00:00:00",66248,7,China,Chongqing,NULL,NULL
+2601,"Ezekiel Lee","Sr. Manager","Human Resources","Research & Development",Male,Asian,37,"2019-08-22 00:00:00",127238,15,China,Shanghai,NULL,NULL
+2602,"Nevaeh Truong","Network Architect",IT,"Specialty Products",Female,Asian,55,"2012-05-23 00:00:00",87857,0,"United States",Austin,NULL,NULL
+2603,"Leah Ali","HRIS Analyst","Human Resources","Specialty Products",Female,Asian,62,"1999-08-20 00:00:00",51454,0,"United States",Seattle,NULL,NULL
+2604,"Emma Soto","Sr. Manager",Accounting,"Specialty Products",Female,Latino,29,"2020-09-13 00:00:00",128066,11,"United States",Seattle,NULL,NULL
+2605,"Lydia Marquez","Sr. Manager","Human Resources",Corporate,Female,Latino,29,"2018-09-28 00:00:00",130790,10,Brazil,"Rio de Janeiro",NULL,NULL
+2606,"Cora Munoz","Vice President","Human Resources",Manufacturing,Female,Latino,45,"2004-05-17 00:00:00",233342,37,"United States",Austin,NULL,NULL
+2607,"Hudson Ross",Analyst,Marketing,Manufacturing,Male,Caucasian,57,"2009-10-04 00:00:00",54155,0,"United States",Austin,NULL,NULL
+2608,"Aiden Cheng","Vice President",Marketing,Manufacturing,Male,Asian,31,"2019-09-06 00:00:00",189403,36,China,Shanghai,"2021-03-31 00:00:00",NULL
+2609,"Willow Vang","Sr. Analyst",Accounting,Manufacturing,Female,Asian,31,"2018-05-18 00:00:00",78732,0,China,Shanghai,"2019-03-11 00:00:00",NULL
+2610,"Jonathan Young",Analyst,Accounting,Manufacturing,Male,Caucasian,47,"2015-04-28 00:00:00",55401,0,"United States",Columbus,NULL,NULL
+2611,"Isaac Rojas","System Administrator�",IT,Manufacturing,Male,Latino,60,"2006-07-12 00:00:00",82343,0,"United States",Austin,NULL,NULL
+2612,"Dylan Guzman","Quality Engineer",Engineering,"Research & Development",Male,Latino,42,"2017-03-16 00:00:00",66226,0,Brazil,"Sao Paulo",NULL,NULL
+2613,"Sarah Shin","Vice President",IT,Manufacturing,Female,Asian,26,"2021-12-03 00:00:00",193435,31,"United States",Chicago,NULL,NULL
+2614,"Michael Johnson",Manager,Finance,Corporate,Male,Caucasian,57,"2011-04-18 00:00:00",114241,10,"United States",Miami,NULL,NULL
+2615,"Riley Vega",Director,Engineering,"Research & Development",Female,Latino,25,"2022-11-11 00:00:00",177264,16,Brazil,Manaus,NULL,NULL
+2616,"Benjamin Ali","Business Partner","Human Resources",Corporate,Male,Asian,53,"2016-04-12 00:00:00",58010,0,"United States",Seattle,NULL,NULL
+2617,"Ezekiel Cooper",Director,IT,"Specialty Products",Male,Black,43,"2003-03-15 00:00:00",154284,25,"United States",Chicago,NULL,NULL
+2618,"Lyla Walker",Analyst,Accounting,Corporate,Female,Caucasian,49,"2002-02-18 00:00:00",54633,0,"United States",Chicago,NULL,NULL
+2619,"Aria Cheng","Business Partner","Human Resources","Research & Development",Female,Asian,61,"1996-08-26 00:00:00",42829,0,"United States",Columbus,NULL,NULL
+2620,"Christopher Ramirez","Engineering Manager",Engineering,"Research & Development",Male,Latino,41,"2010-03-15 00:00:00",118973,10,"United States",Phoenix,NULL,NULL
+2621,"Emily Roberts","Network Architect",IT,Manufacturing,Female,Caucasian,56,"2018-12-29 00:00:00",61251,0,"United States",Miami,NULL,NULL
+2622,"Nathan Parker","Engineering Manager",Engineering,"Specialty Products",Male,Caucasian,49,"2002-04-24 00:00:00",108636,10,"United States",Columbus,NULL,NULL
+2623,"Nora Her","Field Engineer",Engineering,"Specialty Products",Female,Asian,32,"2014-04-24 00:00:00",68780,0,China,Beijing,NULL,NULL
+2624,"Mia Brown","Analyst II",Accounting,Corporate,Female,Caucasian,30,"2016-08-10 00:00:00",60261,0,"United States",Seattle,NULL,NULL
+2625,"Hunter Hu",Manager,Finance,"Specialty Products",Male,Asian,64,"2003-07-13 00:00:00",100951,5,"United States",Miami,NULL,NULL
+2626,"Luke Acosta","Network Architect",IT,"Specialty Products",Male,Latino,57,"2022-07-20 00:00:00",93872,0,Brazil,"Sao Paulo","2022-12-07 00:00:00",NULL
+2627,"Sophia Griffin","Vice President",Marketing,"Specialty Products",Female,Caucasian,50,"2018-06-29 00:00:00",181570,35,"United States",Miami,"2021-10-21 00:00:00",NULL
+2628,"Anthony Chu",Manager,Sales,Manufacturing,Male,Asian,61,"2003-09-30 00:00:00",101517,9,"United States",Seattle,NULL,NULL
+2629,"Landon Ha",Manager,Finance,Manufacturing,Male,Asian,43,"2006-01-30 00:00:00",100822,10,China,Chongqing,NULL,NULL
+2630,"Layla Kang",Manager,Marketing,"Research & Development",Female,Asian,26,"2022-03-02 00:00:00",128965,9,"United States",Columbus,NULL,NULL
+2631,"Cora Xu","Network Administrator",IT,Manufacturing,Female,Asian,54,"2011-11-17 00:00:00",60513,0,"United States",Austin,NULL,NULL
+2632,"Rylee Campos",Manager,Finance,"Research & Development",Female,Latino,49,"2005-02-09 00:00:00",107461,8,"United States",Seattle,NULL,NULL
+2633,"Amelia Foster","Analyst II",Sales,"Research & Development",Female,Caucasian,32,"2018-02-24 00:00:00",66294,0,"United States",Columbus,NULL,NULL
+2634,"Hadley Rios","Sr. Manager",Sales,"Research & Development",Female,Latino,62,"2009-01-11 00:00:00",157500,15,"United States",Columbus,NULL,NULL
+2635,"Luna Chang","IT Coordinator",IT,"Specialty Products",Female,Asian,64,"2022-10-20 00:00:00",43271,0,China,Chengdu,NULL,NULL
+2636,"Mia Navarro","Technical Architect",IT,"Research & Development",Female,Latino,52,"2011-06-19 00:00:00",91518,0,Brazil,"Sao Paulo",NULL,NULL
+2637,"Nova Rios","Sr. Manager","Human Resources","Specialty Products",Female,Latino,42,"2019-04-15 00:00:00",130874,12,"United States",Austin,NULL,NULL
+2638,"Theodore Truong","HRIS Analyst","Human Resources",Corporate,Male,Asian,45,"2017-05-23 00:00:00",66324,0,China,Beijing,"2021-09-10 00:00:00",NULL
+2639,"Asher Ly","Analyst II",Sales,Corporate,Male,Asian,65,"1998-01-29 00:00:00",63853,0,"United States",Austin,NULL,NULL
+2640,"Madeline Doan",Manager,"Human Resources",Corporate,Female,Asian,46,"2021-01-10 00:00:00",104692,8,China,Chengdu,NULL,NULL
+2641,"Scarlett Rodriguez","Solutions Architect",IT,Corporate,Female,Latino,64,"2022-11-03 00:00:00",71864,0,Brazil,Manaus,NULL,NULL
+2642,"Zoey Lu","Vice President",Marketing,Manufacturing,Female,Asian,45,"2007-10-31 00:00:00",216269,37,"United States",Chicago,"2010-12-31 00:00:00",NULL
+2643,"Mila Cheung","Enterprise Architect",IT,"Specialty Products",Female,Asian,32,"2021-12-17 00:00:00",73135,0,"United States",Phoenix,NULL,NULL
+2644,"Lucy Mai",Director,Engineering,Corporate,Female,Asian,56,"2022-06-27 00:00:00",197579,18,"United States",Chicago,NULL,NULL
+2645,"Benjamin Luu","Systems Analyst",IT,Corporate,Male,Asian,46,"2011-12-15 00:00:00",59733,0,"United States",Austin,NULL,NULL
+2646,"Mia Navarro","Vice President","Human Resources",Corporate,Female,Latino,26,"2020-05-22 00:00:00",187792,40,"United States",Chicago,NULL,NULL
+2647,"Maya Watson",Manager,"Human Resources","Specialty Products",Female,Caucasian,59,"2017-01-07 00:00:00",108612,6,"United States",Phoenix,NULL,NULL
+2648,"Jack Adams","System Administrator�",IT,Corporate,Male,Black,50,"2018-07-18 00:00:00",80350,0,"United States",Miami,NULL,NULL
+2649,"Gabriella Jordan","Test Engineer",Engineering,"Research & Development",Female,Caucasian,32,"2019-09-21 00:00:00",61243,0,"United States",Miami,NULL,NULL
+2650,"Jonathan Torres",Analyst,Finance,Manufacturing,Male,Latino,56,"2002-04-12 00:00:00",48896,0,Brazil,Manaus,"2017-03-14 00:00:00",NULL
+2651,"Samuel Xu","Quality Engineer",Engineering,"Research & Development",Male,Asian,32,"2019-09-20 00:00:00",82887,0,China,Chengdu,"2020-01-17 00:00:00",NULL
+2652,"Ezekiel Lai",Analyst,Marketing,Manufacturing,Male,Asian,45,"2005-11-26 00:00:00",54742,0,China,Chengdu,NULL,NULL
+2653,"Levi Rahman","Sr. Manager",Marketing,Corporate,Male,Asian,43,"2007-07-19 00:00:00",134544,13,"United States",Austin,NULL,NULL
+2654,"Madison Phan",Manager,IT,"Specialty Products",Female,Asian,45,"2003-05-10 00:00:00",128115,6,"United States",Austin,NULL,NULL
+2655,"Andrew Pham",Analyst,Accounting,"Specialty Products",Male,Asian,38,"2013-06-29 00:00:00",54713,0,"United States",Columbus,NULL,NULL
+2656,"Clara Ford","Analyst II",Sales,"Research & Development",Female,Caucasian,46,"2014-08-09 00:00:00",63987,0,"United States",Seattle,NULL,NULL
+2657,"Christopher Chau","IT Systems Architect",IT,"Research & Development",Male,Asian,26,"2021-12-28 00:00:00",86288,0,"United States",Columbus,NULL,NULL
+2658,"Madeline Guerrero","Quality Engineer",Engineering,Corporate,Female,Latino,27,"2020-08-16 00:00:00",61693,0,Brazil,"Sao Paulo","2020-11-23 00:00:00",NULL
+2659,"Harper Yee","System Administrator�",IT,Manufacturing,Female,Asian,48,"2021-11-01 00:00:00",75624,0,China,Chengdu,NULL,NULL
+2660,"Mia Thomas",Manager,"Human Resources",Corporate,Female,Caucasian,57,"2013-05-17 00:00:00",122979,6,"United States",Phoenix,NULL,NULL
+2661,"Owen Nelson","Engineering Manager",Engineering,"Specialty Products",Male,Caucasian,58,"2003-01-06 00:00:00",91729,13,"United States",Chicago,NULL,NULL
+2662,"Aiden Evans",Manager,Finance,Corporate,Male,Caucasian,48,"2010-05-16 00:00:00",117736,5,"United States",Columbus,NULL,NULL
+2663,"Josiah Lai","Sr. Manager","Human Resources","Research & Development",Male,Asian,54,"1995-03-21 00:00:00",154658,12,China,Chongqing,NULL,NULL
+2664,"Jameson Yee","Enterprise Architect",IT,"Research & Development",Male,Asian,29,"2020-08-03 00:00:00",84397,0,"United States",Seattle,NULL,NULL
+2665,"Serenity Her",Director,Accounting,"Specialty Products",Female,Asian,50,"1997-08-22 00:00:00",159285,15,"United States",Austin,NULL,NULL
+2666,"Ariana Turner","Analyst II",Accounting,"Research & Development",Female,Caucasian,49,"2004-06-06 00:00:00",59854,0,"United States",Miami,NULL,NULL
+2667,"Jacob Cooper","Solutions Architect",IT,"Research & Development",Male,Caucasian,64,"2018-05-18 00:00:00",87521,0,"United States",Seattle,"2021-06-10 00:00:00",NULL
+2668,"Christopher Dominguez",Director,Marketing,"Research & Development",Male,Latino,36,"2015-09-17 00:00:00",179166,17,Brazil,Manaus,NULL,NULL
+2669,"Nevaeh Lim","Controls Engineer",Engineering,Corporate,Female,Asian,55,"1999-03-29 00:00:00",120092,0,China,Chongqing,NULL,NULL
+2670,"Dominic Cheng",Director,Engineering,Corporate,Male,Asian,53,"2015-06-19 00:00:00",168142,27,China,Beijing,NULL,NULL
+2671,"Serenity Rodriguez",Director,Finance,Corporate,Female,Latino,54,"1995-04-10 00:00:00",195662,15,"United States",Columbus,NULL,NULL
+2672,"Caleb Thompson","Systems Analyst",IT,Manufacturing,Male,Caucasian,41,"2012-12-17 00:00:00",49986,0,"United States",Miami,NULL,NULL
+2673,"Luke Avila","Vice President",Accounting,Corporate,Male,Latino,27,"2020-08-21 00:00:00",181587,38,Brazil,Manaus,NULL,NULL
+2674,"Sadie Chin","Vice President","Human Resources","Specialty Products",Female,Asian,51,"2000-07-26 00:00:00",199736,35,"United States",Austin,NULL,NULL
+2675,"Everett Le","Vice President",Accounting,Corporate,Male,Asian,45,"2014-01-07 00:00:00",250639,34,China,Shanghai,NULL,NULL
+2676,"Carson Santos","Sr. Account Representative",Sales,Corporate,Male,Latino,34,"2022-02-15 00:00:00",80655,0,Brazil,"Sao Paulo",NULL,NULL
+2677,"Natalie Ho","Analyst II",Finance,"Research & Development",Female,Asian,33,"2020-11-22 00:00:00",64327,0,China,Chongqing,NULL,NULL
+2678,"Natalia Hall","Analyst II",Accounting,"Research & Development",Female,Caucasian,37,"2018-11-08 00:00:00",72005,0,"United States",Austin,"2021-07-27 00:00:00",NULL
+2679,"Zoey Ahmed","Quality Engineer",Engineering,"Specialty Products",Female,Asian,56,"2012-04-25 00:00:00",62497,0,"United States",Seattle,NULL,NULL
+2680,"Santiago f Turner","Sr. Account Representative",Sales,"Research & Development",Male,Caucasian,46,"2003-02-24 00:00:00",74912,0,"United States",Phoenix,NULL,NULL
+2681,"Jacob Alexander","Business Partner","Human Resources","Specialty Products",Male,Caucasian,45,"2001-03-19 00:00:00",50393,0,"United States",Miami,"2011-06-17 00:00:00",NULL
+2682,"Christopher Aguilar","Enterprise Architect",IT,Manufacturing,Male,Latino,32,"2021-05-14 00:00:00",79670,0,"United States",Columbus,NULL,NULL
+2683,"Vivian Jackson","Sr. Manager",Accounting,Corporate,Female,Black,51,"1999-02-23 00:00:00",148942,13,"United States",Columbus,"2007-07-16 00:00:00",NULL
+2684,"Leonardo Jenkins","Service Desk Analyst",IT,"Research & Development",Male,Caucasian,29,"2018-04-09 00:00:00",98504,0,"United States",Miami,"2022-07-12 00:00:00",NULL
+2685,"Oliver Hunter","Service Desk Analyst",IT,Manufacturing,Male,Caucasian,38,"2015-12-20 00:00:00",70588,0,"United States",Miami,NULL,NULL
+2686,"Ayla Brooks",Analyst,Accounting,Corporate,Female,Caucasian,58,"2001-11-21 00:00:00",58336,0,"United States",Miami,NULL,NULL
+2687,"Willow Chau","Development Engineer",Engineering,Corporate,Female,Asian,45,"2011-09-09 00:00:00",86001,0,"United States",Austin,NULL,NULL
+2688,"Kai Shin","Sr. Analyst",Sales,"Specialty Products",Male,Asian,49,"2015-09-13 00:00:00",91121,0,"United States",Seattle,"2019-12-23 00:00:00",NULL
+2689,"Liliana Zhao",Director,"Human Resources",Corporate,Female,Asian,50,"2011-08-30 00:00:00",183308,24,"United States",Miami,NULL,NULL
+2690,"Aiden Carter","Network Architect",IT,Manufacturing,Male,Caucasian,32,"2021-03-05 00:00:00",71674,0,"United States",Chicago,"2021-06-17 00:00:00",NULL
+2691,"Christopher Song","Automation Engineer",Engineering,Manufacturing,Male,Asian,29,"2017-01-03 00:00:00",118639,0,"United States",Phoenix,NULL,NULL
+2692,"Charles Luu","Enterprise Architect",IT,Corporate,Male,Asian,34,"2018-11-10 00:00:00",71808,0,China,Chengdu,NULL,NULL
+2693,"Kayden Dinh","Sr. Manager","Human Resources",Manufacturing,Male,Asian,50,"2019-05-26 00:00:00",156374,15,China,Beijing,NULL,NULL
+2694,"Valentina Zhang","Systems Analyst",IT,Manufacturing,Female,Asian,27,"2021-03-10 00:00:00",51133,0,"United States",Chicago,NULL,NULL
+2695,"Alexander Perez","Quality Engineer",Engineering,"Specialty Products",Male,Latino,60,"2008-06-25 00:00:00",86761,0,Brazil,"Rio de Janeiro",NULL,NULL
+2696,"Everleigh Kumar",Manager,IT,Manufacturing,Female,Asian,65,"1994-07-05 00:00:00",125213,7,"United States",Seattle,NULL,NULL
+2697,"Santiago f Xiong",Manager,Sales,Manufacturing,Male,Asian,43,"2008-09-26 00:00:00",120305,7,China,Shanghai,NULL,NULL
+2698,"Elizabeth Powell","Sr. Manager",Marketing,"Research & Development",Female,Caucasian,45,"2013-09-17 00:00:00",138355,14,"United States",Columbus,NULL,NULL
+2699,"Lucas Yang","Network Engineer",IT,Corporate,Male,Asian,28,"2021-07-04 00:00:00",70996,0,"United States",Austin,NULL,NULL
+2700,"John Richardson","Computer Systems Manager",IT,Manufacturing,Male,Caucasian,34,"2014-12-29 00:00:00",77024,9,"United States",Phoenix,"2021-10-23 00:00:00",NULL
+2701,"Miles Ross","IT Coordinator",IT,"Specialty Products",Male,Black,31,"2017-04-18 00:00:00",50022,0,"United States",Miami,NULL,NULL
+2702,"Jonathan Santos","Vice President",Sales,"Specialty Products",Male,Latino,29,"2017-01-06 00:00:00",204534,38,"United States",Chicago,NULL,NULL
+2703,"Joshua Maldonado","Sr. Account Representative",Sales,"Research & Development",Male,Latino,49,"2005-12-22 00:00:00",75814,0,"United States",Chicago,NULL,NULL
+2704,"Santiago f Vo",Director,Sales,Manufacturing,Male,Asian,47,"2019-07-15 00:00:00",169487,23,"United States",Columbus,NULL,NULL
+2705,"Leilani Martin","Sr. Manager",IT,Corporate,Female,Caucasian,56,"2002-05-06 00:00:00",156435,10,"United States",Chicago,NULL,NULL
+2706,"Luca Xiong","Account Representative",Sales,"Specialty Products",Male,Asian,52,"2006-12-20 00:00:00",59845,0,China,Beijing,NULL,NULL
+2707,"Valentina Campos","System Administrator�",IT,Manufacturing,Female,Latino,37,"2020-03-06 00:00:00",93656,0,"United States",Columbus,NULL,NULL
+2708,"Grayson Jenkins","Test Engineer",Engineering,Manufacturing,Male,Caucasian,55,"1998-03-06 00:00:00",99035,0,"United States",Miami,NULL,NULL
+2709,"Jeremiah Ross","Sr. Manager",Marketing,Corporate,Male,Caucasian,27,"2021-06-17 00:00:00",137997,12,"United States",Phoenix,NULL,NULL
+2710,"Natalie Zheng","Network Engineer",IT,Manufacturing,Female,Asian,28,"2019-06-21 00:00:00",61573,0,"United States",Chicago,NULL,NULL
+2711,"Jace Mehta",Analyst,Sales,Manufacturing,Male,Asian,55,"2015-05-06 00:00:00",41102,0,"United States",Seattle,NULL,NULL
+2712,"Hannah Doan",Manager,"Human Resources","Research & Development",Female,Asian,44,"2011-09-16 00:00:00",129866,6,China,Beijing,NULL,NULL
+2713,"Caroline Robinson",Director,"Human Resources","Specialty Products",Female,Caucasian,28,"2020-01-22 00:00:00",161868,21,"United States",Austin,NULL,NULL
+2714,"Naomi Ma","Field Engineer",Engineering,Corporate,Female,Asian,55,"1995-05-16 00:00:00",67131,0,"United States",Austin,NULL,NULL
+2715,"Adam Davis","Quality Engineer",Engineering,"Research & Development",Male,Black,44,"2019-10-15 00:00:00",71345,0,"United States",Miami,NULL,NULL
+2716,"Ellie Ho","Vice President",Sales,Corporate,Female,Asian,30,"2019-10-09 00:00:00",246757,40,"United States",Miami,NULL,NULL
+2717,"Mila Liang",Manager,Marketing,"Research & Development",Female,Asian,63,"2005-03-28 00:00:00",106880,8,"United States",Austin,NULL,NULL
+2718,"Nova Doan","IT Systems Architect",IT,Manufacturing,Female,Asian,36,"2018-08-28 00:00:00",98733,0,China,Beijing,NULL,NULL
+2719,"Colton Mejia","Sr. Manager",Accounting,"Research & Development",Male,Latino,28,"2019-04-26 00:00:00",141675,12,Brazil,"Rio de Janeiro","2020-09-24 00:00:00",NULL
+2720,"Joseph Kim","Analyst II",Accounting,"Research & Development",Male,Asian,28,"2018-06-23 00:00:00",53210,0,"United States",Seattle,NULL,NULL
+2721,"Audrey Campos",Manager,Finance,"Specialty Products",Female,Latino,27,"2021-09-02 00:00:00",107114,10,Brazil,"Rio de Janeiro",NULL,NULL
+2722,"Vivian Brooks","Business Partner","Human Resources","Specialty Products",Female,Black,34,"2022-09-12 00:00:00",57483,0,"United States",Seattle,"2022-11-18 00:00:00",NULL
+2723,"Mateo Vargas","Network Architect",IT,"Specialty Products",Male,Latino,53,"1994-04-20 00:00:00",75226,0,Brazil,"Rio de Janeiro",NULL,NULL
+2724,"David Foster","Controls Engineer",Engineering,Corporate,Male,Caucasian,50,"2012-01-15 00:00:00",87727,0,"United States",Miami,NULL,NULL
+2725,"Isaiah Ramos","Solutions Architect",IT,Manufacturing,Male,Latino,51,"2018-06-21 00:00:00",87897,0,"United States",Phoenix,NULL,NULL
+2726,"Samantha Do","IT Systems Architect",IT,"Research & Development",Female,Asian,27,"2021-11-19 00:00:00",99612,0,China,Shanghai,NULL,NULL
+2727,"Emery Fernandez",Analyst,Accounting,"Research & Development",Female,Latino,33,"2019-03-27 00:00:00",56938,0,Brazil,"Sao Paulo",NULL,NULL
+2728,"Santiago f Brooks","Sr. Business Partner","Human Resources",Corporate,Male,Caucasian,46,"2012-01-20 00:00:00",92247,0,"United States",Miami,NULL,NULL
+2729,"Aubrey Lin","Vice President","Human Resources",Corporate,Female,Asian,51,"2005-10-17 00:00:00",193672,36,"United States",Columbus,NULL,NULL
+2730,"Jace Hsu","Systems Analyst",IT,Manufacturing,Male,Asian,31,"2018-10-06 00:00:00",46098,0,China,Shanghai,NULL,NULL
+2731,"Nicholas Sanders","Vice President",Sales,Manufacturing,Male,Caucasian,45,"2014-11-23 00:00:00",239980,31,"United States",Austin,NULL,NULL
+2732,"Joshua Sun",Manager,Finance,Corporate,Male,Asian,38,"2011-07-13 00:00:00",121546,10,China,Shanghai,NULL,NULL
+2733,"Riley Ayala",Manager,Accounting,"Specialty Products",Female,Latino,42,"2010-02-20 00:00:00",128714,7,Brazil,"Sao Paulo",NULL,NULL
+2734,"Isaac Santos","Development Engineer",Engineering,Manufacturing,Male,Latino,43,"2018-09-13 00:00:00",91537,0,"United States",Chicago,NULL,NULL
+2735,"Logan Brooks",Director,IT,Corporate,Male,Caucasian,28,"2020-05-07 00:00:00",178300,24,"United States",Austin,"2023-01-25 00:00:00",NULL
+2736,"Leilani Hu","Analyst II",Finance,"Research & Development",Female,Asian,57,"2018-05-21 00:00:00",50260,0,China,Chengdu,NULL,NULL
+2737,"Jace Cho",Director,Engineering,"Research & Development",Male,Asian,33,"2016-08-06 00:00:00",161800,19,China,Chongqing,NULL,NULL
+2738,"Jaxson Fong","Sr. Manager",Finance,Corporate,Male,Asian,32,"2020-10-09 00:00:00",157616,10,China,Shanghai,NULL,NULL
+2739,"Wyatt Ly","Quality Engineer",Engineering,Corporate,Male,Asian,45,"2008-12-19 00:00:00",82697,0,China,Beijing,NULL,NULL
+2740,"Mia Huang","Sr. Manager",IT,Corporate,Female,Asian,33,"2018-09-21 00:00:00",124404,12,China,Chongqing,NULL,NULL
+2741,"Levi Her","Sr. Manager",IT,"Specialty Products",Male,Asian,43,"2012-03-30 00:00:00",158750,12,China,Chongqing,NULL,NULL
+2742,"Everleigh Phillips","Analyst II",Sales,Manufacturing,Female,Caucasian,62,"2015-11-08 00:00:00",69057,0,"United States",Chicago,NULL,NULL
+2743,"Natalie Acosta","Sr. Manager",Marketing,"Specialty Products",Female,Latino,36,"2019-01-08 00:00:00",157976,10,Brazil,"Rio de Janeiro",NULL,NULL
+2744,"Hadley Chavez",Analyst,Sales,Corporate,Female,Latino,36,"2020-06-28 00:00:00",54355,0,"United States",Phoenix,NULL,NULL
+2745,"Hailey Liu","Field Engineer",Engineering,Manufacturing,Female,Asian,31,"2022-07-09 00:00:00",72475,0,"United States",Phoenix,NULL,NULL
+2746,"Nicholas Jiang","Engineering Manager",Engineering,Manufacturing,Male,Asian,62,"2003-12-13 00:00:00",80132,14,China,Chongqing,NULL,NULL
+2747,"Gabriel Xu",Analyst,Accounting,"Research & Development",Male,Asian,30,"2018-10-13 00:00:00",52292,0,China,Chengdu,NULL,NULL
+2748,"Sophia Collins","Cloud Infrastructure Architect",IT,"Specialty Products",Female,Caucasian,46,"2022-01-08 00:00:00",69110,0,"United States",Seattle,NULL,NULL
+2749,"Evelyn Vasquez","Technical Architect",IT,Manufacturing,Female,Latino,38,"2013-02-24 00:00:00",68676,0,Brazil,"Sao Paulo",NULL,NULL
+2750,"Paisley Baker","Test Engineer",Engineering,Manufacturing,Female,Caucasian,58,"2002-12-23 00:00:00",86094,0,"United States",Columbus,NULL,NULL
+2751,"Eloise Griffin","Enterprise Architect",IT,"Specialty Products",Female,Caucasian,27,"2022-05-06 00:00:00",77607,0,"United States",Miami,NULL,NULL
+2752,"Samuel Cruz","Sr. Manager","Human Resources","Specialty Products",Male,Latino,61,"1993-04-30 00:00:00",157672,11,"United States",Miami,NULL,NULL
+2753,"Gabriel Cheung",Analyst,Finance,"Specialty Products",Male,Asian,64,"2016-11-29 00:00:00",43785,0,China,Chongqing,"2018-06-26 00:00:00",NULL
+2754,"Kai Green","System Administrator�",IT,Corporate,Male,Caucasian,65,"2015-06-15 00:00:00",75439,0,"United States",Seattle,NULL,NULL
+2755,"Julia Moore","Sr. Manager",IT,Manufacturing,Female,Caucasian,37,"2021-11-18 00:00:00",139987,13,"United States",Seattle,NULL,NULL
+2756,"Roman Mendoza","Vice President",Accounting,"Specialty Products",Male,Latino,54,"1994-09-04 00:00:00",257489,34,Brazil,"Rio de Janeiro",NULL,NULL
+2757,"Levi Rahman","System Administrator�",IT,"Specialty Products",Male,Asian,54,"2009-01-30 00:00:00",91639,0,"United States",Seattle,NULL,NULL
+2758,"Sadie Pham","Analyst II",Finance,"Specialty Products",Female,Asian,26,"2022-12-25 00:00:00",66563,0,China,Chengdu,"2023-01-25 00:00:00",NULL
+2759,"Chloe Contreras","Vice President",Marketing,Corporate,Female,Latino,29,"2021-02-10 00:00:00",235047,36,"United States",Phoenix,NULL,NULL
+2760,"Owen Ford","Vice President","Human Resources",Corporate,Male,Caucasian,37,"2015-02-10 00:00:00",214782,32,"United States",Chicago,NULL,NULL
+2761,"Audrey Powell",Director,Accounting,"Research & Development",Female,Black,37,"2011-05-01 00:00:00",180544,27,"United States",Chicago,NULL,NULL
+2762,"Greyson Munoz","Sr. Manager",Marketing,"Research & Development",Male,Latino,62,"2000-06-23 00:00:00",158614,14,Brazil,"Rio de Janeiro",NULL,NULL
+2763,"Isaiah Vang","Quality Engineer",Engineering,Corporate,Male,Asian,53,"1998-11-30 00:00:00",63187,0,"United States",Chicago,NULL,NULL
+2764,"Lincoln Alvarado","Sr. Analyst",Marketing,Manufacturing,Male,Latino,65,"2004-12-08 00:00:00",93857,0,"United States",Phoenix,NULL,NULL
+2765,"Carter Sandoval","Vice President",IT,Manufacturing,Male,Latino,36,"2021-03-11 00:00:00",253741,34,Brazil,"Rio de Janeiro",NULL,NULL
+2766,"Julia Jimenez","Sr. Analyst",Marketing,"Specialty Products",Female,Latino,46,"2010-11-17 00:00:00",92833,0,Brazil,"Rio de Janeiro",NULL,NULL
+2767,"Savannah Cortez","Service Desk Analyst",IT,"Specialty Products",Female,Latino,55,"2018-12-15 00:00:00",95400,0,Brazil,Manaus,NULL,NULL
+2768,"Everly Brown","Quality Engineer",Engineering,"Specialty Products",Female,Black,63,"2013-10-04 00:00:00",88230,0,"United States",Miami,NULL,NULL
+2769,"Charlotte Pham","Field Engineer",Engineering,"Research & Development",Female,Asian,54,"2003-02-25 00:00:00",62179,0,China,Shanghai,NULL,NULL
+2770,"Iris Bailey","IT Coordinator",IT,"Research & Development",Female,Caucasian,26,"2020-02-18 00:00:00",42343,0,"United States",Miami,"2020-06-02 00:00:00",NULL
+2771,"Logan Daniels","Sr. Analyst",Accounting,Corporate,Male,Caucasian,26,"2022-05-07 00:00:00",70275,0,"United States",Columbus,NULL,NULL
+2772,"Autumn Molina","Analyst II",Sales,Corporate,Female,Latino,34,"2012-04-08 00:00:00",51448,0,Brazil,Manaus,NULL,NULL
+2773,"Emma Mehta","Vice President",Engineering,Manufacturing,Female,Asian,48,"2009-04-09 00:00:00",185363,33,China,Shanghai,NULL,NULL
+2774,"Julian Joseph","Enterprise Architect",IT,Manufacturing,Male,Caucasian,52,"2018-09-20 00:00:00",60784,0,"United States",Austin,NULL,NULL
+2775,"Eleanor Munoz",Analyst,Accounting,"Specialty Products",Female,Latino,45,"2004-04-07 00:00:00",45323,0,Brazil,"Rio de Janeiro",NULL,NULL
+2776,"Caroline Sandoval",Manager,Finance,"Specialty Products",Female,Latino,51,"2012-09-10 00:00:00",129727,8,"United States",Phoenix,"2021-10-07 00:00:00",NULL
+2777,"Eliza Zhu","Account Representative",Sales,"Specialty Products",Female,Asian,43,"2006-09-30 00:00:00",63229,0,"United States",Miami,NULL,NULL
+2778,"Greyson Moore",Director,Accounting,Corporate,Male,Caucasian,54,"2004-02-12 00:00:00",194221,16,"United States",Austin,NULL,NULL
+2779,"Lyla Clark","Sr. Analyst",Sales,"Research & Development",Female,Caucasian,54,"2018-12-12 00:00:00",78020,0,"United States",Columbus,NULL,NULL
+2780,"Samuel Patterson","Vice President",Accounting,"Specialty Products",Male,Caucasian,25,"2022-10-07 00:00:00",197331,33,"United States",Seattle,NULL,NULL
+2781,"Robert Padilla","Analyst II",Accounting,Manufacturing,Male,Latino,65,"1998-02-16 00:00:00",63346,0,Brazil,"Rio de Janeiro",NULL,NULL
+2782,"Landon Munoz","Controls Engineer",Engineering,Manufacturing,Male,Latino,40,"2014-07-11 00:00:00",105574,0,"United States",Miami,NULL,NULL
+2783,"Josiah Yi","Operations Engineer",Engineering,Corporate,Male,Asian,31,"2015-04-12 00:00:00",101941,0,China,Beijing,NULL,NULL
+2784,"Owen Scott","Solutions Architect",IT,"Research & Development",Male,Black,45,"2005-07-17 00:00:00",74777,0,"United States",Austin,NULL,NULL
+2785,"Matthew Parker",Analyst,Sales,"Research & Development",Male,Caucasian,40,"2021-09-15 00:00:00",59447,0,"United States",Austin,NULL,NULL
+2786,"Daniel Huynh",Manager,Marketing,Manufacturing,Male,Asian,25,"2021-12-08 00:00:00",105072,6,China,Chengdu,NULL,NULL
+2787,"Matthew Vargas","Sr. Manager",IT,,,Latino,53,"1999-05-24 00:00:00",150893,13,"United States",Chicago,NULL,NULL
+2788,"Ella Herrera",Director,,Corporate,,Latino,49,"2013-02-08 00:00:00",156276,22,"United States",Austin,NULL,NULL
+2789,"Everly Hwang",,Accounting,,Female,Asian,31,"2022-10-27 00:00:00",191755,40,"United States",Miami,NULL,NULL
+2790,,"Network Engineer",IT,,Female,Caucasian,33,"2020-11-04 00:00:00",81070,0,"United States",Miami,NULL,NULL
+2791,"Ian Hernandez",,Accounting,,Male,Latino,40,"2021-12-01 00:00:00",176533,25,"United States",Austin,NULL,NULL
+2792,"Charlotte Lam","Service Desk Analyst",,,Female,Asian,29,"2020-08-26 00:00:00",60919,0,"United States",Columbus,NULL,NULL
+2802,"Hunter Moua","Sr. Analyst",Accounting,,Male,Asian,29,"2019-11-29 00:00:00",72620,0,,Chongqing,NULL,NULL
+2803,"Athena Aguilar","Analyst II",Marketing,,Female,Latino,25,"2021-08-24 00:00:00",71222,0,,,NULL,NULL
+2804,"Ariana Sanders",Director,Engineering,,Female,Caucasian,62,"1994-12-26 00:00:00",155332,20,,Austin,NULL,NULL
+2805,"Easton Cruz",Manager,Finance,Manufacturing,,Latino,33,"2016-11-21 00:00:00",107202,6,,Columbus,NULL,NULL
+2806,"Josiah Vega",Manager,Accounting,,Male,Latino,56,"2015-12-26 00:00:00",121751,8,,Columbus,NULL,NULL
+2807,"Isla Chavez",Manager,Finance,,Female,Latino,45,"2010-09-29 00:00:00",115591,5,,Chicago,NULL,NULL
+2808,"Willow Estrada",Manager,"Human Resources",,Female,Latino,28,"2021-03-11 00:00:00",108601,5,,"Rio de Janeiro",NULL,NULL
+2809,"Nevaeh Ng","Sr. Manager",,Manufacturing,,Asian,30,"2019-03-18 00:00:00",159823,11,"United States",,"2022-08-29 00:00:00",NULL
+2810,"Jade Hu",Analyst,Marketing,,Female,Asian,45,"2001-12-15 00:00:00",53526,0,,Seattle,NULL,NULL
+2811,"Henry Vazquez","IT Systems Architect",IT,,Male,Latino,33,"2016-12-03 00:00:00",90084,0,,Columbus,NULL,NULL
+2812,"Nathan Jackson","Vice President",Accounting,,Male,Caucasian,41,"2011-03-25 00:00:00",210085,39,,Chicago,NULL,NULL
+2813,"Anthony Lam","Sr. Manager",,"Specialty Products",Male,Asian,33,"2015-02-07 00:00:00",133908,15,,Chicago,NULL,NULL
+2814,"Nevaeh Ali",Manager,,Manufacturing,Female,Asian,48,"2013-03-22 00:00:00",100652,7,,Miami,NULL,NULL
+2815,"Mila Vasquez","Vice President","Human Resources",Corporate,Female,Latino,48,"2013-07-26 00:00:00",225725,37,,Phoenix,NULL,NULL
+2816,"Madelyn Henry","Vice President","Human Resources","Specialty Products",Female,Caucasian,41,"2007-05-10 00:00:00",224989,33,,Seattle,NULL,NULL
+2817,"Emilia Alexander","Operations Engineer",Engineering,"Specialty Products",Female,Caucasian,37,"2022-09-11 00:00:00",109680,0,"United States",,NULL,NULL
+2818,"Christian Ayala","Sr. Account Representative",Sales,"Research & Development",Male,Latino,55,"2003-09-28 00:00:00",74216,0,Brazil,Manaus,NULL,NULL
+2819,"Willow Xiong","Sr. Manager",Marketing,Corporate,Female,Asian,37,"2021-05-04 00:00:00",151363,12,"United States",Miami,NULL,NULL
+2820,"Avery Valdez","HRIS Analyst","Human Resources","Research & Development",Female,Latino,58,"2000-01-29 00:00:00",62686,0,"United States",Phoenix,NULL,NULL
+2821,"Abigail Carter",Director,"Human Resources","Research & Development",Female,Black,51,"2015-01-12 00:00:00",178218,27,"United States",Miami,NULL,NULL
+2823,,,Finance,"Specialty Products",Female,Asian,43,"2006-01-07 00:00:00",161376,24,China,Beijing,NULL,NULL
+2824,"Kinsley Hill","Account Representative",,"Research & Development",Female,Caucasian,26,"2022-06-16 00:00:00",59436,0,"United States",Columbus,NULL,NULL
+2825,"Kai Barnes","Account Representative",Sales,,Male,Caucasian,35,"2016-08-24 00:00:00",58733,0,"United States",Miami,NULL,NULL
+2826,"Lincoln Cheng","Sr. Analyst",,Corporate,Male,Asian,61,"1997-10-14 00:00:00",88681,0,China,Shanghai,NULL,NULL
+2827,"Noah Sharma",,Finance,"Specialty Products",Male,Asian,59,"2008-02-09 00:00:00",186854,30,"United States",Phoenix,NULL,NULL
+2828,,"Sr. Analyst",Finance,Manufacturing,Female,Asian,65,"1997-07-10 00:00:00",96897,0,China,Chengdu,NULL,NULL
+2829,"Ariana Hall",Manager,"Human Resources",Corporate,Female,Caucasian,55,"2005-01-17 00:00:00",128954,5,"United States",Phoenix,NULL,NULL
+2830,,"Account Representative",Sales,"Specialty Products",Male,Asian,51,"1999-05-22 00:00:00",67418,0,China,Shanghai,NULL,NULL
+2832,"Kinsley Gonzalez",,IT,"Research & Development",Female,Latino,47,"2000-01-27 00:00:00",125641,5,"United States",Seattle,NULL,NULL
+2833,"Dominic Tang",Manager,,Corporate,Male,Asian,53,"1993-12-08 00:00:00",100666,10,China,Beijing,NULL,NULL
+2834,"Colton Le","HRIS Analyst","Human Resources",,Male,Asian,38,"2010-01-12 00:00:00",71235,0,China,Chongqing,NULL,NULL
+2835,"Kai Huang","Sr. Business Partner",,Corporate,,Asian,28,"2021-01-15 00:00:00",83235,0,"United States",Austin,NULL,NULL
+2836,"Addison Cruz",,Sales,Corporate,Female,,32,"2014-09-08 00:00:00",42075,0,Brazil,"Rio de Janeiro",NULL,NULL
+2837,,"Systems Analyst",IT,"Specialty Products",,Asian,52,"2022-10-23 00:00:00",55020,0,China,Chongqing,NULL,NULL
+2838,"Maria Barnes",,Marketing,,Female,Caucasian,64,"2003-05-13 00:00:00",76506,0,"United States",Austin,NULL,NULL
+2839,"Everett Le",,,Manufacturing,Male,Asian,55,"2007-03-03 00:00:00",100051,7,China,Chengdu,NULL,NULL
+2840,"Mia Vang",,Finance,Corporate,Female,Asian,38,"2014-04-19 00:00:00",256509,39,China,Shanghai,"2019-08-28 00:00:00",NULL
+2841,,,Engineering,"Specialty Products",Female,Latino,30,"2020-02-16 00:00:00",76904,0,Brazil,"Rio de Janeiro",NULL,NULL
+2843,,"Vice President",Finance,Manufacturing,Male,Asian,40,"2010-03-05 00:00:00",235994,33,China,Beijing,NULL,NULL
+2844,"Adam Jordan",,,Corporate,Male,Caucasian,55,"2015-03-12 00:00:00",79620,0,"United States",Chicago,NULL,NULL
+2845,"Leah Stewart","Cloud Infrastructure Architect",IT,,Female,Caucasian,36,"2010-06-04 00:00:00",62450,0,"United States",Austin,NULL,NULL
+2846,"Robert Santos","Sr. Manager","Human Resources",,Male,Latino,47,"2000-12-29 00:00:00",134612,12,"United States",Austin,"2015-10-26 00:00:00",NULL
+2847,"Addison Ma","Systems Analyst",IT,"Research & Development",Female,Asian,59,"2008-05-21 00:00:00",46151,0,"United States",Phoenix,NULL,NULL
+2848,"Clara Collins","Network Engineer",IT,Manufacturing,Female,Caucasian,40,"2008-03-03 00:00:00",63889,0,"United States",Seattle,"2022-10-17 00:00:00",NULL
+2849,"Stella Castro","Test Engineer",Engineering,Corporate,Female,Latino,53,"2009-04-17 00:00:00",75060,0,"United States",Columbus,NULL,NULL
+2850,"Lucy Chin",Director,IT,Manufacturing,Female,Asian,50,"2011-04-22 00:00:00",175033,20,China,Beijing,NULL,NULL
+2851,"Piper Evans","Computer Systems Manager",IT,"Specialty Products",Female,Caucasian,52,"2014-01-28 00:00:00",89379,10,"United States",Seattle,"2022-06-11 00:00:00",NULL
+2852,"Cora Coleman","Controls Engineer",Engineering,Corporate,Female,Black,40,"2011-04-09 00:00:00",98594,0,"United States",Phoenix,NULL,NULL
+2853,"Cora Holmes","Vice President",Marketing,"Research & Development",Female,Caucasian,39,"2021-10-05 00:00:00",224435,33,"United States",Seattle,NULL,NULL
+2854,"Leo Figueroa","Technical Architect",IT,Corporate,Male,Latino,31,"2015-01-21 00:00:00",63644,0,Brazil,Manaus,NULL,NULL
+2855,"Allison Wang",Manager,Accounting,Manufacturing,Female,Asian,30,"2018-12-16 00:00:00",121234,5,"United States",Austin,NULL,NULL
+2856,"Levi Cruz","Sr. Analyst",Accounting,"Research & Development",Male,Latino,47,"2007-09-22 00:00:00",83793,0,"United States",Miami,NULL,NULL
+2857,"Iris Phillips","Test Engineer",Engineering,"Research & Development",Female,Caucasian,46,"2019-11-28 00:00:00",99586,0,"United States",Miami,NULL,NULL
+2858,"Madelyn Chavez","Business Partner","Human Resources",Corporate,Female,Latino,43,"2006-09-11 00:00:00",59514,0,Brazil,"Rio de Janeiro",NULL,NULL
+2859,"Caroline Smith",Manager,Marketing,Corporate,Female,Caucasian,28,"2020-04-27 00:00:00",106043,10,"United States",Columbus,NULL,NULL
+2860,"Grayson Lai","Solutions Architect",IT,,Male,Asian,47,"2005-09-12 00:00:00",78985,0,China,Beijing,NULL,NULL
+2863,"Jose Park",,,,Male,Asian,45,"2009-10-11 00:00:00",152519,30,,Chongqing,NULL,NULL
+2866,"Melody Yoon","Business Partner","Human Resources","Specialty Products",Female,Asian,49,"2014-10-15 00:00:00",52292,0,China,Chengdu,NULL,NULL
+2867,"Avery Smith","Sr. Manager","Human Resources",,,Caucasian,53,"2008-06-27 00:00:00",147813,13,,Chicago,NULL,NULL
+2868,"Madeline Vu","System Administrator�",IT,,Female,,61,"2010-06-05 00:00:00",96404,0,,Chengdu,NULL,NULL
+2869,"Aubrey Cheng","Analyst II",Accounting,,Female,Asian,0,"2001-06-17 00:00:00",64882,0,"United States",,NULL,NULL
+2873,"Asher Bui","Sr. Account Representative",Sales,"Specialty Products",Male,,0,"2009-01-27 00:00:00",90881,0,,Shanghai,NULL,NULL
+2874,"Samantha Chau","Network Architect",IT,"Specialty Products",Female,,28,"2021-11-10 00:00:00",83965,0,,Chengdu,NULL,NULL
+2878,"Logan Ortega","Analyst II",,Manufacturing,Male,Latino,31,"2020-05-19 00:00:00",64234,0,,Seattle,"2021-11-11 00:00:00",NULL
+2879,"Isaac Jung",Manager,IT,"Specialty Products",Male,Asian,55,"1994-07-12 00:00:00",103726,8,China,Shanghai,NULL,NULL
+2880,"Christopher Desai","Automation Engineer",Engineering,"Research & Development",Male,Asian,46,"2000-12-29 00:00:00",114260,0,China,Chengdu,NULL,NULL
+2881,"Levi Gonzalez","Controls Engineer",Engineering,Corporate,Male,Latino,36,"2012-04-27 00:00:00",116168,0,"United States",Austin,NULL,NULL
+2882,"Santiago f Wang","Sr. Manager",Sales,"Research & Development",Male,Asian,27,"2021-08-09 00:00:00",133267,12,"United States",Phoenix,NULL,NULL
+2883,"Julia Kim","Account Representative",Sales,"Specialty Products",,Asian,50,"2016-12-04 00:00:00",50038,0,,Chongqing,NULL,NULL
+2889,"Hadley Parker",Manager,Accounting,Manufacturing,Female,Caucasian,44,"2010-01-09 00:00:00",129099,6,"United States",Austin,NULL,NULL
+2890,"Elizabeth Estrada","IT Coordinator",IT,Corporate,Female,Latino,37,"2016-12-20 00:00:00",59376,0,"United States",Miami,NULL,NULL
+2891,"Sofia Yee","System Administrator�",IT,"Research & Development",Female,Asian,52,"2018-12-25 00:00:00",98060,0,"United States",Miami,NULL,NULL
+2892,"Asher Mendoza","Sr. Manager","Human Resources",Corporate,Male,Latino,49,"2014-02-21 00:00:00",152911,10,Brazil,"Rio de Janeiro",NULL,NULL
+2893,"Jordan Hernandez","Systems Analyst",IT,"Research & Development",Male,Latino,47,"2003-12-15 00:00:00",42994,0,Brazil,"Sao Paulo",NULL,NULL
+2894,"Everleigh Tan",Analyst,Accounting,Manufacturing,Female,Asian,42,"2019-03-28 00:00:00",59853,0,China,Chengdu,NULL,NULL
+2895,"Joshua Hall","Systems Analyst",IT,Manufacturing,Male,Black,61,"2011-12-07 00:00:00",41220,0,"United States",Chicago,NULL,NULL
+2896,"Stella Gupta","Sr. Analyst",Accounting,Corporate,Female,Asian,33,"2020-02-18 00:00:00",97261,0,China,Beijing,NULL,NULL
+2897,"Levi White",Manager,"Human Resources",Manufacturing,Male,Black,45,"2018-07-19 00:00:00",127363,9,"United States",Columbus,NULL,NULL
+2898,"Matthew Jackson",Manager,Marketing,"Specialty Products",Male,Caucasian,30,"2019-10-13 00:00:00",111274,6,"United States",Seattle,NULL,NULL
+2899,"Dominic Martinez","Computer Systems Manager",IT,Corporate,Male,Latino,53,"2018-04-17 00:00:00",90554,7,Brazil,"Rio de Janeiro",NULL,NULL
+2900,"Aiden Aguilar",Manager,Finance,"Research & Development",Male,Latino,62,"1997-12-12 00:00:00",100226,10,"United States",Seattle,NULL,NULL
+2901,"Victoria Hu","Field Engineer",Engineering,Manufacturing,Female,Asian,37,"2017-04-21 00:00:00",93348,0,China,Chongqing,NULL,NULL
+2902,"Eloise Campos","Network Engineer",IT,"Research & Development",,Latino,62,"1993-06-25 00:00:00",78059,0,"United States",Phoenix,"2008-07-29 00:00:00",NULL
+2903,"Emilia Alvarado","Business Partner","Human Resources","Research & Development",,Latino,63,"2001-06-29 00:00:00",58480,0,Brazil,Manaus,NULL,NULL
+2904,"Lydia Ahmed","Vice President",Finance,Corporate,,Asian,39,"2017-04-24 00:00:00",218052,39,China,Chengdu,NULL,NULL
+2908,"Hudson Bailey","Solutions Architect",IT,Corporate,,,56,"2018-03-12 00:00:00",91835,0,"United States",Seattle,NULL,NULL
+2912,"Ian Gonzales","Sr. Manager",Finance,Corporate,,,38,"2018-12-29 00:00:00",147867,12,,Miami,NULL,NULL
+2913,"Jaxon Wright",Manager,"Human Resources","Research & Development",,,47,"2004-08-30 00:00:00",123790,5,,Austin,NULL,NULL
+2914,"Ethan Cruz","Sr. Business Partner","Human Resources","Specialty Products",,,51,"2000-04-28 00:00:00",77153,0,,Miami,NULL,NULL
+2915,"Adrian James","Enterprise Architect",IT,"Research & Development",,Caucasian,52,"1994-08-15 00:00:00",73779,0,,Chicago,NULL,NULL
+2916,"Isabella Mejia","Vice President",Accounting,Corporate,Female,Latino,56,"2018-10-07 00:00:00",231699,32,,Manaus,NULL,NULL
+2917,"Christopher Miller","Vice President",Finance,Corporate,Male,Black,37,"2009-05-16 00:00:00",199512,35,,Austin,NULL,NULL
+2918,"Samuel Watson","Network Architect",IT,Corporate,Male,Caucasian,29,"2022-04-09 00:00:00",77557,0,,Miami,"2022-09-12 00:00:00",NULL
+2919,"Lucy Phan","Sr. Analyst",Sales,,Female,Asian,59,"2021-02-18 00:00:00",99760,0,,Chongqing,NULL,NULL
+2920,"Dominic Thao","Sr. Analyst",Marketing,,Male,Asian,50,"1996-09-08 00:00:00",96297,0,"United States",Miami,NULL,NULL
+2921,"Jaxon Shin","IT Coordinator",IT,,Male,Asian,48,"2010-12-27 00:00:00",53593,0,China,Chengdu,NULL,NULL
+2922,"Nevaeh Diaz",Director,Marketing,,Female,Latino,44,"2018-03-03 00:00:00",167660,29,Brazil,"Sao Paulo",NULL,NULL
+2923,,Analyst,Sales,,Male,Caucasian,29,"2021-07-18 00:00:00",43084,0,"United States",Seattle,NULL,NULL
+2924,,"Sr. Manager",IT,,Male,Caucasian,60,"1996-07-09 00:00:00",154707,13,"United States",Austin,NULL,NULL
+2925,,"Vice President",IT,,Male,Asian,56,"2011-03-11 00:00:00",184780,38,"United States",Austin,NULL,NULL
+2926,,Manager,Marketing,,Female,Latino,31,"2015-10-19 00:00:00",109925,7,Brazil,Manaus,NULL,NULL
+2927,,"Sr. Manager",Finance,Corporate,Male,Asian,53,"2015-03-09 00:00:00",151706,11,,Chengdu,NULL,NULL
+2928,,Manager,Accounting,Manufacturing,Male,Latino,26,"2022-12-19 00:00:00",102066,10,,Austin,NULL,NULL
+2929,,"Vice President",Marketing,"Research & Development",Male,Asian,31,"2021-05-13 00:00:00",234203,36,,Seattle,NULL,NULL
+2930,,"Sr. Manager",Marketing,Corporate,Male,Latino,48,"2019-07-12 00:00:00",121884,12,,Austin,NULL,NULL
+2931,,"Vice President",Marketing,"Research & Development",Male,Asian,61,"2014-04-20 00:00:00",209680,34,China,Shanghai,NULL,NULL
+2932,"Madison White","Vice President",IT,,Female,Caucasian,42,"2011-07-09 00:00:00",240940,34,"United States",Phoenix,"2016-05-03 00:00:00",NULL
+2933,"Valentina Nelson","Network Administrator",IT,Manufacturing,Female,Caucasian,50,"2013-12-16 00:00:00",63884,0,"United States",Miami,NULL,NULL
+2935,"Everleigh Castillo","Service Desk Analyst",,"Specialty Products",Female,Latino,50,"2007-11-12 00:00:00",67756,0,"United States",Chicago,NULL,NULL
+2936,"Valentina Fernandez",Director,,,Female,Latino,62,"2012-01-23 00:00:00",180256,20,,Phoenix,NULL,NULL
+2937,"Serenity Richardson",Director,Engineering,,Female,Caucasian,45,"2019-03-14 00:00:00",183165,18,,Miami,NULL,NULL
+2938,"Cooper Ramirez",,Accounting,,Male,Latino,34,"2012-02-07 00:00:00",195194,23,,Chicago,NULL,NULL
+2940,"David Barnes","IT Systems Architect",,,Male,Caucasian,41,"2006-08-19 00:00:00",70566,0,"United States",Miami,NULL,NULL
+2941,"Ivy Luong","Cloud Infrastructure Architect",,,Female,Asian,56,"1993-07-05 00:00:00",75435,0,"United States",Austin,NULL,NULL
+2942,"Aurora Bailey","Development Engineer",Engineering,"Research & Development",Female,Caucasian,31,"2020-05-23 00:00:00",69108,0,"United States",Miami,NULL,NULL
+2954,,"Quality Engineer",Engineering,"Specialty Products",Male,Asian,42,"2015-05-14 00:00:00",93851,0,"United States",Miami,NULL,NULL
+2955,,"Sr. Analyst",Sales,"Research & Development",Male,Black,30,"2022-01-17 00:00:00",96010,0,"United States",Chicago,NULL,NULL
+2956,,"Network Administrator",IT,"Research & Development",Male,Asian,44,"2004-03-08 00:00:00",73386,0,China,Chongqing,NULL,NULL
+2957,,"Sr. Analyst",Accounting,"Research & Development",Female,Asian,49,"1999-10-15 00:00:00",95033,0,"United States",Austin,"2018-02-28 00:00:00",NULL
+2958,,"Vice President",Engineering,"Specialty Products",Female,Latino,43,"2011-11-11 00:00:00",185211,39,Brazil,"Sao Paulo",NULL,NULL
+2959,,Manager,Marketing,"Specialty Products",Female,Asian,53,"2014-04-05 00:00:00",125099,8,China,Chengdu,NULL,NULL
+2960,"Lucas Sandoval","Sr. Analyst",Sales,Manufacturing,Male,Latino,41,"2011-05-19 00:00:00",84627,0,Brazil,Manaus,NULL,NULL
+2961,"Brooks Ngo","Vice President",Engineering,Corporate,Male,Asian,26,"2020-03-02 00:00:00",211114,30,"United States",Miami,NULL,NULL
+2962,"Piper Oh",,Marketing,"Research & Development",Female,,57,"1996-01-23 00:00:00",73117,0,"United States",Columbus,NULL,NULL
+2963,"Hunter Molina",,,,Male,,41,"2018-02-20 00:00:00",55330,0,"United States",Austin,NULL,NULL
+2975,"Aria Miller",,,"Research & Development",Female,,32,"2019-06-07 00:00:00",65666,0,"United States",Columbus,NULL,NULL
+2979,,,,"Research & Development",Male,Asian,31,"2016-09-07 00:00:00",118644,13,,Phoenix,NULL,NULL
+2980,,"Sr. Analyst",,"Research & Development",Female,Asian,32,"2015-10-17 00:00:00",79773,0,China,Beijing,NULL,NULL
+2993,"Miles Liu",Analyst,Sales,"Research & Development",Male,Asian,35,"2021-05-25 00:00:00",52232,0,,Columbus,NULL,NULL
+2994,"Violet Duong","Vice President",Marketing,"Specialty Products",Female,Asian,42,"2014-09-22 00:00:00",226646,31,"United States",,NULL,NULL
+2995,"Isaac Xiong","Sr. Manager",Finance,"Specialty Products",Male,Asian,38,"2012-10-28 00:00:00",152253,12,"United States",,NULL,NULL
+2996,"Ian Le","Vice President",Engineering,"Specialty Products",Male,Asian,46,"2007-08-28 00:00:00",195471,36,"United States",,NULL,NULL

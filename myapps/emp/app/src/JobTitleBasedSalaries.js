@@ -48,14 +48,15 @@ export default class JobTitleBasedSalaries extends Component{
                         {this.state.jobTitleSalary &&  rows}
                     </table>
                 </div>
-                
-                <Chart
-                chartType="Bar"
-                width="100%"
-                height="400px"
-                data={data}
-                options={options}
-                />
+                <div className="container" style={{border:'1px silver dashed'}}>
+                    <Chart
+                    chartType="Bar"
+                    width="100%"
+                    height="400px"
+                    data={data}
+                    options={options}
+                    />
+                </div>
             </>
         
         )

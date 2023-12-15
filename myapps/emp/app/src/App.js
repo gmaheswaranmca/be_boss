@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import JobTitleBasedSalaries from './JobTitleBasedSalaries';
 import BulkUploadEmployee from './BulkUploadEmployee';
+import Dashboard from './Dashboard';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item"><a className="nav-link" href="/">Dashboard</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/job-title-vs-salary">Job vs Total Salary</a></li>
                   <li className="nav-item"><a className="nav-link" href="/upload-bulk">Bulk Upload</a></li>
                 </ul>
               </div>
@@ -24,7 +26,8 @@ function App() {
       
       <BrowserRouter>
       <Routes>
-          <Route path="/" element={<JobTitleBasedSalaries/>}/>
+          <Route path="/" element={<Dashboard/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path="/job-title-vs-salary" element={<JobTitleBasedSalaries/>}/>
           <Route path="/upload-bulk" element={<BulkUploadEmployee/>}/>
       </Routes>

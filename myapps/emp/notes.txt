@@ -1,0 +1,57 @@
+FrontEnd: BulkUploadEmployee (component)
+    this.state = {currentFile:null, progressValue: 0}       // initial state
+    File: <input type="file">         onFileSelecected= (e)=>{ /* code here */ }
+    <input type="button">       onUpload = (e)=>{ /* code here */ }
+
+    notes: state "currentFile" is to hold the selected file object
+
+    onFileSelecected = (e)=>{
+        const { files } = e.target;             // selected file in array
+        this.setState({currentFile: files[0]}); // selected filed is set in the state
+    }
+
+    onUpload = (e) => {
+       // attach then() and catch() to axios->'api end point' object to invoke actual 'api end point'
+    }
+
+Steps for invoking 'api end point'
+1.get the axios object          "network"
+2.
+    // types of "api end point" objects
+    //      !network.post(url,data) !network.get(url)
+    //      !network.put(url,data)  !network.delete(url)
+    get the 'api end point' object using axios object  :: promise object
+3. attach then() and catch() to axios->'api end point' object to invoke actual 'api end point'
+
+
+
+
+
+Coming back to actual code:
+
+onUpload = (e) => {
+        let onFileUploading = (e) => {
+            this.setState({progressValue: e.loaded})
+        } 
+        let thenFn = (response) => {
+            console.log(response.data.message);
+            alert('uploaded successfully')
+          };
+        let catchFn = (error) => {
+            console.log(error)
+        }
+        bulkUploadEmployeeDao
+            .uploadCsv(this.state.currentFile, onFileUploading)
+            .then(thenFn)
+            .catch(catchFn);
+    }
+
+
+    bulkUploadEmployeeDao.uploadCsv  is the function which returns axios "api end point" object of verb 'POST'
+    In the function call bulkUploadEmployeeDao.uploadCsv(...) 
+        we are attaching 'then()', 'catch()' 
+        because uploadCsv function returns the promise object 
+        and to make the promise object to go for 'completion' or 'failure'
+'
+
+

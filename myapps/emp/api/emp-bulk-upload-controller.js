@@ -5,24 +5,24 @@ const appConfig = require("./config")
  receiveCsvIntoFile = () => {
     util = require("util");
     multer = require("multer");
-    maxSize = appConfig.maxCsvFileSize;
+    maxSize = appConfig.maxCsvFileSize;//1
 
     storage = multer.diskStorage(
         {
             destination: (req, file, cb) => {
-                cb(null, __basedir + "/resources/static/assets/uploads/");
+                cb(null, __basedir + "/resources/static/assets/uploads/");//2
             },
             filename: (req, file, cb) => {
                 console.log(file.originalname);
                 cb(null, file.originalname);
-            },
+            }
         }
     );
 
     let uploadFile = multer(
             {
                 storage: storage,
-                limits: { fileSize: maxSize },
+                limits: { fileSize: maxSize }, /* 3  */
             }
         ).single("file");
 

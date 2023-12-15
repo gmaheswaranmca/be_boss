@@ -1,0 +1,45 @@
+----------------------------------------------------
+Try the below code at edge browser 'console' to know how 'promise' works:
+----------------------------------------------------
+var thenFn = (data) => {
+    console.log(data + ' we got as the number')
+}
+var catchFn = (error)=>  {
+    console.log('ERR::',error)
+}
+
+new Promise((resolve, reject) => {
+    var data = prompt('Data:');
+    if(data !== ''){
+        data = parseInt(data)
+        resolve(data);
+    }else{
+        reject({message: 'Not a Number'})
+  }
+}).then(thenFn).catch(catchFn);
+----------------------------------------------------
+
+
+*****case 1 (assumption)*****
+python two input() functions (get two nums) if runs in the callback(blocked/sync):
+after two nums input find sum of them.
+
+a = int(input('number 1:'))
+b = int(input('number 2:'))
+c = a + b
+console.log(c)
+
+*****case 2 (assumption)*****
+python two input() functions (get two nums) if runs in the promise(non-blocked/async):
+after two nums input find sum of them.
+
+let handler_one = (data)=>{
+    let a = int(data);
+    let handler_two = (data2)=>{
+        let b = int(data2);
+        let c = a + b;
+        console.log(c)
+    };
+    input('number 2:').then(handler_two);
+}
+input('number 1:').then(handler_one)

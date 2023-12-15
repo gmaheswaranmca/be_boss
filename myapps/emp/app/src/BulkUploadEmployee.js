@@ -23,9 +23,10 @@ export default class BulkUploadEmployee extends Component{
         let catchFn = (error) => {
             console.log(error)
         }
-        bulkUploadEmployeeDao.uploadCsv(this.state.currentFile, onFileUploading)
-        .then(thenFn)
-        .catch(catchFn);
+        bulkUploadEmployeeDao
+            .uploadCsv(this.state.currentFile, onFileUploading)
+            .then(thenFn)
+            .catch(catchFn);
     }
     render(){
         return (
@@ -41,7 +42,10 @@ export default class BulkUploadEmployee extends Component{
                             </div>
                             <input type="button" className="btn btn-success" value="Upload!"
                                 onClick={this.onUpload}/>
-                                <div><div style={{display:'inline-block',width:'100px',width:'100px',backgroundColor:'orange'}}>{this.state.progressValue}</div></div>
+                                <div><div 
+                                style={{display:'inline-block',
+                                width:'100px',width:'100px',
+                                backgroundColor:'orange'}}>{this.state.progressValue}</div></div>
                         </div>
                     </div>
                 </div>

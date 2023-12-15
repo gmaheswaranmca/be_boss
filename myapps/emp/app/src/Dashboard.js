@@ -67,10 +67,48 @@ export default class Dashboard extends Component{
                     </div>
                     <div className="col-4">
                         <div className="container" style={{border:'1px silver dashed'}}>
-                            <Chart chartType="ColumnChart" 
-                                width="100%"
-                                height="400px" 
-                                data={data} 
+                        <Chart
+                            chartType="Line"
+                            width="100%"
+                            height="400px"
+                            data={data}
+                            options={options}
+                            />
+                        </div>
+
+                    </div>
+                </div>
+                <div className="row" style={{marginTop:'20px'}}>
+                    <div className="col-4">
+                        <div className="container" style={{border:'1px silver dashed'}}>
+                        <Chart
+                            chartType="ScatterChart"
+                            width="100%"
+                            height="400px"
+                            data={data}
+                            options={options}
+                            />
+                        </div>
+                    </div>
+                    <div className="col-4">
+                        <div className="container" style={{border:'1px silver dashed'}}>
+                            <Chart
+                            chartType="PieChart"
+                            width="100%"
+                            height="400px"
+                            data={data}
+                            options={options}
+                            />
+                        </div>
+                    </div>
+                    <div className="col-4">
+                        <div className="container" style={{border:'1px silver dashed'}}>
+                        <Chart
+                            chartType="Scatter"
+                            width="100%"
+                            height="400px"
+                            data={data}
+                            options={options}
                             />
                         </div>
 

@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import bulkUploadEmployeeDao  from './emp-bulk-upload-dao'
+import bulkUploadEmployeeDao  from './BulkUploadEmpDao'
 
 export default class BulkUploadEmployee extends Component{
     constructor(props){

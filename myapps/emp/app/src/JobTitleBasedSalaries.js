@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import bulkUploadEmployeeDao  from './emp-bulk-upload-dao'
+import bulkUploadEmployeeDao  from './BulkUploadEmpDao'
 import { Chart } from "react-google-charts";
 
 
@@ -43,6 +43,7 @@ export default class JobTitleBasedSalaries extends Component{
         return (
             <>
                 <div className="container-md p-3">
+                    <h3>Top Job Titles' Total Salaries</h3>
                     <table className="table table-bordered table-primary">
                         <tr className="bg-warning"><td>Job Title</td><td>Salary</td></tr>
                         {this.state.jobTitleSalary &&  rows}

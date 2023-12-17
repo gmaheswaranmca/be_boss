@@ -1,0 +1,21 @@
+appointment app
+----------------
+Customer App
+	- Registration 
+		{name, mobile, password, location}
+	- Login 
+	- Appointment
+		{entry_time, appoitnment_date, 
+		 car_name, model,
+		 service_type }
+		 {+customer_id, staff, cancel_reason, status}
+Business Admin
+	- Admin Login 
+	- View Appointments 
+		- Cancel
+		- Confirm
+	- History 
+		- Confirmed | Cancelled | Both
+---------------------------------------------------------------
+
+---------------------------------------------------------------

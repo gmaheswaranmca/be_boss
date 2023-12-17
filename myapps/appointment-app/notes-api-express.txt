@@ -1,0 +1,414 @@
+-----------------------------------------
+new app
+-----------------------------------------
+    $npm init
+``````````````````````````````````````````
+
+
+-----------------------------------------
+packages installation
+    express cors mysql2 sequelize md5 
+-----------------------------------------
+    $npm install  express cors mysql2 sequelize md5
+``````````````````````````````````````````
+
+-----------------------------------------
+project structure
+-----------------------------------------
+    -api
+        - package.json      #via new app
+        - config.js                        app level properties (hard coded data such as db host, name etc)
+        - []models
+            - customer-model.js             #map for db table 'customer'
+            - appoitnment-model.js          #map for db table 'appointment'
+            - admin-model.js                #map for db table 'admin'
+        - models.js                         CustomerModel, AppointmentModel, AdminModel, sequelize, Sequelize 
+        - customer-controller.js            register, login, fixAppointment
+        - admin-controller.js               login, viewAppointments, confirmAppointment, cancelAppointment, historyOfAppointments
+        - index.js                          server configuration and up and running
+``````````````````````````````````````````
+
+-----------------------------------------
+config.js
+-----------------------------------------
+const db = {
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "1234",
+    db: "emp_db",
+    dialect: "mysql",
+    pool_max : 5,
+    pool_min : 0,
+    pool_acquire: 30000,
+    pool_idle: 10000
+};
+const appConfig = {
+    port : 8080,
+    frontEnd : 'http://localhost:3000',
+    db: db
+};
+
+module.exports = appConfig;
+``````````````````````````````````````````
+
+-----------------------------------------
+customer-model.js
+-----------------------------------------
+const defineCustomerModel = (Sequelize, sequelize) => {
+    const columns = {
+        id: { type: Sequelize.INTEGER, primaryKey: true},
+        name: {type: Sequelize.STRING},
+        mobile: {type: Sequelize.STRING},
+        password: {type: Sequelize.STRING},
+        location: {type: Sequelize.STRING}
+    };
+    const options = {timestamps: false,   freezeTableName: true    };
+    const CustomerModel = sequelize.define("customer", columns, options);
+    return CustomerModel;
+};
+
+module.exports = defineCustomerModel;
+``````````````````````````````````````````
+
+-----------------------------------------
+appoitnment-model.js
+-----------------------------------------
+const defineAppointmentModel = (Sequelize, sequelize) => {
+    const columns = {
+        id: { type: Sequelize.INTEGER, primaryKey: true},
+        entry_time: {type: Sequelize.DATE},
+        customer_id: {type: Sequelize.INTEGER},
+        car_name: {type: Sequelize.STRING},
+        model: {type: Sequelize.STRING},
+        appointment_date: {type: Sequelize.DATE},
+        service_type: {type: Sequelize.STRING},
+        staff: {type: Sequelize.STRING},
+        cancel_reason: {type: Sequelize.STRING},
+        status: {type: Sequelize.INTEGER}
+    };
+    const options = {timestamps: false,   freezeTableName: true    };
+    const AppointmentModel = sequelize.define("appointment", columns, options);
+    return AppointmentModel;
+};
+
+module.exports = defineAppointmentModel;
+``````````````````````````````````````````
+
+-----------------------------------------
+admin-model.js
+-----------------------------------------
+const defineAdminModel = (Sequelize, sequelize) => {
+    const columns = {
+        id: { type: Sequelize.INTEGER, primaryKey: true},
+        username: {type: Sequelize.STRING},
+        password: {type: Sequelize.STRING}
+    };
+    const options = {timestamps: false,   freezeTableName: true    };
+    const AdminModel = sequelize.define("admin", columns, options);
+    return AdminModel;
+};
+
+module.exports = defineAdminModel;
+``````````````````````````````````````````
+
+-----------------------------------------
+models.js
+-----------------------------------------
+const Sequelize = require("sequelize");
+const appConfig = require("./config")
+
+class AppOrm{
+  sequelize = null
+  constructor(){
+    this.init();
+  }
+  init(){
+    const pool = {
+      max: appConfig.db.pool_max,
+      min: appConfig.db.pool_min,
+      acquire: appConfig.db.pool_acquire,
+      idle: appConfig.db.pool_idle
+    };
+    const config = {
+      host: appConfig.db.host,
+      port: appConfig.db.port,
+      dialect: appConfig.db.dialect,
+      operatorsAliases: false,
+      pool: pool
+    };
+    this.sequelize = new Sequelize(appConfig.db.db, appConfig.db.user, 
+        appConfig.db.password, config);
+  }
+  getCustomerModel(){
+    const defineCustomerModel = require('./models/customer-model');
+    const CustomerModel = defineCustomerModel(Sequelize, this.sequelize);
+    return CustomerModel;
+  }  
+  getAppointmentModel(){
+    const defineAppointmentModel = require('./models/appointment-model');
+    const AppointmentModel = defineAppointmentModel(Sequelize, this.sequelize);
+    return AppointmentModel;
+  } 
+  getAdminModel(){
+    const defineAdminModel = require('./models/admin-model');
+    const AdminModel = defineAdminModel(Sequelize, this.sequelize);
+    return AdminModel;
+  } 
+}
+
+const appOrm = new AppOrm();
+const CustomerModel = appOrm.getCustomerModel();
+const AppointmentModel = appOrm.getAppointmentModel();
+const AdminModel = appOrm.getAdminModel();
+
+
+module.exports = {sequelize:appOrm.sequelize, Sequelize,
+    CustomerModel, AppointmentModel, AdminModel}
+``````````````````````````````````````````
+
+
+-----------------------------------------
+test-customer.js
+-----------------------------------------
+const { CustomerModel, AppointmentModel } = require('./models')
+const md5 = require('md5')
+
+newCustomer = {
+        name: 'neela',
+        mobile: '9999',
+        password: md5('4321'),
+        location: 'Banni Manta'
+    };
+
+newAppointment = {
+        customer_id: 1,
+        car_name: 'Volks Wagen',
+        model: 'Taigun',
+        appointment_date: '2023-12-18',
+        service_type: 'INTERIOR'
+    };    
+
+const test = async () => {
+    const savedCustomer = await CustomerModel.create(newCustomer);
+    console.log('Customer has created successfully', savedCustomer);
+
+    const oldCustomers = await CustomerModel.findAll({ where: { mobile: newCustomer.mobile } })
+    console.log(oldCustomers[0])
+
+    newAppointment.customer_id = oldCustomers[0].dataValues.id
+    const savedAppointment = await AppointmentModel.create(newAppointment);
+    console.log('Appointment has created successfully', savedAppointment);
+};
+
+test()
+``````````````````````````````````````````
+
+
+-----------------------------------------
+test-admin.js
+-----------------------------------------
+const { CustomerModel, AppointmentModel, AdminModel, sequelize } = require('./models')
+const { QueryTypes } = require('sequelize')
+const md5 = require('md5')
+
+
+let sqlAptmt = `SELECT appointment.id, entry_time, customer_id, 
+car_name, model, appointment_date, service_type, 
+staff, cancel_reason, status,
+customer.name as customer_name, customer.mobile, customer.location 
+FROM appointment 
+    INNER JOIN customer ON(appointment.customer_id = customer.id)`
+
+const test = async () => {
+    const sqlAppointments = sqlAptmt + ' WHERE (status = 1)'
+    const appointments = await sequelize.query(sqlAppointments, { type: QueryTypes.SELECT });
+    console.log('\n\nappointments:::::',appointments)
+
+    if(appointments.length >= 1){
+        if(appointments.length % 2 == 0){
+            console.log('\n\nConfirmation...')
+            const id = appointments[appointments.length - 1].id
+            console.log('id',id)
+            const a = await AppointmentModel.findByPk(id);
+            console.log(a)
+            const entity = {
+                staff : 'STAFF 1',
+                status : 2
+            }
+            let savedA = await AppointmentModel.update(entity, {where:{id:id}})
+            console.log('Appointment has confirmed',savedA)
+        }else{
+            console.log('\n\nCancellation...')
+            const id = appointments[appointments.length - 1].id
+            const a = await AppointmentModel.findByPk(id);
+            const entity = {
+                cancel_reason : 'SOME REASON',
+                status : 3
+            }
+            let savedA = await AppointmentModel.update(entity,{where:{id:id}})
+            console.log('Appointment has cancelled',savedA)
+        }
+    }
+
+    
+    const sqlHistory = sqlAptmt + ` WHERE status IN(2,3) `
+    let param = 2
+
+    const sqlHistoryConfirmed = sqlHistory + ` AND ((status = ${param}) OR (${param} = 4))`
+    const historyConfirmed = await sequelize.query(sqlHistoryConfirmed, { type: QueryTypes.SELECT });
+    console.log('\n\nhistory confirmed:::::', historyConfirmed)
+
+    param = 3
+    const sqlHistoryCancelled= sqlHistory + `AND ((status = ${param}) OR (${param} = 4))`
+    const historyCancelled = await sequelize.query(sqlHistoryCancelled, { type: QueryTypes.SELECT });
+    console.log('\n\nhistory cancelled:::::', historyCancelled)
+
+    param = 4
+    const sqlHistoryBoth= sqlHistory + ` AND ((status = ${param}) OR (${param} = 4))`
+    const historyBoth = await sequelize.query(sqlHistoryBoth, { type: QueryTypes.SELECT });
+    console.log('\n\nhistory both:::::', historyBoth)
+
+
+    const admin = await AdminModel.findOne({where:{username:'mahesh'}})
+    console.log('\n\nadmin',admin)
+    if(admin.dataValues.password === md5('1234')){
+        console.log('Logged In')
+    }else{
+        console.log('Invalid Username / Password')
+    }
+
+    const admin1 = await AdminModel.findOne({where:{username:'rakesh'}})
+    console.log('\n\nadmin',admin1)
+    if(admin1.dataValues.password === md5('4564')){
+        console.log('Logged In')
+    }else{
+        console.log('Invalid Username / Password')
+    }
+};
+
+test()
+
+``````````````````````````````````````````
+
+
+
+
+-----------------------------------------
+customer-controller.js
+-----------------------------------------
+const { CustomerModel} = require('./models')
+class CustomerController{
+   register = async(request, response) => {
+/*
+POST http://localhost:8080/customer/register
+    {
+        "name": "narmada",
+        "mobile": "9991",
+        "password": "4321",
+        "location": "Srirampura"
+    }
+*/
+        let responseCode = 200;
+        let responseBody = {};
+
+        const inputCustomer = request.body;
+        console.log(inputCustomer);
+        
+        try{
+            const savedCustomer = await CustomerModel.create(inputCustomer);
+            responseBody = savedCustomer;
+            console.log(savedCustomer)
+        }catch(error){
+            console.log(error)
+            responseBody = error;
+            responseCode = 500;
+        }    
+
+        response.status(responseCode).send(responseBody)
+   }
+   login = (request, response) => {
+
+   }
+   fixAppointment = (request, response) => {
+
+   } 
+}
+
+module.exports = { CustomerController }
+``````````````````````````````````````````
+
+-----------------------------------------
+admin-controller.js
+-----------------------------------------
+class AdminController{
+   login = (request, response) => {
+
+   }
+   viewAppointments = (request, response) => {
+
+   }
+   confirmAppointment = (request, response) => {
+
+   }
+   cancelAppointment = (request, response) => {
+
+   }
+   historyOfAppointments = (request, response) => {
+
+   }
+}
+``````````````````````````````````````````
+
+-----------------------------------------
+index.js
+-----------------------------------------
+const express = require("express")
+const cors = require("cors")
+const appConfig = require('./config')
+
+class CarWashApp
+{
+    app = null
+    constructor(app){
+        this.app = app
+    }
+    defineCORS = ()=>{
+        this.app.use(cors({origin: appConfig.frontEnd}))
+    }
+    defineREST = ()=>{
+        this.app.use(express.json())
+        this.app.use(express.urlencoded({extended: true}))
+    }
+    defineRoutes = ()=>{
+        const rootRouteHandler = (request, response) => {
+                response.send({"message" : "App Started"})
+            };
+
+        this.app.get("/", rootRouteHandler); //URL endpoint:  get   http://localhost:8080/
+
+        const { CustomerController } = require('./customer-controller')        
+        let customerController = new CustomerController();        
+        this.app.post("/customer/register", customerController.register); // R 01
+    }
+    startApp=()=>{
+        const port = appConfig.port;
+        const appListener = () => {
+            console.log(`Server listens on ${port}, http://localhost:${port}`)
+        }
+        this.app.listen(port, appListener)
+    }
+}
+
+const app = express()
+let carWashApp = new CarWashApp(app)
+carWashApp.defineCORS()
+carWashApp.defineREST()
+carWashApp.defineRoutes()
+carWashApp.startApp()
+
+
+``````````````````````````````````````````
+
+
+

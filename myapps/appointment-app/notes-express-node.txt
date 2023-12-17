@@ -1,0 +1,55 @@
+-----------------------------------------
+new app
+    Let index.js" be 'start up file'
+-----------------------------------------
+    $npm init
+``````````````````````````````````````````
+
+-----------------------------------------
+to run app
+-----------------------------------------
+    $node .
+``````````````````````````````````````````
+
+
+request, response of '"express router's" "request handler action"'
+-----------------------------------------
+request
+-----------------------------------------
+    #############
+    request.body 
+    #############
+        is json submitted for api end point 
+
+    #############
+    request.params.historyType
+    #############
+        route def:
+        /admin/history/:historyType
+
+        actual url:
+        /admin/history/2
+        /admin/history/3
+        /admin/history/4
+
+    #############
+    request.params.fromDate
+    request.params.toDateDate
+    #############
+        route def:
+        /admin/history/:fromDate/:toDate
+
+        actual url:
+        /admin/history/2022-01-01/2022-01-31
+        /admin/history/2022-05-01/2022-05-07
+        /admin/history/2022-04-01/2022-06-30
+
+-----------------------------------------
+reponse
+-----------------------------------------       
+    responseBody
+    responseStatusCode 
+
+    response
+        .status(responseStatus)
+        .send(responseBody)

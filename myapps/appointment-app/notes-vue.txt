@@ -1,0 +1,12 @@
+To install vue globally as node package
+$npm install -g @vue/cli
+
+To upgrade vue globally 
+$npm install -g @vue/cli
+
+To know the version of vue:
+$vue --version 
+
+To run vue app:
+$npm run serve
+

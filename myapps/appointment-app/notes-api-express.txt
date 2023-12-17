@@ -298,6 +298,7 @@ test()
 customer-controller.js
 -----------------------------------------
 const { CustomerModel} = require('./models')
+const md5= require('md5')
 class CustomerController{
    register = async(request, response) => {
 /*
@@ -312,7 +313,7 @@ POST http://localhost:8080/customer/register
         let responseCode = 200;
         let responseBody = {};
 
-        const inputCustomer = request.body;
+        const inputCustomer = {...request.body, password: md5(request.body.password)};
         console.log(inputCustomer);
         
         try{

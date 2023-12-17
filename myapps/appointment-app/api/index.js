@@ -25,6 +25,9 @@ class CarWashApp
         const { CustomerController } = require('./customer-controller')        
         let customerController = new CustomerController();        
         this.app.post("/customer/register", customerController.register); // R 01
+        this.app.post("/customer/login", customerController.login); // R 02
+        this.app.post("/appointment", [customerController.tokenVerify], 
+            customerController.fixAppointment); // R 02
     }
     startApp=()=>{
         const port = appConfig.port;

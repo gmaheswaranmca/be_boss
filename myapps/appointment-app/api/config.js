@@ -13,7 +13,9 @@ const db = {
 const appConfig = {
     port : 8080,
     frontEnd : 'http://localhost:3000',
-    db: db
+    db: db,
+    jwtSecret : 'v2m--Viji-maheswaran-muralidharan',
+    jwtExpires: (24 * 60 * 60) // 24 hour
 };
 
 module.exports = appConfig;

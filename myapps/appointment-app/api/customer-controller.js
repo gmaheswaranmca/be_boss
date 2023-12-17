@@ -1,5 +1,7 @@
-const { CustomerModel} = require('./models')
+const { CustomerModel, AppointmentModel} = require('./models')
+const appConfig = require('./config')
 const md5= require('md5')
+const jwt = require("jsonwebtoken");
 class CustomerController{
    register = async(request, response) => {
 /*
@@ -29,11 +31,121 @@ POST http://localhost:8080/customer/register
 
         response.status(responseCode).send(responseBody)
    }
-   login = (request, response) => {
+   login = async(request, response) => {
+/*
+POST http://localhost:8080/customer/login
+    {
+        "mobile": "9991",
+        "password": "4321"
+    }
+*/    
+        let responseCode = 200;
+        let responseBody = {};
 
+        const inputLogin = {...request.body};
+        console.log(inputLogin);
+
+        const oldCustomer = await CustomerModel.findOne(
+            {
+                where:
+                    {
+                        mobile: inputLogin.mobile
+                    }
+            });
+        if(!oldCustomer){
+            responseCode = 200;
+            responseBody = {isValidLogin: false, message: 'Invalid username / password'}
+        }
+
+        if(oldCustomer.password !== md5(inputLogin.password)){
+            responseCode = 200;
+            responseBody = {isValidLogin: false, message: 'Invalid username / password'}
+        }
+
+        const token = jwt.sign(
+            { loginname : inputLogin.mobile, role: 'customer' },
+            appConfig.jwtSecret,
+            {
+                algorithm: 'HS256',
+                allowInsecureKeySizes: true,
+                expiresIn: appConfig.jwtExpires
+            }
+        );
+
+        responseCode = 200;
+        responseBody = {isValidLogin: true, message: 'Successful Login', token: token}
+
+        response.status(responseCode).send(responseBody)
    }
-   fixAppointment = (request, response) => {
 
+   tokenVerify = (request, response, next)=>{
+        let responseCode = 200;
+        let responseBody = {};
+
+        let token = request.headers["x-access-token"];
+
+        if(!token){
+            responseCode = 401;
+            responseBody = {isLoggedIn: false, message: 'Unauthorized Access'};
+
+            response.status(responseCode).send(responseBody);
+        }
+
+        jwt.verify(token,
+            appConfig.jwtSecret,
+            (err, decoded) => {
+                if (err) {
+                    console.log('unauthorized') // XXXXX
+                    responseCode = 401;
+                    responseBody = {isLoggedIn: false, message: 'Login Expired'};
+                    response.status(responseCode).send(responseBody);
+                    return
+                }
+              
+                console.log('authorized', decoded) // XXXXX
+                request.loginData = {loginname: decoded.loginname, role: decoded.role}
+                next()
+            });
+   }	
+
+   fixAppointment = async(request, response) => {
+/*
+POST http://localhost:8080/appointment
+    {
+        "car_name": "Volks Wagon",
+        "model" :"Taigun",
+        "appointment_date" : "2023-12-18",
+        "service_type" : "Both"
+    }
+    header : {'x-access-token' : token}
+*/ 
+        let responseCode = 200;
+        let responseBody = {};
+
+        let loginData = request.loginData;
+        let mobile = loginData.loginname;
+
+        let customer = await CustomerModel.findOne(
+            {
+                where:
+                    {
+                        mobile: mobile
+                    }
+            }
+        );
+
+        if(!customer){
+            responseCode = 500;
+            responseBody = {isLoggedIn: false, message: 'Unauthorized Access'}
+        }
+
+        const inputAppointment = {...request.body, customer_id: customer.id};
+        console.log(inputAppointment);
+        const createdAppointment = await AppointmentModel.create(inputAppointment)
+
+        responseBody = {isLoggedIn: true, savedAppointment: createdAppointment}
+
+        response.status(responseCode).send(responseBody)
    } 
 }
 

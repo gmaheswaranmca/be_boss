@@ -7,6 +7,19 @@ $npm install -g @vue/cli
 To know the version of vue:
 $vue --version 
 
-To run vue app:
-$npm run serve
+To create new app:
+$vue create hello-world
 
+    Instead of 
+        "vue create hello-world" use "vue ui" to run gui to get project/items get created 
+
+To run vue app:
+    $cd hello-world
+        AND
+        
+    $npm run serve
+        OR
+    $vue serve 
+
+To run on a port:
+    $vue serve -- --port 3000

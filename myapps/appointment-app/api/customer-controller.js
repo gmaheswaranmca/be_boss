@@ -15,7 +15,7 @@ POST http://localhost:8080/customer/register
 */
         let responseCode = 200;
         let responseBody = {};
-
+        
         const inputCustomer = {...request.body, password: md5(request.body.password)};
         console.log(inputCustomer);
         
@@ -72,8 +72,13 @@ POST http://localhost:8080/customer/login
             }
         );
 
+        const userData = {token: token, 
+            username: inputLogin.mobile, 
+            name: oldCustomer.name,
+            app: 'customer',
+            role: 'customer'}
         responseCode = 200;
-        responseBody = {isValidLogin: true, message: 'Successful Login', token: token}
+        responseBody = {isValidLogin: true, message: 'Successful Login', user: userData}
 
         response.status(responseCode).send(responseBody)
    }

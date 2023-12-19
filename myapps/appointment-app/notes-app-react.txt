@@ -1,0 +1,513 @@
+-----------------------------------------
+new app
+-----------------------------------------
+    $npx create-react-app .
+``````````````````````````````````````````
+
+-----------------------------------------
+packages
+    react-router-dom axios
+-----------------------------------------
+    $npm install react-router-dom axios
+``````````````````````````````````````````
+
+-----------------------------------------
+project structure
+-----------------------------------------
+    -[]appointment-app
+        -[]appr
+            -[]node_modules
+            -[]public
+                index.html          #setup bootstrap 
+            -[]src
+                -index.js
+                -App.js             #setup pages router
+                -CustomerRegistration.js    #customer/register
+                -CustomerLogin.js           #customer/login 
+                -FixAppointment.js          #appointment/create
+                -Network.js                 client library base 
+                -CustomerDao.js             customer app api end points
+``````````````````````````````````````````
+
+-----------------------------------------
+index.html
+-----------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        ...
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        ...
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
+``````````````````````````````````````````
+
+-----------------------------------------
+App.js
+-----------------------------------------
+import './App.css';
+import CustomerLogin from './CustomerLogin';
+import CustomerRegistration from './CustomerRegistration';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Header from './Header';
+import FixAppointment from './FixAppointment';
+
+function App() {
+  return (
+    <div className="App">
+      <Header/>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<CustomerLogin/>}/>
+            <Route path='/customer' element={<CustomerLogin/>}/>
+            <Route path='/customer/register' element={<CustomerRegistration/>}/>
+            <Route path='/customer/login' element={<CustomerLogin/>}/>
+            <Route path='/appointment/create' element={<FixAppointment/>}/>
+        </Routes>
+      </BrowserRouter>
+      
+    </div>
+  );
+}
+
+export default App;
+``````````````````````````````````````````
+
+
+-----------------------------------------
+Network.js
+    instance of 'axios'   ie   'client library' ie 'api end point library'
+-----------------------------------------
+import axios from 'axios'
+const config = {
+    baseURL: 'http://localhost:8080',
+    headers :{
+        'Content-type' : 'application/json'
+    }
+};
+let network = axios.create(config)
+export default network;
+``````````````````````````````````````````
+
+-----------------------------------------
+CustomerDao.js
+    instance of 'api end points' for customer app 
+-----------------------------------------
+import network from "./Network";
+export default class CustomerDao{
+    register = (newCustomer) => {
+        return network.post('/customer/register', newCustomer);
+    }
+    login = (newLogin) => {
+        return network.post('/customer/login', newLogin);
+    }
+    fixAppointment = (newAppointment, token) => {
+        const headers = {
+            'x-access-token' : token
+        };
+        return network.post('/appointment', newAppointment, {headers: headers});
+    }
+    getUser = () => {
+        const user = localStorage.getItem('user')
+        return JSON.parse(user)
+    }
+    setUser = (user) => {
+        alert(user.name)
+        localStorage.setItem('user', JSON.stringify(user))
+    }
+    doLogout = () => {
+        localStorage.removeItem('user')
+    }
+    isLoggedIn = () => {
+        if(!this.getUser())
+        {
+            return false            
+        }else{
+            return true 
+        } 
+    }
+
+}
+``````````````````````````````````````````
+-----------------------------------------
+withRouter.js
+    Navigation for components listed in the routes 
+    via coding 
+
+    and export the withRouter(UserComponent)
+-----------------------------------------
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+
+export const withRouter = (Component) => {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return <Component {...props} router={{ location, navigate, params }} />;
+  }
+  return ComponentWithRouterProp;
+};
+-----------------------------------------
+
+-----------------------------------------
+Header.js
+    Menu Bar
+-----------------------------------------
+import { Component } from 'react'
+import CustomerDao  from './CustomerDao'
+
+export default class Header extends Component{
+    
+    constructor(props){
+        super(props)
+        this.state = { isLoading: true, isLoggedIn: false, user: null, isLoggedOut: false}        
+    }
+    componentDidMount(){
+        const dao = new CustomerDao()
+        const isLoggedIn = dao.isLoggedIn();
+        this.setState({isLoggedIn:isLoggedIn, user: dao.getUser()})
+    }
+    onLogout = (e) => {
+        const dao = new CustomerDao()
+        dao.doLogout();
+        this.setState({isLoggedIn:false, user: null, isLoggedOut: true})
+        window.location.reload()
+    }
+    render(){
+       
+        return(
+            <>  
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    { 
+            this.state.isLoggedIn 
+            ?   
+            <a class="navbar-brand" href="/appointment/create">Carwash App</a>
+            :
+            <a class="navbar-brand" href="/">Carwash App</a>
+    }
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {
+            this.state.isLoggedIn &&
+            <li class="nav-item">
+            <a class="nav-link" href="/appointment/create">Appointment</a>
+            </li>
+        }
+      </ul>
+    </div>
+    <div class="d-flex">    
+        { 
+            this.state.isLoggedIn 
+            ?   <>
+                    
+                    <span style={{maxWidth:'200px'}}>{this.state.user ? this.state.user.name : 'No User'}!!!</span>
+                    
+                    <button className="btn btn-info" type="button" onClick={this.onLogout}>Logout</button>
+                </>
+            :
+                <>
+                    <span class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/customer/login">Login</a>
+                    </span>
+                    <span class="nav-item">
+                        <a class="nav-link" href="/customer/register">Registration</a>
+                    </span>
+                </>
+        }
+    </div>
+  </div>
+</nav>
+            </>
+        )
+    }
+}
+``````````````````````````````````````````
+
+-----------------------------------------
+CustomerLogin.js
+-----------------------------------------
+import { Component } from 'react'
+import CustomerDao  from './CustomerDao'
+import { withRouter} from './withRouter'
+
+class CustomerLoginNoRouter extends Component{
+    constructor(props){
+        super(props)
+        this.state = { mobile: '', password: '', isLoggedIn: false}
+    }
+    onBoxChange = (e) => {
+        let entity = {}
+        entity[e.target.id] = e.target.value;
+        this.setState(entity)
+    }
+    onLogin = async(e) => {
+        const dao = new CustomerDao();
+        try{
+            let loginData = {
+                mobile: this.state.mobile,
+                password: this.state.password
+            }
+            let loginResponse = await dao.login(loginData);
+            loginResponse = loginResponse.data
+            console.log(loginResponse) //XXXXX
+            if(loginResponse.isValidLogin){
+                dao.setUser(loginResponse.user);
+                this.setState({isLoggedIn : true})               
+                alert(loginResponse.message)
+                this.props.router.navigate("/appointment/create");
+                window.location.reload();                   
+            }else{
+                alert(loginResponse.message)
+            }            
+        }catch(error){
+            console.log(error)   //XXXXX
+            alert('Server Error')
+        }
+    }
+    componentDidMount(){
+        const dao = new CustomerDao()
+        const isLoggedIn = dao.isLoggedIn();  
+          
+        if(isLoggedIn){
+            this.props.router.navigate("/appointment/create");
+            window.location.reload();  
+        }
+    }
+    render(){
+        
+        return(
+            <>  
+               <div className="container">
+                    <form>    
+                        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                       
+                        <div class="form-floating">
+                            <input type="text" 
+                                className="form-control" 
+                                id="mobile" 
+                                placeholder="Mobile Number"
+                                value={this.state.mobile}
+                                onChange={this.onBoxChange}/>
+                            <label forName="mobile">Mobile Number</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" 
+                                class="form-control" 
+                                id="password" 
+                                placeholder="Password"
+                                value={this.state.password}
+                                onChange={this.onBoxChange}/>
+                            <label for="password">Password</label>
+                        </div>
+                        
+                        <button class="w-100 btn btn-lg btn-primary"
+                            type="button"
+                            onClick={this.onLogin}>Sign in</button>
+                    </form>
+                </div>                
+            </>
+        )
+    }
+}
+
+const CustomerLogin = withRouter(CustomerLoginNoRouter)
+export default CustomerLogin 
+``````````````````````````````````````````
+
+
+-----------------------------------------
+CustomerRegistration.js
+-----------------------------------------
+import { Component } from 'react'
+import CustomerDao  from './CustomerDao'
+import { withRouter} from './withRouter'
+
+class CustomerRegistrationNoRouter extends Component{
+    constructor(props){
+        super(props)
+        this.state = {name: '', mobile: '', password: '', location: ''}
+    }
+    onBoxChange = (e) => {
+        let entity = {}
+        entity[e.target.id] = e.target.value;
+        this.setState(entity)
+    }
+    onRegister = async(e) => {
+        const dao = new CustomerDao();
+        try{
+            const savedCustomer = await dao.register({...this.state});
+            console.log(savedCustomer) //XXXXX
+            
+            this.props.router.navigate("/customer/login");
+            window.location.reload();  
+        
+            alert('Customer has been registered successfully')
+        }catch(error){
+            console.log(error)   //XXXXX
+            alert('Server Error')
+        }
+    }
+    componentDidMount(){
+        const dao = new CustomerDao()
+        const isLoggedIn = dao.isLoggedIn();        
+        if(isLoggedIn){
+            this.props.router.navigate("/appointment/create");
+            window.location.reload();  
+        }
+    }
+    render(){
+        return(
+            <>  
+               <div className="container">
+                    <form>    
+                        <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+                        <div class="form-floating">
+                            <input type="text" 
+                                	className="form-control" 
+                                    id="name" 
+                                    placeholder="Your Name"
+                                    value={this.state.name}
+                                    onChange={this.onBoxChange}
+                                    />
+                            <label forName="name">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" 
+                                className="form-control" 
+                                id="mobile" 
+                                placeholder="Mobile Number"
+                                value={this.state.mobile}
+                                onChange={this.onBoxChange}/>
+                            <label forName="mobile">Mobile Number</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" 
+                                class="form-control" 
+                                id="password" 
+                                placeholder="Password"
+                                value={this.state.password}
+                                onChange={this.onBoxChange}/>
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" 
+                                className="form-control" 
+                                id="location" 
+                                placeholder="Location"                                
+                                value={this.state.location}
+                                onChange={this.onBoxChange}/>
+                            <label forName="name">Location</label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary"
+                            type="button"
+                            onClick={this.onRegister}>Sign up</button>
+                    </form>
+                </div>                
+            </>
+        )
+    }
+}
+
+const CustomerRegistration = withRouter(CustomerRegistrationNoRouter)
+export default CustomerRegistration 
+``````````````````````````````````````````
+
+-----------------------------------------
+FixAppointment.js
+-----------------------------------------
+import { Component } from 'react'
+import CustomerDao  from './CustomerDao'
+import { Navigate } from 'react-router-dom'
+import { withRouter} from './withRouter'
+
+class FixAppointmentNoRouter extends Component{
+    constructor(props){
+        super(props)
+        this.state = {car_name: '', model: '', 
+                appointment_date: '', 
+                service_type: '',
+                isLoggedIn: true}
+    }
+    componentDidMount(){
+        const dao = new CustomerDao()
+        const isLoggedIn = dao.isLoggedIn();
+        this.setState({isLoggedIn:isLoggedIn, user: dao.getUser()})
+        if(!isLoggedIn){
+            this.props.router.navigate("/customer/login");
+            window.location.reload();  
+        }
+    }
+    onBoxChange = (e) => {
+        let entity = {}
+        entity[e.target.id] = e.target.value;
+        this.setState(entity)
+    }
+    onFixAppointment = async(e) => {
+        
+    }
+    render(){
+        
+        return(
+            <>  
+               <div className="container">
+                    <form>    
+                        <h1 class="h3 mb-3 fw-normal">Fix appointment</h1>
+                        <div class="form-floating">
+                            <input type="text" 
+                                	className="form-control" 
+                                    id="car_name" 
+                                    placeholder="Car Name"
+                                    value={this.state.car_name}
+                                    onChange={this.onBoxChange}
+                                    />
+                            <label forName="car_name">Car Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" 
+                                className="form-control" 
+                                id="model" 
+                                placeholder="Model"
+                                value={this.state.model}
+                                onChange={this.onBoxChange}/>
+                            <label forName="model">Model</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="date" 
+                                class="form-control" 
+                                id="appointment_date" 
+                                placeholder="Appointment Date"
+                                value={this.state.appointment_date}
+                                onChange={this.onBoxChange}/>
+                            <label for="appointment_date">Appointment Date</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" 
+                                className="form-control" 
+                                id="service_type" 
+                                placeholder="Service Type"                                
+                                value={this.state.service_type}
+                                onChange={this.onBoxChange}/>
+                            <label forName="service_type">Service Type</label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary"
+                            type="button"
+                            onClick={this.onFixAppointment}>Fix Appointment</button>
+                    </form>
+                </div>                
+            </>
+        )
+    }
+}
+
+const FixAppointment = withRouter(FixAppointmentNoRouter)
+export default FixAppointment 
+``````````````````````````````````````````

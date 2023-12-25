@@ -11,13 +11,15 @@ export default class CustomerDao{
             'x-access-token' : token
         };
         return network.post('/appointment', newAppointment, {headers: headers});
-    }
+    }   
+}
+export class SecurityDao{    
     getUser = () => {
         const user = localStorage.getItem('user')
         return JSON.parse(user)
     }
     setUser = (user) => {
-        alert(user.name)
+        //alert(user.name)
         localStorage.setItem('user', JSON.stringify(user))
     }
     doLogout = () => {
@@ -31,5 +33,15 @@ export default class CustomerDao{
             return true 
         } 
     }
-
+}
+export class AdminDao{
+    login = (newLogin) => {
+        return network.post('/admin/login', newLogin);
+    }
+    viewAppointments = (token) => {
+        const headers = {
+            'x-access-token' : token
+        };
+        return network.get('/appointment/view', {headers: headers});
+    }
 }

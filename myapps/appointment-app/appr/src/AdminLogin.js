@@ -1,19 +1,19 @@
 import { Component } from 'react'
-import CustomerDao, { SecurityDao }  from './CustomerDao'
+import CustomerDao  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
 
-class CustomerLoginNoRouter extends Component{
+class AdminLoginNoRouter extends Component{
     constructor(props){
         super(props)
         this.state = { 
-            loginFormData   :   {   mobile: '', password: ''    }, 
+            loginFormData   :   {   username: '', password: ''    }, 
             pageData        :   {   isLoggedIn: false, isLoading: true  } 
         };
     }
     componentDidMount(){
-        const securityDao = new SecurityDao()
-        const isLoggedIn = securityDao.isLoggedIn();  
+        const dao = new CustomerDao()
+        const isLoggedIn = dao.isLoggedIn();  
           
         if(isLoggedIn){
             this.props.router.navigate("/");//MAIN PAGE
@@ -30,7 +30,6 @@ class CustomerLoginNoRouter extends Component{
     }
     onLogin = async(e) => {
         const dao = new CustomerDao();
-		const securityDao = new SecurityDao()
         try{
             let loginFormData = {
                 ...this.state.loginFormData
@@ -39,7 +38,7 @@ class CustomerLoginNoRouter extends Component{
             loginResponse = loginResponse.data
             console.log(loginResponse) //XXXXX
             if(loginResponse.isValidLogin){
-                securityDao.setUser(loginResponse.user);
+                dao.setUser(loginResponse.user);
                 this.setState({ pageData: { ...this.state.pageData, isLoggedIn: true }    });               
                 //alert(loginResponse.message);
 
@@ -57,8 +56,8 @@ class CustomerLoginNoRouter extends Component{
     
     render(){      
         if(this.state.isLoading){
-			return(
-				<LoadingPage/>
+            return(
+                <LoadingPage/>
             )
         }
 
@@ -98,5 +97,5 @@ class CustomerLoginNoRouter extends Component{
     }
 }
 
-const CustomerLogin = withRouter(CustomerLoginNoRouter)
-export default CustomerLogin 
+const AdminLogin = withRouter(AdminLoginNoRouter)
+export default AdminLogin 

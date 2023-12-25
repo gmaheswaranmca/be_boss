@@ -17,7 +17,7 @@ class AppOrm{
       host: appConfig.db.host,
       port: appConfig.db.port,
       dialect: appConfig.db.dialect,
-      operatorsAliases: false,
+      /* operatorsAliases: false, */
       pool: pool
     };
     this.sequelize = new Sequelize(appConfig.db.db, appConfig.db.user, 

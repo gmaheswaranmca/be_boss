@@ -1,6 +1,6 @@
 const db = {
     host: "localhost",
-    port: 3306,
+    port: 3316,
     user: "root",
     password: "1234",
     db: "carwash_db",

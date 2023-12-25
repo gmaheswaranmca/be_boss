@@ -1,21 +1,39 @@
 import { Component } from 'react'
-import CustomerDao  from './CustomerDao'
+import CustomerDao, { SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
+import LoadingPage from './LoadingPage'
 
 class CustomerRegistrationNoRouter extends Component{
     constructor(props){
         super(props)
-        this.state = {name: '', mobile: '', password: '', location: ''}
+        this.state = {
+            registrationFormData    : { name: '', mobile: '', password: '', location: '' }, 
+            pageData                : {   isLoading: true   }
+        };
+    }
+	componentDidMount(){
+        const securityDao = new SecurityDao()
+        const isLoggedIn = securityDao.isLoggedIn();        
+        if(isLoggedIn){
+            this.props.router.navigate("/");//MAIN PAGE
+            window.location.reload();  
+            return
+        }
+        
+        this.setState({ pageData: { ...this.state.pageData, isLoading: false }    })
     }
     onBoxChange = (e) => {
-        let entity = {}
-        entity[e.target.id] = e.target.value;
-        this.setState(entity)
+        let registrationFormData = {...this.state.registrationFormData};
+        registrationFormData[e.target.id] = e.target.value;
+        this.setState({registrationFormData: registrationFormData});
     }
     onRegister = async(e) => {
         const dao = new CustomerDao();
         try{
-            const savedCustomer = await dao.register({...this.state});
+			let registrationFormData = {
+                ...this.state.registrationFormData
+            }
+            const savedCustomer = await dao.register(registrationFormData);
             console.log(savedCustomer) //XXXXX
             
             this.props.router.navigate("/customer/login");
@@ -27,58 +45,57 @@ class CustomerRegistrationNoRouter extends Component{
             alert('Server Error')
         }
     }
-    componentDidMount(){
-        const dao = new CustomerDao()
-        const isLoggedIn = dao.isLoggedIn();        
-        if(isLoggedIn){
-            this.props.router.navigate("/appointment/create");
-            window.location.reload();  
-        }
-    }
+    
     render(){
+        if(this.state.isLoading){
+            return(
+                <LoadingPage/>
+            )
+        }
+
         return(
             <>  
                <div className="container">
                     <form>    
-                        <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
-                        <div class="form-floating">
+                        <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
+                        <div className="form-floating">
                             <input type="text" 
                                 	className="form-control" 
                                     id="name" 
                                     placeholder="Your Name"
-                                    value={this.state.name}
+                                    value={this.state.registrationFormData.name}
                                     onChange={this.onBoxChange}
                                     />
-                            <label forName="name">Name</label>
+                            <label htmlFor="name">Name</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="text" 
                                 className="form-control" 
                                 id="mobile" 
                                 placeholder="Mobile Number"
-                                value={this.state.mobile}
+                                value={this.state.registrationFormData.mobile}
                                 onChange={this.onBoxChange}/>
-                            <label forName="mobile">Mobile Number</label>
+                            <label htmlFor="mobile">Mobile Number</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="password" 
-                                class="form-control" 
+                                className="form-control" 
                                 id="password" 
                                 placeholder="Password"
-                                value={this.state.password}
+                                value={this.state.registrationFormData.password}
                                 onChange={this.onBoxChange}/>
-                            <label for="password">Password</label>
+                            <label htmlFor="password">Password</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="text" 
                                 className="form-control" 
                                 id="location" 
                                 placeholder="Location"                                
-                                value={this.state.location}
+                                value={this.state.registrationFormData.location}
                                 onChange={this.onBoxChange}/>
-                            <label forName="name">Location</label>
+                            <label htmlFor="name">Location</label>
                         </div>
-                        <button class="w-100 btn btn-lg btn-primary"
+                        <button className="w-100 btn btn-lg btn-primary"
                             type="button"
                             onClick={this.onRegister}>Sign up</button>
                     </form>

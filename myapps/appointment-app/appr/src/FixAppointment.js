@@ -1,78 +1,125 @@
 import { Component } from 'react'
-import CustomerDao  from './CustomerDao'
-import { Navigate } from 'react-router-dom'
+import CustomerDao, { SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
+import LoadingPage from './LoadingPage'
 
 class FixAppointmentNoRouter extends Component{
     constructor(props){
         super(props)
-        this.state = {car_name: '', model: '', 
-                appointment_date: '', 
-                service_type: '',
-                isLoggedIn: true}
+        this.state = {
+			appointment:{
+				car_name: '', 
+				model: '', 
+				appointment_date: '', 
+				service_type: ''
+			},
+			pageData :   {isLoggedIn: false, user: null, isLoading: true}
+		};
     }
     componentDidMount(){
-        const dao = new CustomerDao()
-        const isLoggedIn = dao.isLoggedIn();
-        this.setState({isLoggedIn:isLoggedIn, user: dao.getUser()})
+        const securityDao = new SecurityDao()
+        const isLoggedIn = securityDao.isLoggedIn();
+		const user = securityDao.getUser();
+		let pageData ={
+			isLoggedIn:isLoggedIn, 
+			user: user, 
+			isLoading: true
+		};
+		
+        this.setState({pageData:pageData})
+		
         if(!isLoggedIn){
-            this.props.router.navigate("/customer/login");
+            this.props.router.navigate("/");//MAIN PAGE
             window.location.reload();  
+            return
         }
+		
+		// GET Latest created appointment if any //TODO
+		
+		pageData = {...pageData, isLoading: false};
+		
+        this.setState({ pageData: pageData})
     }
     onBoxChange = (e) => {
-        let entity = {}
-        entity[e.target.id] = e.target.value;
-        this.setState(entity)
+        let appointment = {...this.state.appointment}
+        appointment[e.target.id] = e.target.value;
+        this.setState({appointment: appointment})
     }
     onFixAppointment = async(e) => {
-        
+        const dao = new CustomerDao();
+
+        try{
+			console.log(this.state.pageData);
+			if(!window.confirm("Are you sure to fix the appointment?")){
+				return;
+			}
+            const newAppointment = {
+                ...this.state.appointment, 
+                customer_id: this.state.pageData.user.customer_id
+            };
+			const token = this.state.pageData.user.token;
+            const savedAppointment = await dao.fixAppointment(newAppointment, token);
+            console.log(savedAppointment) //XXXXX
+
+            alert('Appointment has been fixed successfully')
+
+            this.props.router.navigate("/appointment/create");
+            window.location.reload();  
+        }catch(error){
+            console.log(error)   //XXXXX
+            alert('Server Error')
+        }
     }
     render(){
-        
+        if(this.state.isLoading){
+            return(
+                <LoadingPage/>
+            )
+        }
+
         return(
             <>  
                <div className="container">
                     <form>    
-                        <h1 class="h3 mb-3 fw-normal">Fix appointment</h1>
-                        <div class="form-floating">
+                        <h1 className="h3 mb-3 fw-normal">Fix appointment</h1>
+                        <div className="form-floating">
                             <input type="text" 
                                 	className="form-control" 
                                     id="car_name" 
                                     placeholder="Car Name"
-                                    value={this.state.car_name}
+                                    value={this.state.appointment.car_name}
                                     onChange={this.onBoxChange}
                                     />
-                            <label forName="car_name">Car Name</label>
+                            <label htmlFor="car_name">Car Name</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="text" 
                                 className="form-control" 
                                 id="model" 
                                 placeholder="Model"
-                                value={this.state.model}
+                                value={this.state.appointment.model}
                                 onChange={this.onBoxChange}/>
-                            <label forName="model">Model</label>
+                            <label htmlFor="model">Model</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="date" 
-                                class="form-control" 
+                                className="form-control" 
                                 id="appointment_date" 
                                 placeholder="Appointment Date"
-                                value={this.state.appointment_date}
+                                value={this.state.appointment.appointment_date}
                                 onChange={this.onBoxChange}/>
-                            <label for="appointment_date">Appointment Date</label>
+                            <label htmlFor="appointment_date">Appointment Date</label>
                         </div>
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="text" 
                                 className="form-control" 
                                 id="service_type" 
                                 placeholder="Service Type"                                
-                                value={this.state.service_type}
+                                value={this.state.appointment.service_type}
                                 onChange={this.onBoxChange}/>
-                            <label forName="service_type">Service Type</label>
+                            <label htmlFor="service_type">Service Type</label>
                         </div>
-                        <button class="w-100 btn btn-lg btn-primary"
+                        <button className="w-100 btn btn-lg btn-primary"
                             type="button"
                             onClick={this.onFixAppointment}>Fix Appointment</button>
                     </form>

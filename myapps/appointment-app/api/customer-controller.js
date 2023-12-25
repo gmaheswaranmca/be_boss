@@ -41,6 +41,7 @@ POST http://localhost:8080/customer/login
 */    
         let responseCode = 200;
         let responseBody = {};
+        let isValidLogin = true;
 
         const inputLogin = {...request.body};
         console.log(inputLogin);
@@ -52,34 +53,39 @@ POST http://localhost:8080/customer/login
                         mobile: inputLogin.mobile
                     }
             });
+		//console.log(oldCustomer, oldCustomer===null, oldCustomer==null)
         if(!oldCustomer){
+            isValidLogin = false;
             responseCode = 200;
-            responseBody = {isValidLogin: false, message: 'Invalid username / password'}
+            responseBody = {isValidLogin: isValidLogin, message: 'Invalid username / password 1'}
         }
 
-        if(oldCustomer.password !== md5(inputLogin.password)){
+        if(oldCustomer && oldCustomer.password !== md5(inputLogin.password)){
+            isValidLogin = false;
             responseCode = 200;
-            responseBody = {isValidLogin: false, message: 'Invalid username / password'}
+            responseBody = {isValidLogin: isValidLogin, message: 'Invalid username / password 2'}
         }
 
-        const token = jwt.sign(
-            { loginname : inputLogin.mobile, role: 'customer' },
-            appConfig.jwtSecret,
-            {
-                algorithm: 'HS256',
-                allowInsecureKeySizes: true,
-                expiresIn: appConfig.jwtExpires
-            }
-        );
+        if(isValidLogin){
+            const token = jwt.sign(
+                { loginname : inputLogin.mobile, role: 'customer' },
+                appConfig.jwtSecret,
+                {
+                    algorithm: 'HS256',
+                    allowInsecureKeySizes: true,
+                    expiresIn: appConfig.jwtExpires
+                }
+            );
 
-        const userData = {token: token, 
-            username: inputLogin.mobile, 
-            name: oldCustomer.name,
-            app: 'customer',
-            role: 'customer'}
-        responseCode = 200;
-        responseBody = {isValidLogin: true, message: 'Successful Login', user: userData}
-
+            const userData = {token: token, 
+                username: inputLogin.mobile, 
+                name: oldCustomer.name,
+                app: 'customer',
+                role: 'customer',
+                customer_id: oldCustomer.id}
+            responseCode = 200;
+            responseBody = {isValidLogin: true, message: 'Successful Login', user: userData}
+        }        
         response.status(responseCode).send(responseBody)
    }
 

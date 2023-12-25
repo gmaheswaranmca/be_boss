@@ -1,20 +1,20 @@
 import { Component } from 'react'
-import CustomerDao  from './CustomerDao'
+import { SecurityDao }  from './CustomerDao'
 
 export default class Header extends Component{
     
     constructor(props){
         super(props)
-        this.state = { isLoading: true, isLoggedIn: false, user: null, isLoggedOut: false}        
+        this.state = {isLoggedIn: false, user: null, isLoggedOut: false}        
     }
     componentDidMount(){
-        const dao = new CustomerDao()
-        const isLoggedIn = dao.isLoggedIn();
-        this.setState({isLoggedIn:isLoggedIn, user: dao.getUser()})
+        const securityDao = new SecurityDao()
+        const isLoggedIn = securityDao.isLoggedIn();
+        this.setState({isLoggedIn:isLoggedIn, user: securityDao.getUser()})
     }
     onLogout = (e) => {
-        const dao = new CustomerDao()
-        dao.doLogout();
+        const securityDao = new SecurityDao()
+        securityDao.doLogout();
         this.setState({isLoggedIn:false, user: null, isLoggedOut: true})
         window.location.reload()
     }
@@ -23,30 +23,30 @@ export default class Header extends Component{
         return(
             <>  
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+ <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
     { 
             this.state.isLoggedIn 
             ?   
-            <a class="navbar-brand" href="/appointment/create">Carwash App</a>
+            <a className="navbar-brand" href="/appointment/create">Carwash App</a>
             :
-            <a class="navbar-brand" href="/">Carwash App</a>
+            <a className="navbar-brand" href="/">Carwash App</a>
     }
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
         {
             this.state.isLoggedIn &&
-            <li class="nav-item">
-            <a class="nav-link" href="/appointment/create">Appointment</a>
+            <li className="nav-item">
+            <a className="nav-link" href="/appointment/create">Appointment</a>
             </li>
         }
       </ul>
     </div>
-    <div class="d-flex">    
+    <div className="d-flex">    
         { 
             this.state.isLoggedIn 
             ?   <>
@@ -57,11 +57,11 @@ export default class Header extends Component{
                 </>
             :
                 <>
-                    <span class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/customer/login">Login</a>
+                    <span className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="/customer/login">Login</a>
                     </span>
-                    <span class="nav-item">
-                        <a class="nav-link" href="/customer/register">Registration</a>
+                    <span className="nav-item">
+                        <a className="nav-link" href="/customer/register">Registration</a>
                     </span>
                 </>
         }

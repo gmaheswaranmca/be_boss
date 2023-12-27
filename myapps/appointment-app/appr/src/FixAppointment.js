@@ -71,7 +71,7 @@ class FixAppointmentNoRouter extends Component{
         }
     }
     render(){
-        if(this.state.isLoading){
+        if(this.state.pageData.isLoading){
             return(
                 <LoadingPage/>
             )

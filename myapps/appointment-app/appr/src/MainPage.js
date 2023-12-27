@@ -14,10 +14,11 @@ class MainPageNoRouter extends Component{
     componentDidMount(){
         const dao = new SecurityDao()
         const isLoggedIn = dao.isLoggedIn();
+        const user = dao.getUser()
 		let pageData = {
 			...this.state.pageData, 
 			isLoggedIn:isLoggedIn, 
-			user: dao.getUser()
+			user: user
 		};
         this.setState({pageData:pageData})
         if(!isLoggedIn){
@@ -26,11 +27,17 @@ class MainPageNoRouter extends Component{
             return
         }
 		
-		if(isLoggedIn){
-            this.props.router.navigate("/appointment/create");//LOGGED IN PAGE
+		if(isLoggedIn && user.app === 'customer'){
+            this.props.router.navigate("/appointment/create");//LOGGED IN PAGE, Customer App
             window.location.reload();  
             return
-        }		
+        }	
+        
+        if(isLoggedIn && user.app === 'admin'){
+            this.props.router.navigate("/appointment/view");//LOGGED IN PAGE, Admin App
+            window.location.reload();  
+            return
+        }
 		
 		pageData = { 
 			...this.state.pageData, 
@@ -39,7 +46,7 @@ class MainPageNoRouter extends Component{
         this.setState({ pageData: pageData})
     }
     render(){
-        if(this.state.isLoading){
+        if(this.state.pageData.isLoading){
             return(
                 <LoadingPage/>
             )

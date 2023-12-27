@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import CustomerDao  from './CustomerDao'
+import { AdminDao, SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
 
@@ -12,8 +12,8 @@ class AdminLoginNoRouter extends Component{
         };
     }
     componentDidMount(){
-        const dao = new CustomerDao()
-        const isLoggedIn = dao.isLoggedIn();  
+        const securityDao = new SecurityDao()
+        const isLoggedIn = securityDao.isLoggedIn();  
           
         if(isLoggedIn){
             this.props.router.navigate("/");//MAIN PAGE
@@ -29,16 +29,17 @@ class AdminLoginNoRouter extends Component{
         this.setState({loginFormData: loginFormData});
     }
     onLogin = async(e) => {
-        const dao = new CustomerDao();
+        const adminDao = new AdminDao();
+        const securityDao = new SecurityDao();
         try{
             let loginFormData = {
                 ...this.state.loginFormData
             }
-            let loginResponse = await dao.login(loginFormData);
+            let loginResponse = await adminDao.login(loginFormData);
             loginResponse = loginResponse.data
             console.log(loginResponse) //XXXXX
             if(loginResponse.isValidLogin){
-                dao.setUser(loginResponse.user);
+                securityDao.setUser(loginResponse.user);
                 this.setState({ pageData: { ...this.state.pageData, isLoggedIn: true }    });               
                 //alert(loginResponse.message);
 
@@ -55,7 +56,7 @@ class AdminLoginNoRouter extends Component{
     }
     
     render(){      
-        if(this.state.isLoading){
+        if(this.state.pageData.isLoading){
             return(
                 <LoadingPage/>
             )
@@ -66,16 +67,16 @@ class AdminLoginNoRouter extends Component{
             <>  
                <div className="container">
                     <form>    
-                        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+                        <h1 className="h3 mb-3 fw-normal">Admin Sign In</h1>
                        
                         <div className="form-floating">
                             <input type="text" 
                                 className="form-control" 
-                                id="mobile" 
-                                placeholder="Mobile Number"
-                                value={this.state.loginFormData.mobile}
+                                id="username" 
+                                placeholder="Username"
+                                value={this.state.loginFormData.username}
                                 onChange={this.onBoxChange}/>
-                            <label htmlFor="mobile">Mobile Number</label>
+                            <label htmlFor="username">Username</label>
                         </div>
                         <div className="form-floating">
                             <input type="password" 

@@ -6,6 +6,10 @@ import Header from './Header';
 import FixAppointment from './FixAppointment';
 import MainPage from './MainPage';
 
+import AdminLogin from './AdminLogin';
+import ViewAppointments from './ViewAppointments';
+import HistoryOfAppointments from './HistoryOfAppointments';
+
 function App() {
   return (
     <div className="App">
@@ -16,8 +20,12 @@ function App() {
             <Route path='/customer' element={<CustomerLogin/>}/>            
             <Route path='/customer/login' element={<CustomerLogin/>}/>
 			
-			<Route path='/customer/register' element={<CustomerRegistration/>}/>
+			      <Route path='/customer/register' element={<CustomerRegistration/>}/>
             <Route path='/appointment/create' element={<FixAppointment/>}/>
+
+            <Route path='/admin/login' element={<AdminLogin/>}/>
+            <Route path='/appointment/view' element={<ViewAppointments/>}/>
+            <Route path='/appointment/history' element={<HistoryOfAppointments/>}/>
         </Routes>
       </BrowserRouter>
       

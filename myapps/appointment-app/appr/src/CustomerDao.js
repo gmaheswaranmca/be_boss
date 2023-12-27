@@ -44,4 +44,23 @@ export class AdminDao{
         };
         return network.get('/appointment/view', {headers: headers});
     }
+    historyOfAppointments = (historyType, token) => {
+        const headers = {
+            'x-access-token' : token
+        };
+        return network.get(`/appointment/history/${historyType}`, {headers: headers});
+    }
+    confirmAppointment = (modifiedAppointment, token) => {
+        const headers = {
+            'x-access-token' : token
+        };
+        return network.post('/appointment/confirm', modifiedAppointment, {headers: headers});
+    }
+    cancelAppointment = (modifiedAppointment, token) => {
+        const headers = {
+            'x-access-token' : token
+        };
+        return network.post('/appointment/cancel', modifiedAppointment, {headers: headers});
+    }
+
 }

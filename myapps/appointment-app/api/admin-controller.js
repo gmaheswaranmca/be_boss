@@ -98,7 +98,6 @@ POST http://localhost:8080/admin/login
 POST http://localhost:8080/appointment/confirm
     {
         "id": 5,
-        "status" : 2,
         "staff" : "DRAVID"
     }
     header : {'x-access-token' : token}
@@ -118,7 +117,7 @@ POST http://localhost:8080/appointment/confirm
 		
 		if(responseBody.isLoggedIn){
 			const updateAppointment = { 
-				status : request.body.status,
+				status : 2,
 				staff: request.body.staff
 				};
 			console.log(updateAppointment);
@@ -135,7 +134,6 @@ POST http://localhost:8080/appointment/confirm
 POST http://localhost:8080/appointment/cancel
     {
         "id": 5,
-        "status" : 3,
         "cancel_reason" : "ALL STAFF BUSY"
     }
     header : {'x-access-token' : token}
@@ -155,7 +153,7 @@ POST http://localhost:8080/appointment/cancel
 		
 		if(responseBody.isLoggedIn){
 			const updateAppointment = { 
-				status : request.body.status,
+				status : 3,
 				cancel_reason: request.body.cancel_reason
 				};
 			console.log(updateAppointment);

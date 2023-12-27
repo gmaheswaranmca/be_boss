@@ -1,0 +1,403 @@
+v2m.in/freelancer
+Login 
+        [                ] 
+        [                ]
+        <Login>
+    
+Developer
+    Welcome Maheswaran!!!       
+    jobs:
+    #1001 
+        to do carwash app as a service work.
+
+        for android devices...
+
+        customer module 
+            registration 
+            login 
+            fix appointment 
+        admin module 
+            login 
+            view appointments 
+                - not confirmed | not cancelled
+            history of appontments
+                Confirmed | Cancelled | Both 
+
+        technology:
+            mern | 
+        project duration: {start date: xxxx, end date: xxxx}
+-----------------------------------------------------------------
+Admin 
+    100 hourly based employees 
+        - Developers 
+            MERN 2
+            Java FS 3
+    10 source experts 
+        - uses 100 freenlancers names 
+
+        gets jobs for employees 
+            - from freelancer sites 
+
+            - from market 
+                - personal marketting 
+                    - after done research 
+                - call marketting 
+                    - after done research
+    1 manager 
+-----------------------------------------------------------------
+
+
+From freelancer sites:
+1. fiverr.com 
+2. upwork.com 
+    Development & IT *****
+    AI Services
+    Design & Creative
+    Sales & Marketing
+    Admin & Customer Support
+    Writing & Translation
+    Finance & Accounting
+    HR & Training
+    Legal
+    Engineering & Architecture
+    See all specializations
+3. toptal.com
+    Developers *****
+    Designers *****
+    Finance Experts
+    Project Managers
+    Product Managers
+    Plus Thousands More Skills
+4. flexjobs.com 
+    Accounting
+    Analyst
+    Bookkeeping
+    Call Center
+    Communications
+    Customer Service
+    Data Entry
+    Developer               *****
+    Education
+    Finance
+    Graphic Design
+    HR
+    Marketing
+    Nursing
+    Project Management      *****
+    Proofreading
+    Sales
+    Spanish
+    Transcription
+    Virtual Assistant
+    Writing
+
+    ...
+    Account Management Jobs
+    
+    Accounting & Finance Jobs
+    
+    Administrative Jobs
+    
+    Advertising & PR Jobs
+    
+    Animals & Wildlife Jobs
+    Art & Creative Jobs
+    
+    Bilingual Jobs
+    
+    Business Development Jobs
+    Call Center Jobs
+    
+    Communications Jobs
+    Computer & IT Jobs
+    
+    Consulting Jobs
+    
+    Customer Service Jobs
+    Data Entry Jobs
+    Editing Jobs
+    
+    Education & Training Jobs
+    
+    Engineering Jobs
+    Entertainment & Media Jobs
+    
+    Environmental & Green Jobs
+    Event Planning Jobs
+    Fashion & Beauty Jobs
+    Food & Beverage Jobs
+    Government & Politics Jobs
+    
+    Graphic Design Jobs
+    
+    HR & Recruiting Jobs
+    Human Services Jobs
+    
+    Insurance Jobs
+    
+    International Jobs
+    Internet & Ecommerce Jobs
+    
+    Legal Jobs
+    Manufacturing Jobs
+    Marketing Jobs
+    
+    Math & Economics Jobs
+    
+    Medical & Health Jobs
+    
+    Mortgage & Real Estate Jobs
+    News & Journalism Jobs
+    
+    Nonprofit & Philanthropy Jobs
+    
+    Operations Jobs
+    Product Jobs
+    Project Management Jobs
+    Research Jobs
+    
+    Retail Jobs
+    Sales Jobs
+    
+    Science Jobs
+    
+    Software Development Jobs       *****
+    
+    Sports & Fitness Jobs
+    
+    Telemarketing Jobs
+    Transcription Jobs
+    Translation Jobs
+    Travel & Hospitality Jobs
+    Web Design Jobs
+    Writing Jobs
+    
+    Youth & Children Jobs
+
+
+5. https://solidgigs.com/
+
+
+6. https://www.freelancer.com/
+    Website Design          *****
+    Mobile Apps *****
+    Android Apps *****
+    iPhone Apps *****
+    Software Architecture *****
+    Graphic Design *****
+    Logo Design *****
+    Public Relations
+    Logistics
+    Proofreading
+    Translation
+    Research
+    Research Writing
+    Article Writing
+    Web Scraping
+    HTML *****
+    CSS *****
+    HTML 5 *****
+    Javascript *****
+    Data Processing *****
+    Python *****
+    Wordpress *****
+    Web Search *****
+    Finance
+    Legal
+    Linux
+    Manufacturing
+    Data Entry
+    Content Writing
+    Marketing
+    Excel
+    Ghostwriting
+    Copywriting
+    Accounting
+    MySQL *****
+    C++ Programming *****
+    Banner Design
+    Illustration
+    Link Building
+    C# Programming *****
+    PHP *****
+    3D Modelling
+    Photoshop
+    Technical Writing
+    Blogging
+    Internet Marketing
+    eCommerce
+    View more
+
+7. https://www.guru.com/
+    3D Designers
+    Accountants
+    Advertising Experts
+    App Developers *****
+    Article Writers
+    Artists
+    Blog Writers  *****
+    Business Card Designers
+    C Developers  ***** 
+    C# Developers  *****
+    Content Writers
+    Copywriters
+    CSS Developers  *****
+    Customer Service Experts
+    Data Analysts
+    Data Entry Experts
+    Editors
+    Email Specialists
+    Engineers
+    English Language Experts
+    Excel Experts
+    Graphic Designers
+    HTML5 Developers  *****
+    Illustrators
+    JavaScript Developers  *****
+    jQuery Developers  *****
+    Logo Designers
+    Marketers
+    MS Word Experts
+    MySQL Developers  *****
+    Photo and Image Editors
+    Photographers
+    Photoshop Experts 
+    PHP Developers  *****
+    Programmers  *****
+    Proofreaders
+    Python Developers  *****
+    Report Writers
+    Researchers
+    Sales Consultants
+    SEO Experts
+    Social Media Marketers
+    Software Developers
+    SQL Developers  *****
+    Transcriptionists
+    Translators
+    User Experience (UX) Designers  *****
+    Video Editors
+    Web Designers  *****
+    Web Developers  *****
+    WordPress Developers  *****
+    Writers
+
+8. https://www.servicescape.com/
+
+9. https://www.peopleperhour.com/
+    Technology & Programming   *****
+    Writing & Translation
+    Design   *****
+    Digital Marketing
+    Video & Photo & Image
+    Business
+    Music & Audio
+    Marketing, Branding & Sales
+    Social Media
+
+
+10. https://hubstafftalent.net/
+    Development             *****
+        Web Development
+        JavaScript
+        Data Scraping
+        CSS
+        HTML
+    Marketing & Sales
+        Marketing & Sales
+        Social Media Marketing
+        Email Marketing
+        Facebook Advertising
+        SEO (Search Engine Optimization)
+        Marketing
+    Design & Multimedia
+        Design & Multimedia
+        Graphic Design
+        Photoshop
+        Video Production & Editing
+        Logo Design
+        Photo Editing
+    Writing & Content
+        Writing & Content
+        Copywriting
+        Writing
+        Editing & Proofreading
+        Content Writing
+        Content Creation
+    Database & IT
+        Database & IT
+        PDF to Word
+        Data Mining
+        Data Extraction
+        PDF Conversion
+        MySQL
+    Admin
+        Admin
+        Data Entry
+        Customer Service
+        Microsoft Office
+        Excel
+        Virtual Assistant
+    Business Consulting
+        Business Consulting
+        Data Analytics
+        Project Management
+        Accounting
+        Data Processing
+        CRM (Customer Relationship Management)
+
+11. https://www.truelancer.com/
+    Content Writers
+        Content Writers
+        Academic Writers
+        Blog Writers
+        Technical Writers
+        Copywriters
+        SEO Writers
+
+    Freelancers
+        Freelancers in India
+        Freelancers in USA
+        Freelancers in UK
+        Freelancers in Philippines
+        Freelancers in Pakistan
+        Freelancers in Bangladesh
+        Freelance Jobs
+        Freelance Writing Jobs
+
+    Graphic Design Jobs
+        Data Entry Jobs
+        Virtual Assistant Jobs
+        Customer Service Jobs
+
+    Online Jobs
+        Work From Home Jobs
+        Part Time Jobs
+        Interior Design Jobs
+        Voice Over Jobs
+        Transaltor Jobs
+        Accounting Jobs
+
+    Designers
+        Logo Designers
+        Web Designer
+        Web Developer
+        SEO Consultant
+        Android Developer
+        IOS Developer
+
+    Developers
+        Front End Developer
+        Backend Developer
+        PHP Developer
+        Wordpress Developer
+        Java Developer
+        API Developer
+
+    Translations
+        English to Spanish Translation
+        German to English Translation
+        English to Hindi Translation
+        English to Tamil Translation
+        English to French Translation
+        Spanish to English Translation

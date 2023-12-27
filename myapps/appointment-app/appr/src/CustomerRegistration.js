@@ -47,7 +47,7 @@ class CustomerRegistrationNoRouter extends Component{
     }
     
     render(){
-        if(this.state.isLoading){
+        if(this.state.pageData.isLoading){
             return(
                 <LoadingPage/>
             )

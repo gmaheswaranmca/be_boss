@@ -1,0 +1,424 @@
+-----------------------------------------
+new app
+-----------------------------------------
+    $npm init
+``````````````````````````````````````````
+
+
+-----------------------------------------
+packages installation
+    express cors mysql2 sequelize md5 jsonwebtoken 
+-----------------------------------------
+    $npm install  express cors mysql2 sequelize md5 jsonwebtoken
+
+    #unit test packages 
+    $npm install dotenv express-async-errors jest supertest cross-env
+``````````````````````````````````````````
+
+-----------------------------------------
+project structure
+-----------------------------------------
+    -api
+        - package.json      #via new app
+        - config.js                        app level properties (hard coded data such as db host, name etc)
+        - []models
+            - customer-model.js             #map for db table 'customer'
+            - appoitnment-model.js          #map for db table 'appointment'
+            - admin-model.js                #map for db table 'admin'
+        - models.js                         CustomerModel, AppointmentModel, AdminModel, sequelize, Sequelize 
+        - customer-controller.js            register, login, fixAppointment
+        - admin-controller.js               login, viewAppointments, confirmAppointment, cancelAppointment, historyOfAppointments
+        - index.js                          server configuration and up and running
+``````````````````````````````````````````
+
+-----------------------------------------
+config.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+-----------------------------------------
+customer-model.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+-----------------------------------------
+appoitnment-model.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+-----------------------------------------
+admin-model.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+-----------------------------------------
+models.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+
+-----------------------------------------
+test-customer-model.js
+-----------------------------------------
+    ...
+``````````````````````````````````````````
+    $node test-customer-model.js
+``````````````````````````````````````````
+
+-----------------------------------------
+test-admin-model.js
+-----------------------------------------
+    ...
+``````````````````````````````````````````
+    $node test-admin-model.js
+``````````````````````````````````````````
+
+
+-----------------------------------------
+test-jwt-token.js
+-----------------------------------------
+    ...
+``````````````````````````````````````````
+    $node test-jwt-token.js
+    !!! Do: Take a copy of created 'token' to  "test-jwt-valid.js"
+``````````````````````````````````````````
+
+-----------------------------------------
+test-jwt-valid.js
+-----------------------------------------
+    ...
+``````````````````````````````````````````
+    !!! Note:  Created 'token' using 'test-jwt-token.js' has copied to  "test-jwt-valid.js"
+    $node test-jwt-valid.js
+``````````````````````````````````````````
+
+-----------------------------------------
+customer-controller.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+-----------------------------------------
+admin-controller.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+-----------------------------------------
+index.js
+-----------------------------------------
+...
+``````````````````````````````````````````
+
+
+***********Test api end points using postman:***********
+-----------------------------------------
+API End Points - Customer App
+-----------------------------------------
+01
+    POST http://localhost:8080/customer/register
+        !!!JSON body:
+            {
+                "name": "narmada",
+                "mobile": "9991",
+                "password": "4321",
+                "location": "Srirampura"
+            }
+02
+    POST http://localhost:8080/customer/login
+        !!!JSON body:
+            {
+                "mobile": "9991",
+                "password": "4321"
+            }
+
+03
+    POST http://localhost:8080/appointment
+        !!!JSON body:
+            {
+                "car_name": "Volks Wagon",
+                "model" :"Taigun",
+                "appointment_date" : "2023-12-18",
+                "service_type" : "Both"
+            }
+
+        !!!header : 
+            'x-access-token' = token
+``````````````````````````````````````````
+
+-----------------------------------------
+API End Points - Admin App
+-----------------------------------------
+01
+    POST http://localhost:8080/admin/login
+        !!!JSON body:
+            {
+                "username": "mahesh",
+                "password": "1234"
+            }
+
+02
+    POST http://localhost:8080/appointment/confirm
+        !!!JSON body:
+            {
+                "id": 5,
+                "staff" : "DRAVID"
+            }
+        !!!header : 
+            'x-access-token' = token
+
+03
+    POST http://localhost:8080/appointment/cancel
+        !!!JSON body:
+            {
+                "id": 5,
+                "cancel_reason" : "ALL STAFF BUSY"
+            }
+        !!!header : 
+            'x-access-token' = token
+
+04
+    GET http://localhost:8080/appointment/view    
+        !!!header : 
+            'x-access-token' = token
+
+05  
+    GET http://localhost:8080/appointment/history/2 
+    GET http://localhost:8080/appointment/history/3
+    GET http://localhost:8080/appointment/history/4   
+        !!!header : 
+            'x-access-token' = token
+``````````````````````````````````````````
+
+
+-----------------------------------------
+API Test Data Plan:
+-----------------------------------------
+Some of the car name and model:
+    Volkswagen Taigun
+    Skoda Kushaq
+    Hyundai Creta
+    Kia Seltos
+    MG Hector
+    Mahindra XUV700
+
+Customer Password: 4321
+
+Some of the customer name and mobile number:
+
+Admin Password: 1234
+Admin Usernames: mahesh, nithin, rakesh
+``````````````````````````````````````````
+
+-----------------------------------------
+API Test Data Plan:
+-----------------------------------------
+Admin
+    user      password    id
+    mahesh    1234        1
+    nithin    1234        2
+    rakesh    1234        3
+
+Customer Registration 
+    mobile  password    name        location    id
+    1001    4321        dravid      mysore      1
+    1002    4321        rohit       mysore      2
+    1003    4321        kohli       mysore      3
+    1004    4321        hartik      mysore      4
+    1005    4321        sami        mysore      5
+
+Appointment Creation
+    customer date           service             car name            id   entry              status   
+    id                                          model                    time 
+    1        2024-01-05     Interior+Exterior   Volkswagen Taigun   1    2023-12-30 10:00   1
+    2        2024-01-07     Interior            Skoda Kushaq        2    2023-12-30 11:00   1
+    3        2024-01-06     Interior            Hyundai Creta       3    2023-12-30 11:10   1
+    4        2024-01-06     Interior+Exterior   Kia Seltos          4    2023-12-30 11:20   1
+    5        2024-01-05     Interior+Exterior   MG Hector           5    2023-12-30 11:30   1
+
+Appointment Update
+    id      staff           cancel              status 
+                            reason
+    1       STAFF 1                             2
+    2                       STAFFs ARE BUSY     3   
+    4       STAFF 2                             2        
+``````````````````````````````````````````
+
+
+
+-----------------------------------------
+*****API Test STEP - PREPARATION:*****
+-----------------------------------------
+01. Customer Registration 
+    mobile  password    name        location
+    1001    4321        dravid      mysore
+xx. Customer Registration 
+    mobile  password    name        location
+    1002    4321        rohit       mysore
+xx. Customer Registration 
+    mobile  password    name        location
+    1003    4321        kohli       mysore
+xx. Customer Registration 
+    mobile  password    name        location
+    1004    4321        hartik      mysore
+xx. Customer Registration 
+    mobile  password    name        location
+    1005    4321        sami        mysore
+02. Customer Login 
+    mobile  password    token
+    1001    4321        AAAA
+xx. Customer Login 
+    mobile  password    token
+    1002    4321        BBBB
+xx. Customer Login 
+    mobile  password    token 
+    1003    4321        CCCC
+xx. Customer Login 
+    mobile  password    token  
+    1004    4321        DDDD
+xx. Customer Login 
+    mobile  password    token   
+    1005    4321        EEEE
+03. Fix Appointment 
+    date           service              car name           id       token    
+                                        model                  
+    2024-01-05     Interior+Exterior    Volkswagen Taigun   1       AAAA
+
+xx. Fix Appointment
+    date           service              car name           id       token    
+                                        model                    
+    2024-01-07     Interior             Skoda Kushaq        2       BBBB
+
+xx. Fix Appointment
+    date           service              car name           id       token    
+                                        model                      
+    2024-01-06     Interior             Hyundai Creta       3       CCCC
+
+xx. Fix Appointment
+    date           service              car name           id       token    
+                                        model                      
+    2024-01-06     Interior+Exterior    Kia Seltos          4       DDDD
+
+xx. Fix Appointment
+    date           service              car name           id       token    
+                                        model                      
+    2024-01-05     Interior+Exterior    MG Hector           5       EEEE    
+
+04. Admin Login  
+    username  password    token
+    mahesh    4321        ZZZZ
+
+05. Confirm Appointment
+    id  staff         token     
+    1   STAFF 1       ZZZZ
+
+xx. Confirm Appointment
+    id  staff         token    
+    4   STAFF 2       ZZZZ
+
+06. Cancel Appointment
+    id  cancel              token 
+        reason              
+    2   STAFFs ARE BUSY     ZZZZ
+
+07. View Appointments 
+    token 
+    ZZZZ 
+
+08. History of Appointments (Confirmed)
+    URL:
+    /2
+    token 
+    ZZZZ
+
+xx. History of Appointments (Cancelled)
+    URL:
+    /3
+    token 
+    ZZZZ
+
+xx. History of Appointments (Confirmed + Cancelled)
+    URL:
+    /4
+    token 
+    ZZZZ
+``````````````````````````````````````````
+
+
+-----------------------------------------
+Google Search Term: 
+    "mern api unit test"
+-----------------------------------------
+    https://bognov.tech/mern-stack-test-nodejs-and-express-with-jest
+        https://github.com/bgdnvk/MERN-stack-2/blob/testing/tests/dummy.test.js
+
+    https://javascript.plainenglish.io/jest-mock-for-unit-testing-mern-backend-983c1e3fef83
+
+    https://hackernoon.com/a-guide-on-writing-tests-in-full-stack-mern-web-application
+``````````````````````````````````````````
+
+
+
+const sumFunction = (a,b) => {return  a + b;}
+
+//tests take a description and a function
+test('test sumFunction, expected to pass', () => {
+    const a = 5
+    const b = 6
+    const result = sumFunction(a, b)
+    //through expect we indicate the expected result of the test
+    //the .toBe method expects a specific value you pass
+    //https://jestjs.io/docs/expect#tobevalue
+    expect(result).toBe(11)
+})
+test('test sumFunction, expected to fail', () => {
+    const a = 6//5
+    const b = 6
+    const result = sumFunction(a, b)
+
+    expect(result).toBe(12)
+})
+
+
+
+
+
+
+
+/*
+const supertest = require("supertest");
+const app = require("../app");
+const request = supertest(app)
+//require("dotenv").config();
+
+// Connecting to the database before each test. 
+beforeEach(async () => {
+    //await mongoose.connect(process.env.MONGODB_URI);
+    console.log('app tests started....')
+});
+  
+// Closing database connection after each test. 
+afterEach(async () => {
+    //await mongoose.connection.close();
+    console.log('app tests finished....')
+});
+
+
+describe("GET /", () => {
+    it("ReAD root", async () => {
+      //const loginData = {email: process.env.EMAIL,password: process.env.PASSWORD}  
+      //const token = await request.post("/api/auth/login").send(loginData);
+      const headers = {"Content-Type": "application/json"};
+      const response = await request.get("/").set(headers);
+  
+      expect(response.statusCode).toBe(200);
+      expect(response.body.length).toBeGreaterThan(0);
+    });
+  });
+
+  */

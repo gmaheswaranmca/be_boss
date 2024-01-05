@@ -38,37 +38,7 @@
         <button class="w-100 btn btn-lg btn-primary"
             type="button"
             @click="onRegister">Sign up</button>
-<hr>
-        <ul>
-          <template v-for="(hobby,index) in hobbies" :key="index">
-            <li v-if="index % 2 == 0" style="color:red">{{ hobby.name }}
-              
-            </li>
-            <li v-else style="color:blue">{{ hobby.name }}</li>
 
-          </template>
-        </ul>
-<hr>
-        <ul>
-          <template v-for="(hobby,index) in hobbies" :key="index">
-            <li v-if="index % 2 == 1" style="color:red">{{ hobby.name }}
-              <input type="text" value="mahesh" :title="hobby.name"/>
-
-            </li>
-            
-
-          </template>
-        </ul>
-<hr>
-        <ul>
-          <template v-for="(hobby,index) in hobbies" :key="index">
-            <li v-show="index % 2 == 0" style="color:red">{{ hobby.name }}</li>
-            
-
-          </template>
-        </ul>
-
-<hr>
         
     </form>
 </div>                
@@ -84,10 +54,7 @@ export default {
         name: '',
         mobile: '',
         password: '',
-        location: '',
-        hobbies: [{name:'Reading Books'},
-          {name:'Watching TV'},
-          {name:'Stamp Collection'}]
+        location: ''
       
     };
   },

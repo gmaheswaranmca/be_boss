@@ -1,0 +1,24 @@
+Day(s)	dhina(gallu)
+Sunday	bhanuvaara/ravivaara
+Monday	somavaara
+Tuesday	mangalavaara
+Wednesday	budhavaara
+Thursday	guruvaara
+Friday	shukravaara
+Saturday	shanivaara
+
+
+
+Month(s)	maasa(galu)
+March/April	chaitra
+April/May	vaishaakha
+May/June	jyeshTa
+June/July	AashaaDha
+July/August	Shraavana
+August/September	Bhaadrapada
+September/October	aashwayuja
+October/November	Kaarthika
+November/December	Dhanur
+December/January	Pushya
+January/February	Maagha
+February/March	Phaalguna

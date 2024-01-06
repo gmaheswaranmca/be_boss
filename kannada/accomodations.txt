@@ -1,0 +1,6 @@
+Accomodations
+
+English	Transliteration
+house	mane
+storey	mahaDi
+room	kONe

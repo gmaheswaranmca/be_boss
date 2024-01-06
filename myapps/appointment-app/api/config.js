@@ -1,8 +1,8 @@
 const db = {
     host: "localhost",
-    port: 3316,
+    port: 3306,
     user: "root",
-    password: "4321",
+    password: "1234",
     db: "carwash_db",
     dialect: "mysql",
     pool_max : 5,

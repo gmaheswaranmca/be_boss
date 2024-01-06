@@ -1,0 +1,12 @@
+Black	Kappu
+Blue	Neeli
+Brown	Kandu
+Green	Hasiru
+Grey	Boodu/Narugu
+Orange	Kittale/Peeta rakta
+Pink	Gulaabi/Paatala
+Purple	Nerale/dhoomala
+Red	Kempu
+Violet	Nerale
+White	Bili
+Yellow	Haladhi/Arishina/Peeta

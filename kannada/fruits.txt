@@ -1,0 +1,18 @@
+Apple			sebu
+Pear			Marasebu
+Avocado			Benne Hannu
+Banana			Baale Hannu
+Chikku			Sapota
+Custard Apple	Seethaphala
+Grapes			Dhraakshi
+Guava			Perala, Seebe Hannu, Chepekaayi
+Muskmelon		Kharbooja
+Mango			Maavina Hannu
+Moosambi		Moosambi
+Orange			Kittale
+Pomegranate		Daalimbe
+Papaya			Parangi
+Pineapple		Ananas
+Watermelon		Kallangadi Hannu
+Jackfruit		Halasina hannu
+Lemon			Nimbe hannu

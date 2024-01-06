@@ -1,0 +1,46 @@
+Vegetable	Tarakari
+Beans /Green Beans	Hurali kaayi
+Bitter gourd	Haagala kaayi
+Bottle gourd	Sore kaaye
+Brinjal	Badane kaayi
+Cabbage	Yele kosu
+Capsicum	Donne Menasina kaayi / Dappa Menasina kaayi
+Carrot	Gajjari
+Cauliflower	Hoo kosu
+Chow-chow	Seemebadne
+Coriander leaves	Kotthambari Soppu
+Cucumber	Southe kaayi
+Curry leaves	Karibevu
+Flat Beans	Avarekāyi
+Garlic	Belulli
+Knol khol	GeDDee kosu
+Ginger	Shunti
+Green chilli	Hasiru menasina kaayi
+Greens	Soppu
+Lady's finger / Okra	Bende kaayi
+Lemon	Nimbe hannu
+Onion	Eerulli, Ullagadde
+Peas	Batani
+Potato	Aaloo gadde
+Radish	Moolangi Mulli
+Pumpkin	Kumbal kaayi
+Raw plantain	Baale kaayi
+Plantain Stem	Bale Dindu
+Ridge Gourd/Chinese Okra	Hīrekāyi
+Snake gourd	Padavala kaayi
+Sweet Potato	Genasu
+Tomato	Tamtekayi, Tometo, Tomyato/Gore hannu
+Coconut	Thengina kayi
+Beetroot	Kanduberu
+Cocina/Ivy Gourd	Tondekayi
+Elephant Yam	suvarna Gedde
+Mushroom	Nayi Kode/Anabe
+Mint leaves	Pudina soppu
+Fenugreek leaves	Menthya soppu
+Spinach	palak soppu
+cluster beans	Chavalikai/Gorikai
+Malabar spinach	Basale soppu
+Amaranth	rajgira
+Bread fruit	Beru halasinakayi
+Taro root	kesu gedde
+Groundnut	sheng/kadle kayi

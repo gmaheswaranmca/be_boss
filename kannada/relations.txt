@@ -1,0 +1,48 @@
+Relatives		nentaru
+Mother			amma, taayi
+Father			appa, tande
+Son				maga
+Daughter		magalu
+Elder Brother	anna
+Younger Brother	tamma
+Elder Sister	akka
+Younger Sister	tangi
+Grandfather		ajja, taata
+Grandmother		ajji
+Husband			ganda
+Wife			hendathi
+Father In Law	maava
+Maternal Uncle, Paternal Aunt's Husband			Sodare maava
+Mother In Law	atte
+Paternal Aunt, Maternal Uncle's Wife			Sodare atte
+Son In Law										aliya
+Elder Brother's son / Younger Brother's son		Maga
+Elder Brother's Daughter / Younger Brother's Daughter	Maghalu
+Elder Sister's son / Younger sister's son				Sodaraliya
+Daughter In Law											sose
+Elder Sister's Daughter / Younger sister's Daughter		sodarasose
+Father’s Younger Brother, Mother’s Younger Sister’s Husband	chikkappa
+Mother’s Younger Sister, Father’s Younger Brother’s Wife	chikkamma
+Father’s Elder Brother, Mother’s Elder Sister’s Husband		doDDappa
+Mother’s Elder Sister, Father’s Elder Brother’s Wife		doDDamma
+Spouse’s elder brother,										bhamaida
+Elder sister's husband										Bhava
+Children													makkalu
+Spouse’s elder sister, Elder brother's wife					attige
+Husband’s Younger Brother									maiduna
+Spouse’s younger sister										Naadini
+Friend(Male), Friend(Female)								geLeya, geLathi
+Friend(Male), Friend(Female)								snehitha, snehithe
+Friendship													geLethana
+Orphan														Anatha
+Wife’s Sister's Husband.									Shadka
+Husband's Brother's wife.									Vaaragitti
+Wife's Brother.												Baamaida,
+Great grand mother											Muthajji
+great grand father											muttajja/muthaata
+great grand daughter										Mari-mommagalu
+great grand son												Mari-mommaga
+grand son													Mommaga
+grand daughter												Mommagalu
+Husband's another wife										Savati
+Younger brother’s wife										Naadini

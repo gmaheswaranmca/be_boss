@@ -1,0 +1,22 @@
+Birds	hakki/pakshi
+Cock	hunja
+Crow	kaage
+Duck	baatukoli
+Eagle	haddu
+Hen	koli
+Owl	goobe
+Parrot	gili
+Peacock	navilu
+Pigeon	paarivaala
+Sparrow	gubbacchhi
+Stork	kokkare
+Coucal	kembhuta
+Red wattled lapwing	tittiba
+Falcon	Lagada
+Vulture	Ranahaddu
+Woodpecker	Marakutaka
+Red-whiskered bulbul	Juttina hakki
+Baya weaver bird	Geejaga hakki
+Swallows	Thale thirugina hakki
+Jungle bush quail	Purule hakki
+Ostrich	

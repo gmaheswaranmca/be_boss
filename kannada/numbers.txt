@@ -1,0 +1,38 @@
+https://en.wikibooks.org/wiki/Category:Book:Kannada
+
+0	sonne
+1	ondu
+2	yeradu
+3	mooru
+4	naalku
+5	aidu
+6	aaru
+7	yelu
+8	entu
+9	ombatthu
+10	hatthu
+11	hannondu
+12	hanneradu
+13	hadimooru
+14	hadinalku
+15	hadinaidu
+16	hadinaaru
+17	hadinelu
+18	hadinentu
+19	hathombattu
+20	ippatthu
+21	ippattondu
+30	moovatthu
+40	nalavatthu
+50	aivatthu
+60	aravatthu
+70	yepatthu
+80	embatthu
+90	thombatthu
+100	nooru
+1000	saavira
+10000	hatthu saavira
+100000	laksha
+1000000	hattulaksha
+10000000	koti
+100000000	dhashkoti

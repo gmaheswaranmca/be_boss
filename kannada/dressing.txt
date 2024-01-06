@@ -1,0 +1,11 @@
+Dresses
+
+English	Transliteration
+shirt	angi
+trousers	SarAyi
+lungi	lungi
+shoe	kera
+ring	ungura
+
+
+

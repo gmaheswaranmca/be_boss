@@ -29,8 +29,12 @@ Customer::Customer(int id_,
     strcpy(name, name_);
     strcpy(mobile, mobile_);
     strcpy(password, password_);
-    location = new char[255];
+
+    if(location == nullptr) {
+        location = new char[255];
+    }
     strcpy(location, location_);
+    
 }
 
 Customer::Customer(const Customer& RHS) : Customer(RHS.id, (char*)RHS.name, (char*)RHS.mobile, (char*)RHS.password, (char*)RHS.location){
@@ -56,6 +60,9 @@ Customer& Customer::operator=(const Customer& RHS) {
     strcpy(name, RHS.name);
     strcpy(mobile, RHS.mobile);
     strcpy(password, RHS.password);
+    if(location == nullptr) {
+        location = new char[255];
+    }
     strcpy(location, RHS.location);
 }
 
@@ -79,7 +86,8 @@ Customer::~Customer() {
     strcpy(mobile, "");
     strcpy(password, "");
     strcpy(location, "");
-
-    delete[] location;
-    location = nullptr;
+    if(location != nullptr){
+        delete[] location;
+        location = nullptr;
+    }
 }

@@ -28,12 +28,11 @@ class FixAppointmentNoRouter extends Component{
 		
         this.setState({pageData:pageData})
 		
-        if(!isLoggedIn){
+        if((!isLoggedIn) || (isLoggedIn && user.app !== 'customer')){
             this.props.router.navigate("/");//MAIN PAGE
             window.location.reload();  
             return
         }
-		
 		// GET Latest created appointment if any //TODO
 		
 		pageData = {...pageData, isLoading: false};

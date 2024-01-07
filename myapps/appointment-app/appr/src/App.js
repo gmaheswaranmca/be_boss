@@ -16,8 +16,7 @@ function App() {
       <Header/>
       <BrowserRouter>
         <Routes>
-            <Route path='/' element={<MainPage/>}/>
-            <Route path='/customer' element={<CustomerLogin/>}/>            
+         
             <Route path='/customer/login' element={<CustomerLogin/>}/>
 			
 			      <Route path='/customer/register' element={<CustomerRegistration/>}/>
@@ -26,6 +25,8 @@ function App() {
             <Route path='/admin/login' element={<AdminLogin/>}/>
             <Route path='/appointment/view' element={<ViewAppointments/>}/>
             <Route path='/appointment/history' element={<HistoryOfAppointments/>}/>
+
+            <Route path='/*' element={<MainPage/>}/>  
         </Routes>
       </BrowserRouter>
       

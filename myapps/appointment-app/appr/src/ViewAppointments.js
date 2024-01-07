@@ -18,14 +18,15 @@ class ViewAppointmentsNoRouter extends Component{
         const securityDao = new SecurityDao()
         const adminDao = new AdminDao()
         const isLoggedIn = securityDao.isLoggedIn();
-
-        if(!isLoggedIn){
+        const user = securityDao.getUser();
+        
+        if((!isLoggedIn) || (isLoggedIn && user.app !== 'admin')){
             this.props.router.navigate("/");//MAIN PAGE
             window.location.reload();  
             return
         }
 
-		const user = securityDao.getUser();
+		
         const token = user.token;
 		let pageData ={
 			isLoggedIn:isLoggedIn, 

@@ -1,0 +1,52 @@
+------------------------------
+To install the packages from existing node app 
+    -- to install uninstalled packages 
+       by referring 'dependecies' section of "packages.json"'
+------------------------------
+    o Be in the app root folder     
+        Note: packages.json will be in the app root folder
+        o Run 
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            $npm install 
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        o Notes: "npm install" will install the uninstalled packages 
+``````````````````````````````
+
+------------------------------
+$node file.js
+------------------------------
+    It runs the file.js 
+``````````````````````````````
+
+------------------------------
+$node .
+------------------------------
+    It runs index.js in the current working folder 
+``````````````````````````````
+
+------------------------------
+$npm start
+------------------------------
+    In packages.json 
+    there is "scripts" section
+
+    In scripts section,
+    there is definition for "start" command 
+
+    for example, for react app, npm start will run "react-scripts start" 
+``````````````````````````````
+
+------------------------------
+$npm test
+------------------------------
+    In packages.json 
+    there is "scripts" section
+
+    In scripts section,
+    there is definition for "test" command 
+
+    for example, for our carwash backend app, npm test will run 
+    the command: "cross-env NODE_ENV=test jest --testTimeout=5000 --coverage --verbose" 
+
+    This command is defined by maheswaran for unit testing the backend app 
+``````````````````````````````

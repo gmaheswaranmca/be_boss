@@ -42,7 +42,7 @@ POST http://localhost:8080/admin/login
 
         if(isValidLogin){
             const token = jwt.sign(
-                { loginname : inputLogin.username, role: 'admin' },
+                { loginname : inputLogin.username, app: 'admin' },
                 appConfig.jwtSecret,
                 {
                     algorithm: 'HS256',

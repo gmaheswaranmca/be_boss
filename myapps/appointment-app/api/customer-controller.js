@@ -68,7 +68,7 @@ POST http://localhost:8080/customer/login
 
         if(isValidLogin){
             const token = jwt.sign(
-                { loginname : inputLogin.mobile, role: 'customer' },
+                { loginname : inputLogin.mobile, app: 'customer' },
                 appConfig.jwtSecret,
                 {
                     algorithm: 'HS256',

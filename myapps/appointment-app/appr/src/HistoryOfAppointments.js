@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { SecurityDao, AdminDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
+import Header from './Header';
 
 class HistoryOfAppointmentsNoRouter extends Component{
     constructor(props){
@@ -21,7 +22,7 @@ class HistoryOfAppointmentsNoRouter extends Component{
 
         if((!isLoggedIn) || (isLoggedIn && user.app !== 'admin')){
             this.props.router.navigate("/");//MAIN PAGE
-            window.location.reload();  
+            //window.location.reload();  
             return
         }
 
@@ -52,7 +53,8 @@ class HistoryOfAppointmentsNoRouter extends Component{
     render(){
         if(this.state.pageData.isLoading){
             return(
-                <LoadingPage/>
+                
+                <LoadingPage router={this.props.router}/>
             )
         }
 
@@ -60,6 +62,7 @@ class HistoryOfAppointmentsNoRouter extends Component{
         //<h3>View Appoointments {this.state.count}</h3>
         return(
 <>  
+    <Header router={this.props.router}/>
     <h3>History Of Appointments</h3>
     <div className="container">
         <table className="table table-bordered">

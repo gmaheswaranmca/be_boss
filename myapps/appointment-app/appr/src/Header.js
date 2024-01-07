@@ -16,7 +16,8 @@ export default class Header extends Component{
         const securityDao = new SecurityDao()
         securityDao.doLogout();
         this.setState({isLoggedIn:false, user: null, isLoggedOut: true})
-        window.location.reload()
+        this.props.router.navigate("/");
+        //window.location.reload()
     }
     render(){
         let ui;

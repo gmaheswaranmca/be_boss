@@ -1,5 +1,7 @@
 To do:
-    1. I will be ready for MERN stack corporate trainings asap 
-    2. I will be ready for Modern C++ corporate trainings asap 
+    1. I will be ready for end-to-end MERN stack corporate trainings asap for lateral
+    2. I will be ready for Modern C++ corporate trainings asap for lateral 
 
-    
+Tasks for day:
+    1. To transfer technical stuff of carwash MERN app to Nithin    !!! NOT DONE
+    2. To ask Nithin to visit the stuff in the MERN app             !!! NOT DONE 

@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { AdminDao, SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
+import Header from './Header';
 
 class AdminLoginNoRouter extends Component{
     constructor(props){
@@ -17,7 +18,7 @@ class AdminLoginNoRouter extends Component{
           
         if(isLoggedIn){
             this.props.router.navigate("/");//MAIN PAGE
-            window.location.reload();  
+            //window.location.reload();  
             return
         }
         
@@ -44,7 +45,7 @@ class AdminLoginNoRouter extends Component{
                 //alert(loginResponse.message);
 
                 this.props.router.navigate("/");//MAIN PAGE
-				window.location.reload();  
+				//window.location.reload();  
 				return                   
             }
                 
@@ -58,13 +59,14 @@ class AdminLoginNoRouter extends Component{
     render(){      
         if(this.state.pageData.isLoading){
             return(
-                <LoadingPage/>
+                <LoadingPage router={this.props.router}/>
             )
         }
 
 
         return(
             <>  
+                <Header router={this.props.router}/>
                <div className="container">
                     <form>    
                         <h1 className="h3 mb-3 fw-normal">Admin Sign In</h1>

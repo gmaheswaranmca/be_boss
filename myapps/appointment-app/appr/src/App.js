@@ -2,7 +2,7 @@ import './App.css';
 import CustomerLogin from './CustomerLogin';
 import CustomerRegistration from './CustomerRegistration';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Header from './Header';
+
 import FixAppointment from './FixAppointment';
 import MainPage from './MainPage';
 
@@ -13,7 +13,7 @@ import HistoryOfAppointments from './HistoryOfAppointments';
 function App() {
   return (
     <div className="App">
-      <Header/>
+      
       <BrowserRouter>
         <Routes>
          

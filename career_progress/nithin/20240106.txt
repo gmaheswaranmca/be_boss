@@ -14,7 +14,7 @@ Learn carwash app MERN technology stack stuff
 2. I will get the stuff from my trainer 
     @1:07pm - 3:00pm
     2.1 Open be_boss at "code"      ! DONE
-    2.2 Run carwash app             ! ???    
+    2.2 Run carwash app             ! DONE    
         2.2.0 DB Setup 
             Tables 
             Script for Add Admins
@@ -24,15 +24,19 @@ Learn carwash app MERN technology stack stuff
                 $npm install
             2.2.1.3 Run             ! DONE
                 $node .     
-        2.2.1 Run fronend app           ! ???    
-            2.2.1.1  install packages if required  ! ??? 
+        2.2.1 Run fronend app           ! DONE    
+            2.2.1.1  install packages if required  ! DONE 
                 $npm install 
-            2.2.1.2 Run
+            2.2.1.2 Run ! DONE
                 $npm start 
 
-3. I will take notes of each stuff 
+3. I will take notes of each stuff ! NOT DONE
     @4pm - 
-
+    REASON for NOT DONE: I am busy with my(Nithin) calls, my meetings, my personal commitments, self learning lined up 
+                         I missed the opportunity to upskill as per trainer's plan 
+                         I didnot give enough time to learn 
+                         I gave importance to other than learnings but Maheswaran Sir is here for my learning only 
+                         I am busy with Alchemy training methodology process video hearing and taking notes as I felt it is very important 
 $git --version 
     if not there the git, I ve to install and check.
 

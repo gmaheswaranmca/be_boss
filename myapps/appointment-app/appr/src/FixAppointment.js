@@ -2,6 +2,7 @@ import { Component } from 'react'
 import CustomerDao, { SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
+import Header from './Header';
 
 class FixAppointmentNoRouter extends Component{
     constructor(props){
@@ -30,7 +31,7 @@ class FixAppointmentNoRouter extends Component{
 		
         if((!isLoggedIn) || (isLoggedIn && user.app !== 'customer')){
             this.props.router.navigate("/");//MAIN PAGE
-            window.location.reload();  
+            //window.location.reload();  
             return
         }
 		// GET Latest created appointment if any //TODO
@@ -63,7 +64,7 @@ class FixAppointmentNoRouter extends Component{
             alert('Appointment has been fixed successfully')
 
             this.props.router.navigate("/appointment/create");
-            window.location.reload();  
+            //window.location.reload();  
         }catch(error){
             console.log(error)   //XXXXX
             alert('Server Error')
@@ -72,12 +73,13 @@ class FixAppointmentNoRouter extends Component{
     render(){
         if(this.state.pageData.isLoading){
             return(
-                <LoadingPage/>
+                <LoadingPage router={this.props.router}/>
             )
         }
 
         return(
             <>  
+               <Header router={this.props.router}/>
                <div className="container">
                     <form>    
                         <h1 className="h3 mb-3 fw-normal">Fix appointment</h1>

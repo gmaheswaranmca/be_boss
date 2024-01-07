@@ -2,6 +2,7 @@ import { Component } from 'react'
 import { SecurityDao, AdminDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
+import Header from './Header';
 
 class ViewAppointmentsNoRouter extends Component{
     constructor(props){
@@ -22,7 +23,7 @@ class ViewAppointmentsNoRouter extends Component{
         
         if((!isLoggedIn) || (isLoggedIn && user.app !== 'admin')){
             this.props.router.navigate("/");//MAIN PAGE
-            window.location.reload();  
+            //window.location.reload();  
             return
         }
 
@@ -64,7 +65,8 @@ class ViewAppointmentsNoRouter extends Component{
         const savedAppointment = await adminDao.confirmAppointment(appointment, token);
         console.log(savedAppointment);
         alert("Appointment has been confirmed");
-        window.location.reload()
+        //window.location.reload()
+        this.componentDidMount()
     }
     onGoForCancel = async(id) => {
         const cancel_reason = prompt("Cancellation Reason:","All staffs are busy");
@@ -81,12 +83,13 @@ class ViewAppointmentsNoRouter extends Component{
         const savedAppointment = await adminDao.cancelAppointment(appointment, token);
         console.log(savedAppointment);
         alert("Appointment has been cancelled");
-        window.location.reload()
+        //window.location.reload()
+        this.componentDidMount();
     }
     render(){
         if(this.state.pageData.isLoading){
             return(
-                <LoadingPage/>
+                <LoadingPage router={this.props.router}/>
             )
         }
 
@@ -94,6 +97,7 @@ class ViewAppointmentsNoRouter extends Component{
         //<h3>View Appoointments {this.state.count}</h3>
         return(
 <>  
+    <Header router={this.props.router}/>
     <h3>View Appoointments</h3>
     <div className="container">
         <table className="table table-bordered">

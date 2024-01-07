@@ -2,6 +2,7 @@ import { Component } from 'react'
 import CustomerDao, { SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
+import Header from './Header';
 
 class CustomerRegistrationNoRouter extends Component{
     constructor(props){
@@ -16,7 +17,7 @@ class CustomerRegistrationNoRouter extends Component{
         const isLoggedIn = securityDao.isLoggedIn();        
         if(isLoggedIn){
             this.props.router.navigate("/");//MAIN PAGE
-            window.location.reload();  
+            //window.location.reload();  
             return
         }
         
@@ -37,7 +38,7 @@ class CustomerRegistrationNoRouter extends Component{
             console.log(savedCustomer) //XXXXX
             
             this.props.router.navigate("/customer/login");
-            window.location.reload();  
+            //window.location.reload();  
         
             alert('Customer has been registered successfully')
         }catch(error){
@@ -49,12 +50,12 @@ class CustomerRegistrationNoRouter extends Component{
     render(){
         if(this.state.pageData.isLoading){
             return(
-                <LoadingPage/>
+                <LoadingPage router={this.props.router}/>
             )
         }
 
         return(
-            <>  
+            <>  <Header router={this.props.router}/>
                <div className="container">
                     <form>    
                         <h1 className="h3 mb-3 fw-normal">Please sign up</h1>

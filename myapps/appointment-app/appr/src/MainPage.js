@@ -3,6 +3,7 @@ import CustomerDao, { SecurityDao }  from './CustomerDao'
 import { Navigate } from 'react-router-dom'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
+import Header from './Header';
 
 class MainPageNoRouter extends Component{
     constructor(props){
@@ -48,7 +49,9 @@ class MainPageNoRouter extends Component{
     render(){
         if(this.state.pageData.isLoading){
             return(
-                <LoadingPage/>
+                <>
+                    <LoadingPage router={this.props.router}/>
+                </>
             )
         }
 

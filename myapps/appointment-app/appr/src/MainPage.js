@@ -1,9 +1,8 @@
 import { Component } from 'react'
-import CustomerDao, { SecurityDao }  from './CustomerDao'
-import { Navigate } from 'react-router-dom'
+import { SecurityDao }  from './CustomerDao'
 import { withRouter} from './withRouter'
 import LoadingPage from './LoadingPage'
-import Header from './Header';
+
 
 class MainPageNoRouter extends Component{
     constructor(props){

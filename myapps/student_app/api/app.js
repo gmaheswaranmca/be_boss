@@ -1,5 +1,6 @@
 'use strict';
 /*
+version: 3.0
 Defining mongo db 'promise' methods using 'async' and 'await'
 
 To run:

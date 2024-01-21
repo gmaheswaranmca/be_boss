@@ -1,0 +1,133 @@
+*** Javascript ***
+###
+Why AJAX is called asynchronous? 
+    AJAX, which stands for asynchronous JavaScript and XML , is 
+    a technique that allows web pages to be updated asynchronously, 
+    which means that the browser doesn't need to reload the entire page 
+    when only a small bit of data on the page has changed. 
+    
+    AJAX passes only the updated information to and from the server.
+
+    # fetch() api method to invoke server API call 
+    https://youtube.com/shorts/TR_9UgKenSk?si=ird1a_YuC6OmZEnd
+
+###
+Callback vs Promises vs async / await in JavaScript
+    #
+    https://youtube.com/shorts/yqcSzeyPJOg?si=FzItBDCvQnq8dwqr
+
+    -----Callback:-----
+    a callback function is usually used as a parameter
+    for another function 
+
+    it is used normally 
+    when 
+        a function is fetching data from a database,
+                      dowloading a file or
+                      making an API request 
+        passing a callback to the server call function 
+            another callback to the previous callback function
+            and so on 
+         it may create callback hell    
+
+    getData(a => {
+        getMoreData(a, b => {
+            getMoreData(b, c => {
+                getMoreData(c,d => {
+                    getMoreData(d, e => { 
+                        console.log(e);
+                    })
+                })
+            })
+        })
+    })
+
+    -----Promise:----- 
+        In modern JS, 'Promise' is an object 
+        represents some value that 
+        will be available in the future
+
+        the 'then' method is used to get 
+        the returned value from the promise         
+
+        promises support 
+            adding a new 'then' method after event method
+            and so on 
+        it is called promise chaining 
+
+    getData()
+        .then(a => getMoreData(a))
+        .then(b => getMoreData(b))
+        .then(c => getMoreData(c))
+        .then(d => getMoreData(d))
+        .then(e => console.log(e));
+
+    -----async / await----- 
+    'Promise' allows to create the Promise Callback Hell
+        async / await is a new way of writing promises
+        it look like synchronous code  
+
+        (async () => {
+            const a = await getData();
+            const b = await getMoreData(a);
+            const c = await getMoreData(b);
+            const d = await getMoreData(c);
+            const e = await getMoreData(d);
+            console.log(e);
+        })
+
+    #
+    https://youtube.com/shorts/Yg1Wf_rFG7Q?si=O42exosxCJGxBbLv
+
+    #
+    https://youtube.com/shorts/rxXQX_hV4Jk?si=uwE_9VXM9k-U48bd
+
+    #
+    https://youtube.com/shorts/TtnodUZ7xnQ?si=YaTnJ1MkDEKWsLEd
+
+
+###
+    Javascript Qns
+    #
+    https://youtube.com/shorts/Zg8-sbAmPEg?si=MeJl1hH1SMavcc2n
+
+###
+    Notorious Question from javascript:
+    Loop has setTimeout() call where call back for timeout uses loop index variable.
+    If it is declared as 'var' what is the output?
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    for (var i = 1 ; i < 3 ; i++) {
+        setTimeout( () => { console.log(i); }, 100 );
+    }
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Output:
+        3
+        3
+
+    Solution 1:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    for (let i = 1 ; i < 3 ; i++) {
+        setTimeout( () => { console.log(i); }, 100 );
+    }
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+    Output:
+        1
+        2
+
+    Solution 2:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    for (var i = 1 ; i < 3 ; i++) {
+        const print = (i) => {
+            setTimeout( () => { console.log(i); }, 100 );
+        };
+        print(i);
+    }
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+    Output:
+        1
+        2
+
+    #
+    https://youtube.com/shorts/KQ712CebFDM?si=A_XmWKm3NnQmirqc
+

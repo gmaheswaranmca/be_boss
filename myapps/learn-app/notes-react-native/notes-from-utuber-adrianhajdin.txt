@@ -1,0 +1,73 @@
+# 2 
+--- Build and Deploy a React Native App | 2023 React Native Course Tutorial for Beginners ---
+    github: JavaScript Mastery
+    youtube: adrianhajdin
+    https://www.youtube.com/watch?v=mJ3bGvy0WAY&t=5948s
+
+    Time Stamps:
+    00:00:00 Intro
+    00:04:18 React Native Crash Course
+    00:14:06 Setup 
+    00:24:30 Home Screen
+    00:55:20 useFetch Hook (API integration)
+    01:22:15 Job Details Screen
+    02:00:59 Search Functionality
+    02:11:00 Deployment
+    
+    ### 2.1
+    https://github.com/adrianhajdin/project_react_native_jobs
+
+    API is deployed at:
+    https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+
+
+    Designs are at:
+    https://dribbble.com/shots/11867493-Job-finder-Mobile-UI-Job-list
+
+    
+=== === ===
+# 1
+... clone source  ...
+$ git clone https://github.com/adrianhajdin/project_react_native_jobs.git
+
+# 2
+... install the uninstalled packages ...
+Be in project folder. ie folder : C:/mywork/source/hunted/project_react_native_jobs
+
+$npm install 
+        1287 packages installed!!!
+#3
+... run the app ...
+$npm start 
+
+!!!"cors" not allowed to connect the 'backend'
+
+Signed up with "rapidapi.com" to use api app at "jsearch.p.rapidapi.com"
+    Here, "https://jsearch.p.rapidapi.com/" is the start end point
+    to test apis:
+        https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+    sign up page: !!!Not Done !!! used github login 
+        https://rapidapi.com/auth/sign-up?referral=/letscrape-6bRBa3QguO5/api/jsearch
+
+        Logged in with github account "gmaheswaranmca@gmail.com"
+        Enter the code sent by "github"
+        "Authorize" github account to work with "https://rapidapi.com/"
+        Gave input 
+            name: Maheswaran
+            experience: 5+ yrs
+            purpose: learning or teaching
+
+            subscribe to test the jsearch api 
+                pricing:
+                    Basic
+                    $0.00 / mo
+                    200 / month Hard Limit
+                    5 requests per second	
+            Now, I got 
+                API Key: '7f82fb1582mshecdca71d9b58ef8p1f5d25jsnff3c92b6e51c'
+            
+            Do changes at "./hook/useFetch.js" -> options.header (Code Line# 13)
+                    "X-RapidAPI-Key": '7f82fb1582mshecdca71d9b58ef8p1f5d25jsnff3c92b6e51c'
+
+    
+=== === ===    

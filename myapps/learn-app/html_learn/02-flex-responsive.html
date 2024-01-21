@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Make a responsive container using CSS</title>
+        <style type="text/css">
+            .parent {
+                display : flex;
+                flex-wrap : wrap;
+            }
+
+            .child {
+                width : calc(33% - 10px);
+                height : 100px;
+                background-color : darkblue;
+                margin-left : 10px;
+                margin-top : 10px;
+            }
+
+            @media( min-width : 640px ) {
+                .child {
+                    width : calc(25% - 10px);
+                }
+            }
+
+            @media( min-width : 940px ) {
+                .child {
+                    width : calc(20% - 10px);
+                }
+            }
+        </style>
+	</head>
+	<body>
+		<div class="parent">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+    
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+--- To do: ---
+1. "student_app" CRUD operations with mongo db 
+	student_app -> api-v4 !DONE
+		multi module server app with application_properties, module_properties for dependencies management.
+				-> appr !DONE

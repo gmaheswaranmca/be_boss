@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------
+version: 4.0
+folder: "myapps/student_app/api-v4"   
+-------------------------------------------------------------------------
+- multi module server app 
+- monogoose promises methods as "async / await" way
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step 1: 
+Run the mongo server where 'nithin_db' is the name of the database
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step 2: 
+Run the app 
+    $node .
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    
+Step 3: 
+    Use 'postman'
+    to test the api end points 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To install uninstalled packages:
+$npm install
+!Note: <=> 86 packages added 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+project structure:    
+    - config.js
+    - [] model
+        - AppModel.js
+    - [] controller
+        - AppController.js
+        - StudentController.js
+    - AppRoutes.js
+    - app.js
+    - index.js              !!! APP ENTRY
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+module dependecies:  
+    o application_properties
+    o module_properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Handled dependencies across modules by 
+    - 'application_properties' json of the module "config"
+       is imported to the module "app"
+    - 'application_properties' json is enhanced in the module 'app'
+       by bringing instances / classes written across the modules
+    - 'application_properties' json is exported from the module 'app'
+       into every module 
+       by adding as an attribute to the 'module_properties' of every module
+       ie. we have "module_properties.application_properties" in every module 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*** TO DO ***
+    1. app
+*** TO DO ***
+    2. take copy of student_app {api_v4 / app} to student_app_v2
+    *** TO DO ***
+        2.1. api unit test
+    *** TO DO ***
+        2.2. app unit test
+*** TO DO ***
+    3. take copy of student_app_v2 to student_app_v3
+    *** TO DO ***
+        3.1. run each app using docker
+    *** TO DO ***
+        3.2. run all apps under kubernets for orchestration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

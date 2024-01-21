@@ -1,0 +1,69 @@
+from 'medium' blog:
+--- Creating a 'React Native' 'Mobile App' with 'Expo CLI' and 'EAS CLI' ---
+
+https://medium.com/@edsin.delikumar/building-a-react-native-mobile-app-with-expo-cli-and-eas-cli-2d6bcb02c8aa
+
+
+=== === ===
+Here are the steps to create a React Native mobile app using the Expo CLI and then building it for iOS and Android using the EAS CLI:
+
+Step 1: 
+... Install Expo CLI ...
+$ npm install -g expo-cli
+
+✔️ Installed Expo CLI
+
+Step 2: 
+... Create a new Expo project ...
+$ expo init YourAppName
+
+✔️ Created project "YourAppName"
+Replace “YourAppName” with the desired name for your application.
+
+Step 3: 
+... Navigate to the project directory ...
+$ cd YourAppName
+
+Step 4: 
+... Start the development server ... 
+$ expo start
+
+✔️ Expo development server started
+
+Step 5: 
+... Make changes to the app ... 
+Open the project in your preferred code editor and 
+start making changes to the app’s code using React Native components.
+
+Step 6: 
+... Building for 'iOS' and 'Android' using 'EAS CLI' ... 
+$ npm install -g eas-cli
+
+✔️ Installed EAS CLI
+$ eas login
+
+✔️ Successfully authenticated
+$ eas build --platform ios
+
+✔️ Building iOS app...
+$ eas build --platform android
+
+✔️ Building Android app...
+
+Follow the prompts and provide the necessary information 
+when prompted during the build process, 
+such as choosing the target device, 
+providing necessary certificates, etc.
+
+Once the build is complete, 
+you will receive a URL to download the app. 
+You can also find the build artifacts in the Expo EAS Build dashboard.
+
+These are the steps 
+to create a React Native app using the Expo CLI and 
+then building it for iOS and Android using the EAS CLI. 
+
+The EAS CLI provides advanced build and deployment capabilities for Expo apps, 
+allowing you to customize the build process and integrate 
+with continuous integration/delivery systems.
+=== === ===

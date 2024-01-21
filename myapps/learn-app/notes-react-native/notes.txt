@@ -1,0 +1,78 @@
+Reference / Study Material Resources:
+    # 1
+    Creating a React Native Mobile App with Expo CLI and EAS CLI
+        https://medium.com/@edsin.delikumar/building-a-react-native-mobile-app-with-expo-cli-and-eas-cli-2d6bcb02c8aa
+
+    # 2 
+    Build and Deploy a React Native App | 2023 React Native Course Tutorial for Beginners
+        https://www.youtube.com/watch?v=mJ3bGvy0WAY&t=5948s
+        
+        ### 2.1
+        https://github.com/adrianhajdin/project_react_native_jobs
+
+=== === ===
+For react native app developmen,
+    To setup development environment
+        npm packages 
+            "expo-cli", "eas-cli"
+        npx expo packages  
+            "react-native-web" "react-dom" "@expo/metro-runtime"
+    To create react native app 
+    To run react native app in web 
+    To run react native app in android using "Expo Go"
+=== === ===
+
+
+=== === ===
+::Notes::
+
+
+# 1
+---install expo cli--- >=1240 packages
+$npm install -g expo-cli
+
+expo cli allows 
+    to create react native app
+
+# 2
+---install eas cli---   >=410 packages
+$npm install -g eas-cli
+eas cli allows
+    to build ios app 
+    to build android app 
+
+# 3
+--- to create react native app project in current folder ---
+$expo init .
+--- to create react native app project ---
+$expo init <project_name>
+
+global "expo-cli" is deprecated
+So, use:
+$npx create-expo-app .
+It create the react-native-app at current folder.
+
+# 4
+--- to start development server on run in web
+Be at project folder.
+$npx expo start 
+
+Type: w 
+It opens the app in web 
+
+# 5
+To open the react-native app in web:
+    Install the following packages.
+$npx expo install react-native-web react-dom @expo/metro-runtime
+
+# 6
+--- to start development server on run in android
+Be at project folder.
+$npx expo start 
+
+Do scan the 'QR code' from latest 'Expo Go' Android App
+
+Type: a
+It opens the app in android
+=== === ===
+

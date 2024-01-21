@@ -1,0 +1,13 @@
+To install uninstalled packages:
+$npm install 
+    !Note: 1537 packages added 
+
+To run the app:
+$npm start
+
+project structure:
+    #???
+
+Completed the app     
+
+

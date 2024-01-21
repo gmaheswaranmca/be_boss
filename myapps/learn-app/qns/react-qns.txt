@@ -1,0 +1,111 @@
+*** React JS ***
+###
+Controlled vs Uncontrolled React.js components
+    https://youtube.com/shorts/ge6arCJkB24?si=yRGfA9alhtiGTu_E
+
+###
+HOC
+What is HOC?
+    HOC (higher order component) is the function
+        takes a component as argmement
+        and returns 
+    
+    ie the enhanced component is the component with added extra properties
+    #
+    https://www.youtube.com/shorts/ao84VuXSm-o
+
+    #
+    https://www.youtube.com/shorts/Y-c7PTIDBIE
+
+###
+    React Hooks Qns
+    #
+    https://youtube.com/shorts/-zl4vhxYXCc?si=-CskEmS7NeHaR3U9
+
+
+###
+    How to pass data from child to parent in react?
+    #
+    https://www.youtube.com/shorts/L0DWAVbdEaM?si=J7YxIrZPHSDuYf-A
+
+
+###
+    What is react memo?
+    #
+    https://www.youtube.com/shorts/do7EzsFcgaI?si=ITXVimvnSE0HvlQI
+
+###
+    use fetch() to call API and display data on react component.
+    #
+    https://www.youtube.com/shorts/57V5dxoM9u8
+
+
+###
+    purpose of React context api?
+    #
+    https://youtube.com/shorts/aqVTtYK8tDs?si=RHeDAMJQssjdMXkl
+
+
+###
+    Limitations of React:
+    #
+    https://youtube.com/shorts/p3ABj2dCym8?si=58IfQoH9xPYiCfI3    
+
+###
+    Life Cycle methods class vs function
+    #
+    https://youtube.com/shorts/Zg8-sbAmPEg?si=MeJl1hH1SMavcc2n
+
+    # useEffect() hook uses:
+    # how side effects are not there for "useEffect()"
+    https://www.youtube.com/shorts/QlrNjef6Myg
+
+    #Call API with React Hooks.
+
+
+###
+    How react works?
+    Answer:
+    Composition of components.
+    Components made with JSX.
+    React has its Virtual DOM which will be sync with Real DOM 
+        for optimizated way 
+        to update the content.
+
+    How to change data in reacts?
+        State is used.
+        When state changes, 
+        'virtual DOM' is updated and then 
+        the changes in 'virtual DOM' will be rendered to 'real DOM'.
+    #
+    https://www.youtube.com/shorts/TAErhnUP09o?si=gdyzD39FHjCTb29P
+
+
+###
+    Optimize react app.
+    Answer:
+
+    #
+    https://www.youtube.com/shorts/GimSWXuSir0
+
+
+###
+    Why Developers failed in React Interview?
+    Why React developers should have good stuff at Javascript / ECMAScript / ES6?
+    #
+    https://www.youtube.com/shorts/hw-c1vUMkRA?si=GIwVtFCQZyYUPBzR
+
+###vid###
+    React Interview Qns: 
+    #
+    https://www.youtube.com/watch?si=d6v1R3MIC1aqqjXU&v=On0uzgW8tOI&feature=youtu.be
+
+###vid###
+    Capgemini - ReactJS Interview | Frontend Developer | 5+ Years | JavaScript Interview Questions 2022
+    #
+    https://www.youtube.com/watch?v=VjWDmF-ePm0
+
+
+
+  
+

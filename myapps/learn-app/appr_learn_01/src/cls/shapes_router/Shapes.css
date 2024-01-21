@@ -1,0 +1,22 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: white;
+    border-radius: 50px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+}
+
+.corner-curved-square {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    color: white;
+    border-radius: 25px;
+}

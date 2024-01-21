@@ -64,10 +64,10 @@ Signed up with "rapidapi.com" to use api app at "jsearch.p.rapidapi.com"
                     200 / month Hard Limit
                     5 requests per second	
             Now, I got 
-                API Key: '7f82fb1582mshecdca71d9b58ef8p1f5d25jsnff3c92b6e51c'
+                API Key: '???'
             
             Do changes at "./hook/useFetch.js" -> options.header (Code Line# 13)
-                    "X-RapidAPI-Key": '7f82fb1582mshecdca71d9b58ef8p1f5d25jsnff3c92b6e51c'
+                    "X-RapidAPI-Key": '????'
 
     
 === === ===    

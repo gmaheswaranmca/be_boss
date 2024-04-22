@@ -1,0 +1,154 @@
+What is MongoDB?
+    MongoDB is a document database.
+
+https://www.mongodb.com/docs/manual/tutorial/getting-started/
+
+1. MongoDB CRUD Operations
+    CRUD operations create, read, update, and delete documents.
+
+i Create Operations    
+    - Create or insert operations add new documents to a collection.
+    - If the collection does not currently exist, 
+        insert operations will create the collection.
+    - MongoDB provides the following methods to insert documents into a collection:
+        db.collection.insertOne() New in version 3.2
+        db.collection.insertMany() New in version 3.2
+    - In MongoDB, insert operations target a single collection. 
+    - All write operations in MongoDB are atomic on the level of a single document.
+    ^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^
+    db.products.insertOne( { _id: 10, item: "box", qty: 20 } )
+    db.inventories.insertOne({
+        item: 'canvas',
+        qty: 100,
+        tags: ['cotton'],
+        size: { h: 28, w: 35.5, uom: 'cm' }
+        })
+    ^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^
+    Insert Methods
+        MongoDB provides the following methods for inserting documents into a collection:
+
+            db.collection.insertOne() Inserts a single document into a collection.
+            db.collection.insertMany() Inserts multiple documents into a collection.
+        Additional Methods for Inserts
+            The following methods can also add new documents to a collection:
+            db.collection.updateOne() when used with the upsert: true option.
+            db.collection.updateMany() when used with the upsert: true option.
+            db.collection.findAndModify() when used with the upsert: true option.
+            db.collection.findOneAndUpdate() when used with the upsert: true option.
+            db.collection.findOneAndReplace() when used with the upsert: true option.
+            db.collection.bulkWrite().
+
+ii. Read Operations
+    - Read operations retrieve documents from a collection; 
+        i.e. query a collection for documents. 
+    - MongoDB provides the following methods to read documents from a collection:
+        db.collection.find()
+    Examples:
+    ^^^^^^^^^^^^^^^^^^^^^^
+        db.inventories.find({})    #All Documents 
+            # SQL correspondence
+            SELECT * FROM inventory
+        db.inventories.find({ status: "D" })   #Equality condition 
+            # SQL correspondence 
+            SELECT * FROM inventory WHERE status = "D"
+        db.inventories.find({ status: { $in: [ "A", "D" ] } })  #IN condition 
+            # SQL correspondence
+            SELECT * FROM inventory WHERE status in ("A", "D")
+        db.inventories.find({ status: "A", qty: { $lt: 30 } })  #AND condition 
+            # SQL correspondence
+            SELECT * FROM inventory WHERE status = "A" AND qty < 30
+        db.inventories.find({ $or: [ { status: "A" }, { qty: { $lt: 30 } } ] })  #AND condition 
+            # SQL correspondence
+            SELECT * FROM inventory WHERE status = "A" OR qty < 30
+        db.inventories.find({ status: "A", $or: [ { qty: { $lt: 30 } }, { item: /^p/ } ] }) #AND as well as OR Conditions
+            # SQL correspondence
+            SELECT * FROM inventory WHERE status = "A" AND ( qty < 30 OR item LIKE "p%")
+    ^^^^^^^^^^^^^^^^^^^^^^
+
+iii. Update Operations
+    - Update operations modify existing documents in a collection. 
+    - MongoDB provides the following methods to update documents of a collection:
+        db.collection.updateOne() New in version 3.2
+        db.collection.updateMany() New in version 3.2
+        db.collection.replaceOne() New in version 3.2
+    - In MongoDB, update operations target a single collection. 
+        All write operations in MongoDB are atomic on the level of a single document.
+    - You can specify criteria, or filters, that identify the documents to update. 
+        These filters use the same syntax as read operations.
+    Example:
+    ^^^^^^^^^^^^^^^^^^^^^^
+        db.inventories.updateOne(
+            { item: 'paper' },
+            {
+                $set: { 'size.uom': 'cm', status: 'P' },
+                $currentDate: { lastModified: true }
+            }
+        )   
+        db.inventories.updateMany(
+            { qty: { $lt: 50 } },
+            {
+                $set: { 'size.uom': 'in', status: 'P' },
+                $currentDate: { lastModified: true }
+            }
+        )
+        db.inventories.replaceOne(
+            { item: 'paper' },
+            {
+                item: 'paper',
+                instock: [
+                    { warehouse: 'A', qty: 60 },
+                    { warehouse: 'B', qty: 40 }
+                ]
+            }
+        )
+    ^^^^^^^^^^^^^^^^^^^^^^
+    Update Methods
+        MongoDB provides the following methods for updating documents in a collection:
+            db.collection.updateOne() Updates at most a single document 
+                    that match a specified filter even though multiple documents may match 
+                    the specified filter.
+            db.collection.updateMany()  Update all documents 
+                    that match a specified filter.
+            db.collection.replaceOne()  Replaces at most a single document 
+                    that match a specified filter even though multiple documents may match 
+                    the specified filter.
+    Additional Methods
+        The following methods can also update documents from a collection:
+        db.collection.findOneAndReplace().
+        db.collection.findOneAndUpdate().
+        db.collection.findAndModify().
+        db.collection.bulkWrite().
+
+iv. Delete Documents
+    - Delete operations remove documents from a collection. 
+    - MongoDB provides the following methods to delete documents of a collection:
+        db.collection.deleteOne() New in version 3.2
+        db.collection.deleteMany() New in version 3.2
+    - In MongoDB, delete operations target a single collection. 
+    - All write operations in MongoDB are atomic on the level of a single document.
+    - You can specify criteria, or filters, that identify the documents to remove. 
+      These filters use the same syntax as read operations.
+    Examples:
+    ^^^^^^^^^^^^^^^^^^^^^^
+        db.inventories.deleteMany({})
+    ^^^^^^^^^^^^^^^^^^^^^^
+    Delete Methods
+        MongoDB provides the following methods to delete documents of a collection:
+        db.collection.deleteOne()   Delete at most a single document 
+            that match a specified filter even though multiple documents 
+            may match the specified filter.
+        db.collection.deleteMany()        Delete all documents that match a specified filter.
+        db.collection.remove()        Delete a single document or all documents 
+            that match a specified filter.
+    Starting in MongoDB 6.1:
+        To improve efficiency, MongoDB may batch multiple document deletions together.
+        The explain command results contain a new BATCHED_DELETE stage for batched document deletions.
+    Additional Methods
+        The following methods can also delete documents from a collection:
+        db.collection.findOneAndDelete().
+        findOneAndDelete() provides a sort option. The option allows for the deletion of the first document sorted by the specified order.
+        db.collection.findAndModify().
+        db.collection.findAndModify() provides a sort option. The option allows for the deletion of the first document sorted by the specified order.
+        db.collection.bulkWrite().        
+
+        

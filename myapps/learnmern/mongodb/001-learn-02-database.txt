@@ -1,0 +1,24 @@
+Database
+        In MongoDB, databases hold one or more collections of documents.
+
+Create a Database
+    MongoDB creates the database named 'myNewDB' 
+    when you first store data for that database.
+^^^^^^^^^^^^^^^^^^^^^^    
+    > use myNewDB                                   
+    > db.myNewCollection1.insertOne( { x: 1 } )     
+^^^^^^^^^^^^^^^^^^^^^^
+    'myNewDB' is the database name.
+    To switch to a non-existent database
+        ~~~~~~~~~~~~~
+        >use myNewDB
+        ~~~~~~~~~~~~~
+    The insertOne() operation creates 
+        1. database 'myNewDB' if it does not exist 
+        2. collection 'myNewCollection1' if it does not exist
+        ~~~~~~~~~~~~~
+        >db.myNewCollection1.insertOne( { x: 1 } )
+        ~~~~~~~~~~~~~
+        
+Note: Be sure that both the 'database' and 'collection' names 
+    follow MongoDB Naming Restrictions.

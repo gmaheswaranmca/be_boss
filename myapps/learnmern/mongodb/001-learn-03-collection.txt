@@ -1,0 +1,25 @@
+Collection
+    - MongoDB stores documents in collections. 
+    - Collections are analogous to tables in relational databases.
+
+Create a Collection
+    If a collection does not exist, 
+    MongoDB creates the collection when you first store data for that collection.
+    ~~~~~~~~~~~~~
+    > db.myNewCollection2.insertOne( { x: 1 } )
+    > db.myNewCollection3.createIndex( { y: 1 } )
+    ~~~~~~~~~~~~~
+    Both the insertOne() and the createIndex() operations 
+    create their respective collection 
+    if they do not already exist.
+
+
+Explicit Creation
+    MongoDB provides the db.createCollection() method 
+    to explicitly create a collection with various options, 
+    such as setting the maximum size or the documentation validation rules. 
+    
+    If you are not specifying these options, 
+    you do not need to explicitly create the collection 
+    since MongoDB creates new collections 
+    when you first store data for the collections.    

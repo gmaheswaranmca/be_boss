@@ -1,0 +1,108 @@
+------------------------------------------------------
+version: "3.8"
+services:
+  mydb:
+    image: mongo:5.0.2
+    command: mongod --port 7017
+    ports:
+      - "27017:7017"
+    volumes:
+      - db:/data/db
+  myapi:
+    depends_on:
+      - mydb
+    build: ./api
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
+  myapp:
+    depends_on:
+      - myapi 
+    build: ./appr
+    ports: 
+      - "3000:3000"  
+    stdin_open: true
+    tty: true
+volumes:
+  db:
+------------------------------------------------------
+
+
+
+version: "3.8"
+services:
+  mydb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=8765
+    ports:
+      - "27018:27018"
+    volumes:
+      - data:/data/db
+  myapi:
+    build: ./api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mydb      
+  myapp:
+    build: ./appr
+    ports: 
+      - "3000:3000"  
+    stdin_open: true
+    tty: true  
+volumes:
+  data:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+version: "3.8"
+services:
+  mydb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - data:/data/db
+    networks:
+      - student-app
+  myapi:
+    build: ./api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mydb
+    networks:
+      - student-app      
+  myapp:
+    build: ./appr
+    ports: 
+      - "3000:3000"  
+    stdin_open: true
+    tty: true
+    depends_on:
+      - myapi      
+    networks:
+      - student-app      
+volumes:
+  data:
+networks:
+  student-app:
+    driver: bridge
+

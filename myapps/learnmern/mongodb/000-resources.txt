@@ -1,0 +1,22 @@
+URL:
+    https://learn.mongodb.com/
+
+    -> MongoDB Node.js Developer Path   ![15 Hours] Free
+        https://learn.mongodb.com/learning-paths/mongodb-nodejs-developer-path
+
+        ! Login using gmail etc
+
+            # 01 
+            # Intro to MongoDB ! [15 Minutes | FREE ]
+            https://learn.mongodb.com/courses/start-here-introduction-to-mongodb
+            o CRUD operations
+            o search experience
+            o key topics such as 
+                o aggregation, 
+                o indexing, 
+                o data modeling, and 
+                o transactions
+            !Practice these concepts in 
+                - hands-on labs and 
+                - knowledge check quizzes
+            

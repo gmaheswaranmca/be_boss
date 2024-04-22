@@ -1,0 +1,51 @@
+#
+11 Best Practices for Logging in Node.js
+
+https://betterstack.com/community/guides/logging/nodejs-logging-best-practices/
+
+...
+
+#
+o The global module 'console' has logging methods 
+    o to write Node.js program with basic debugging messages 
+        - console.error(), console.warn(): 
+            - prints messages to the standard error.
+        - console.trace(): 
+            - writes debugging messages with a stack trace to the standard error.
+        - console.info(), console.log(): 
+            - prints messages to the standard output
+    o to debug the code quickly
+    o they have lack of 
+        - log levels
+        - structured logging formats
+        - timestamps
+        - customizable output destinations
+        - context-aware logging
+        so, they are not suitable for production-level logging
+
+o To address Production challenges 
+  we must set up a proper logging solution 
+    - Here, we invest some time
+        to save time (hours) for troubleshooting and 
+        analyzing issues in the future
+
+o Let us learn the best practices for logging
+
+#	Best practice	                                Impact	           Difficulty
+1	Opt for a recognized logging framework	        ⭐⭐⭐⭐⭐	   ⭐⭐⭐
+2	Use structured logging	                        ⭐⭐⭐⭐⭐	   ⭐
+3	Employ log levels correctly	                    ⭐⭐⭐⭐⭐      ⭐⭐
+4	Write descriptive log messages	                ⭐⭐⭐⭐        ⭐⭐
+5	Always include a timestamp	                    ⭐⭐⭐⭐⭐      ⭐
+6	Add contextual fields to your log entries	    ⭐⭐⭐⭐        ⭐⭐⭐
+7	Log unexpected errors with a stack trace	    ⭐⭐⭐⭐⭐	   ⭐
+8	Ensure sensitive data stays out of logs	        ⭐⭐⭐⭐⭐	   ⭐⭐⭐⭐
+9	Log for more than troubleshooting purposes	    ⭐⭐⭐	          ⭐⭐⭐
+10	Always log to the standard output	            ⭐⭐⭐	          ⭐⭐
+11	Centralize your logs in a log management system	⭐⭐⭐⭐⭐	   ⭐⭐⭐⭐
+        
+1	Recognize a logging framework
+    - Production-Level third-party loggers such as 'Winston' and 'Pino'
+    - 'Winston' and 'Pino' provide robust logging capabilities for Node.js applications
+
+

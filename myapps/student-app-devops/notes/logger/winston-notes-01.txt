@@ -1,0 +1,816 @@
+--- ---
+# A Complete Guide to Winston Logging in Node.js  
+    
+https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/
+--- ---
+
+
+
+#
+*** winson ***
+1. Winston  is the most popular logging library for Node.js.
+2. It is more flexible.
+3. It is extensible by decoupling different aspects such as 
+        log levels, 
+        formatting, and 
+        storage 
+   so that each API is independent and many combinations are supported.
+4. It uses Node.js streams  
+   to minimize the performance impact of implementing logging 
+   in the application.
+
+# Hands on
+--- Objectives: ---
+o To install
+o To set up
+o To use 
+    the Winston logger in the Node.js application
+
+o To explore all the options of 'Winston logger'
+  so, to customize logging in various ways
+
+o To use along with 'Morgan looger, a middleware'
+
+Prerequisites:
+    o Node.js and npm are installed in the machine
+    o Knowledge in basic concepts of logging in Node.js
+
+Learning:
+    o Logging with Winston 3.x
+    o Configure Winston to send logs in a centralized platform
+
+===================================================
+Getting started with Winston
+===================================================
+1. Winston is available as an npm packag
+$npm install winston
+
+
+2. To import 'Winston' into your Node.js program 
+const winston = require('winston');
+! Winston provides a default logger
+! Use by calling a level method on the winston module
+
+[]
+3. Recommendation is to create a custom logger through the createLogger() method
+const winston = require('winston');
+
+const logger = winston.createLogger( {
+  level: 'info',
+  format: winston.format.json(),
+  transports: [new winston.transports.Console()],
+} );
+
+//Start logging like
+logger.info('Info message');
+logger.error('Error message');
+logger.warn('Warning message');
+
+/*
+This yields the following output:
+{"level":"info","message":"Info message"}
+{"level":"error","message":"Error message"}
+{"level":"warn","message":"Warning message"}
+*/
+
+[]
+4. Log levels in Winston [### i]
+    - Winston supports six log levels by default
+    - It follows the order specified by the RFC5424 document
+    - Each level is given an integer priority with 
+        the most severe being the lowest number and 
+        the least severe being the highest number
+{
+  error: 0,
+  warn: 1,
+  info: 2,
+  http: 3,
+  verbose: 4,
+  debug: 5,
+  silly: 6
+}
+//The six log levels above each correspond to a method on the logger:
+logger.error('error');
+logger.warn('warn');
+logger.info('info');
+logger.verbose('verbose');
+logger.debug('debug');
+logger.silly('silly');
+
+//You can also pass a string representing the logging level to the log() method:
+logger.log('error', 'error message');
+logger.log('info', 'info message');
+
+Note:
+!!!
+The 'level' property on the 'logger' determines 
+which log messages will be emitted 
+to the configured transports (discussed later). 
+
+For example, since the 'level' property was set to 'info' 
+in the previous section, 
+only log entries with a minimum severity of 'info'
+ (or maximum integer priority of 2) 
+ will be written while all others are suppressed. 
+
+ This means that only the info, warn, and error messages 
+ will produce output with the current configuration.
+ !!!
+ To cause the other levels to produce output, 
+ you'll need to change the value of level property 
+ to the desired minimum. 
+ 
+ The reason for this configuration is so that
+ you'll be able to run your application in production at one level (say 'info') and 
+ your development/testing/staging environments can be set to a less severe level 
+ like 'debug' or 'silly', causing more information to be emitted.
+
+ The accepted best practice for setting a log level is 
+ to use an environmental variable. 
+ This is done to avoid modifying the application code 
+ when the log level needs to be changed.
+ 
+//environmental variable based log level
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: winston.format.json(),
+  transports: [new winston.transports.Console()],
+});
+
+!!!
+With this change in place, 
+the application will log at the info level 
+if the LOG_LEVEL variable is not set in the environment.
+
+
+
+
+[]
+5. Customizing log levels in Winston
+Winston allows you to readily customize the log levels to your liking. 
+The default log levels are defined in winston.config.npm.levels, 
+but you can also use the Syslog levels  
+through winston.config.syslog.levels:
+
+const logger = winston.createLogger({
+  levels: winston.config.syslog.levels,
+  level: process.env.LOG_LEVEL || 'info',
+  format: winston.format.cli(),
+  transports: [new winston.transports.Console()],
+});
+
+https://datatracker.ietf.org/doc/html/rfc5424#page-10
+
+The syslog levels are shown below:
+
+{
+  emerg: 0,
+  alert: 1,
+  crit: 2,
+  error: 3,
+  warning: 4,
+  notice: 5,
+  info: 6,
+  debug: 7
+}
+
+Afterwards, you can log using the methods that correspond to each defined level:
+
+logger.emerg("Emergency");
+logger.crit("Critical");
+logger.warning("Warning");
+
+If you prefer to change the levels to a completely custom system, 
+you'll need to create an object and assign a number priority 
+to each one starting from the most severe to the least. 
+
+Afterwards, assign that object to the levels property 
+in the configuration object passed to the createLogger() method.
+
+const logLevels = {
+  fatal: 0,
+  error: 1,
+  warn: 2,
+  info: 3,
+  debug: 4,
+  trace: 5,
+};
+
+const logger = winston.createLogger({
+  levels: logLevels,
+  level: process.env.LOG_LEVEL || 'info',
+  format: winston.format.json(),
+  transports: [new winston.transports.Console()],
+});
+
+
+You can now use methods on the logger that correspond to your custom log levels as shown below:
+
+logger.fatal('fatal!');
+logger.trace('trace!');
+
+
+
+
+[]
+6. Formatting your log messages
+Winston outputs its logs in JSON format by default, 
+but it also supports other formats which are accessible on the winston.format object. 
+For example, if you're creating a CLI application, 
+you may want to switch this to the cli format which will print a color coded output:
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: winston.format.cli(),
+  transports: [new winston.transports.Console()],
+});
+
+The formats available in winston.format are defined in the logform module. 
+This module provides the ability to customize the format used 
+by Winston to your heart's content. 
+You can create a completely custom format or 
+modify an existing one to add new properties.
+
+Here's an example that adds a timestamp field to the each log entry:
+const winston = require('winston');
+const { combine, timestamp, json } = winston.format;
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: combine(timestamp(), json()),
+  transports: [new winston.transports.Console()],
+});
+
+When you use a level method on the logger, 
+you'll see a datetime value formatted as new Date().toISOString().
+
+logger.info('Info message')
+
+Output
+{"level":"info","message":"Info message","timestamp":"2022-01-25T15:50:09.641Z"}
+
+You can change the format of this datetime value 
+by passing an object to timestamp() as shown below. 
+The string value of the format property below must be one acceptable by the fecha module .
+
+timestamp({
+  format: 'YYYY-MM-DD hh:mm:ss.SSS A', // 2022-01-25 03:23:10.350 PM
+})
+
+You can also create a entirely different format as shown below:
+const winston = require('winston');
+const { combine, timestamp, printf, colorize, align } = winston.format;
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: combine(
+    colorize({ all: true }),
+    timestamp({
+      format: 'YYYY-MM-DD hh:mm:ss.SSS A',
+    }),
+    align(),
+    printf((info) => `[${info.timestamp}] ${info.level}: ${info.message}`)
+  ),
+  transports: [new winston.transports.Console()],
+});
+
+logger.info('Info message');
+logger.error('Error message');
+logger.warn('Warning message');
+
+The combine() method merges multiple formats into one, 
+while colorize() assigns colors to the different log levels 
+so that each level is easily identifiable. 
+The timestamp() method outputs a datatime value 
+that corresponds to the time that the message was emitted. 
+The align() method aligns the log messages, 
+while printf() defines a custom structure for the message. 
+In this case, it outputs the timestamp and 
+log level followed by the message.
+
+Output
+[2022-01-27 06:37:27.653 AM] info:      Info message
+[2022-01-27 06:37:27.656 AM] error:     Error message
+[2022-01-27 06:37:27.656 AM] warn:      Warning message
+
+While you can format your log entries in any way you wish, 
+the recommended practice for server applications is 
+to stick with a structured logging format (like JSON) 
+so that your logs can be easily machine readable 
+for filtering and gathering insights.
+
+
+
+
+
+[]
+7. Configuring transports in Winston
+Transports in Winston refer to the storage location for your log entries. 
+Winston provides great flexibility in choosing 
+where you want your log entries to be outputted to. 
+The following transport options are available in Winston by default:
+
+Console : output logs to the Node.js console.
+File : store log messages to one or more files.
+HTTP : stream logs to an HTTP endpoint.
+Stream : output logs to any Node.js stream.
+Thus far, we've demonstrated the default Console transport  
+to output log messages to the Node.js console. 
+Let's look at how we can store logs in a file next.
+
+ 
+
+const winston = require('winston');
+const { combine, timestamp, json } = winston.format;
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: combine(timestamp(), json()),
+  transports: [
+    new winston.transports.File({
+      filename: 'combined.log',
+    }),
+  ],
+});
+
+logger.info('Info message');
+logger.error('Error message');
+logger.warn('Warning message');
+The snippet above configures the logger to output all emitted log messages 
+to a file named combined.log. 
+When you run the snippet above, this file will be created with the following contents:
+ 
+{"level":"info","message":"Info message","timestamp":"2022-01-26T09:38:17.747Z"}
+{"level":"error","message":"Error message","timestamp":"2022-01-26T09:38:17.748Z"}
+{"level":"warn","message":"Warning message","timestamp":"2022-01-26T09:38:17.749Z"}
+
+In a production application, 
+it may not be ideal to log every single message into a single file 
+as that will make filtering critical issues harder 
+since it will be mixed together with inconsequential messages. 
+A potential solution would be to use two File transports, 
+one that logs all messages to a combined.log file, 
+and another that logs messages with a minimum severity of error to a separate file.
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: combine(timestamp(), json()),
+  transports: [
+    new winston.transports.File({
+      filename: 'combined.log',
+    }),
+    new winston.transports.File({
+      filename: 'app-error.log',
+      level: 'error',
+    }),
+  ],
+});
+
+With this change in place, 
+all your log entries will still be outputted to the combined.log file, 
+but a separate app-error.log will also be created and 
+it will contain only error messages. 
+Note that the level property on the File() transport signifies 
+the minimum severity that should be logged to the file. 
+If you change it from error to warn, 
+it means that any message with a minimum severity of warn will be logged 
+to the app-error.log file (warn and error levels in this case).
+
+A common need that Winston does not enable 
+by default is the ability to log each level into different files 
+so that only info messages go to an app-info.log file, 
+debug messages into an app-debug.log file, and so on (see this GitHub issue ). 
+To get around this, use a custom format on the transport to filter the messages by level. 
+This is possible on any transport (not just File), 
+since they all inherit from winston-transport.
+
+ 
+
+const errorFilter = winston.format((info, opts) => {
+  return info.level === 'error' ? info : false;
+});
+
+const infoFilter = winston.format((info, opts) => {
+  return info.level === 'info' ? info : false;
+});
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: combine(timestamp(), json()),
+  transports: [
+    new winston.transports.File({
+      filename: 'combined.log',
+    }),
+    new winston.transports.File({
+      filename: 'app-error.log',
+      level: 'error',
+      format: combine(errorFilter(), timestamp(), json()),
+    }),
+    new winston.transports.File({
+      filename: 'app-info.log',
+      level: 'info',
+      format: combine(infoFilter(), timestamp(), json()),
+    }),
+  ],
+});
+The above code logs only error messages 
+in the app-error.log file and info messages to the app-info.log file. 
+What happens is that the custom functions (infoFilter() and errorFilter()) checks 
+the level of a log entry and returns false 
+if it doesn't match the specified level 
+which causes the entry to be omitted from the transport. 
+You can customize this further or create other filters as you see fit.
+
+
+
+
+
+[]
+8. Log rotation in Winston
+Logging into files can quickly get out of hand 
+if you keep logging to the same file 
+as it can get extremely large and become cumbersome to manage. 
+This is where the concept of log rotation  can come in handy. 
+The main purpose of log rotation is 
+to restrict the size of your log files and create new ones 
+based on some predefined criteria. 
+For example, you can create a new log file every day and 
+automatically delete those older than a time period (say 30 days).
+
+Winston provides the winston-daily-rotate-file module  for this purpose. 
+It is a transport that logs to a rotating file 
+that is configurable based on date or file size, 
+while older logs can be auto deleted based on count or elapsed days. 
+Go ahead and install it through npm as shown below:
+
+$npm install winston-daily-rotate-file
+
+Once installed, it may be used to replace the default File transport 
+as shown below:
+// 
+const winston = require('winston');
+require('winston-daily-rotate-file');
+
+const { combine, timestamp, json } = winston.format;
+
+const fileRotateTransport = new winston.transports.DailyRotateFile({
+  filename: 'combined-%DATE%.log',
+  datePattern: 'YYYY-MM-DD',
+  maxFiles: '14d',
+});
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: combine(timestamp(), json()),
+  transports: [fileRotateTransport],
+});
+The datePattern property controls how often the file should be rotated (every day), 
+and the maxFiles property ensures that log files 
+that are older than 14 days are automatically deleted. 
+You can also listen for the following events on a rotating file transport 
+if you want to perform some action on cue:
+
+ 
+
+// fired when a log file is created
+fileRotateTransport.on('new', (filename) => {});
+// fired when a log file is rotated
+fileRotateTransport.on('rotate', (oldFilename, newFilename) => {});
+// fired when a log file is archived
+fileRotateTransport.on('archive', (zipFilename) => {});
+// fired when a log file is deleted
+fileRotateTransport.on('logRemoved', (removedFilename) => {});
+
+
+[]
+9. Custom transports in Winston
+Winston supports the ability 
+to create your own transports or utilize one made by the community . 
+A custom transport may be used to store your logs 
+in a database, log management tool, or some other location. 
+Here are some custom transports that you might want to check out:
+
+winston-mongodb  - transport logs to MongoDB.
+winston-syslog  - transport logs to Syslog.
+winston-telegram  - send logs to Telegram.
+@logtail/winston  - send logs to Logtail.
+winston-mysql  - store logs in MySQL.
+
+
+
+
+[]
+9. Adding metadata to your logs
+Winston supports the addition of metadata to log messages. 
+You can add default metadata to all log entries, 
+or specific metadata to individual logs. 
+Let's start with the former which can be added to a logger instance 
+through the defaultMeta property:
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  defaultMeta: {
+    service: 'admin-service',
+  },
+  format: winston.format.json(),
+  transports: [new winston.transports.Console()],
+});
+
+logger.info('Info message');
+logger.error('Error message');
+When you log any message using the logger above, 
+the contents of the defaultMeta object will be injected into each entry:
+
+Output
+{"level":"info","message":"Info message","service":"admin-service"}
+{"level":"error","message":"Error message","service":"admin-service"}
+This default metadata can be used 
+to differentiate log entries by service or other criteria 
+when logging to the same location from different services.
+
+Another way to add metadata to your logs is 
+by creating a child logger through the child method. 
+This is useful if you want to add certain metadata 
+that should be added to all log entries in a certain scope. 
+For example, if you add a requestId to your logs entries, 
+you can search your logs and find the all the entries 
+that pertain to a specific request.
+ 
+
+const childLogger = logger.child({ requestId: 'f9ed4675f1c53513c61a3b3b4e25b4c0' });
+
+childLogger.info('Info message');
+childLogger.info('Error message');
+
+ Output
+{"level":"info","message":"Info message","requestId":"f9ed4675f1c53513c61a3b3b4e25b4c0","service":"admin-service"}
+{"level":"error","message":"Error message","requestId":"f9ed4675f1c53513c61a3b3b4e25b4c0","service":"admin-service"}
+
+A third way to add metadata to your logs is to pass an object to the level method at its call site:
+ 
+const childLogger = logger.child({ requestId: 'f9ed4675f1c53513c61a3b3b4e25b4c0' });
+
+childLogger.info('File uploaded successfully', {
+  file: 'something.png',
+  type: 'image/png',
+  userId: 'jdn33d8h2',
+});
+ Output
+{"file":"something.png","level":"info","message":"File uploaded successfully","requestId":"f9ed4675f1c53513c61a3b3b4e25b4c0","service":"admin-service","type":"image/png","userId":"jdn33d8h2"}
+
+
+
+
+[] 
+10. Logging errors in Winston
+One of the most surprising behaviors of Winston for newcomers 
+to the library is in its way of handling errors. 
+Logging an instance of the Error object results in an empty message:
+
+const winston = require("winston");
+const { combine, timestamp, json } = winston.format;
+const logger = winston.createLogger({
+  level: "info",
+  format: combine(timestamp(), json()),
+  transports: [new winston.transports.Console()],
+});
+
+logger.error(new Error("an error"));
+ Output
+{"level":"error","timestamp":"2022-07-03T19:58:26.516Z"}
+Notice how the message property is omitted, 
+and other properties of the Error 
+(like its name and stack) are also not included in the output. 
+This can result in a nightmare situation where errors 
+in production are not recorded leading to lost time when troubleshooting.
+
+Fortunately, you can fix this issue by importing and 
+specifying the errors format as shown below:
+
+ 
+
+const winston = require("winston");
+const { combine, timestamp, json, errors } = winston.format;
+const logger = winston.createLogger({
+  level: "info",
+  format: combine(errors({ stack: true }), timestamp(), json()),
+  transports: [new winston.transports.Console()],
+});
+
+logger.error(new Error("an error"));
+You will now get the proper output:
+
+ Output
+{"level":"error","message":"an error","stack":"Error: an error\n    at Object.<anonymous> (/home/ayo/dev/betterstack/betterstack-community/demo/snippets/main.js:9:14)\n    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Module._load (node:internal/modules/cjs/loader:827:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47","timestamp":"2022-07-03T20:11:23.303Z"}
+
+
+
+
+[]
+11. Handling uncaught exceptions and uncaught promise rejections
+Winston provides the ability to automatically catch and 
+log uncaught exceptions and uncaught promise rejections on a logger. 
+You'll need to specify the transport 
+where these events should be emitted to 
+through the exceptionHandlers and rejectionHandlers properties respectively:
+
+const winston = require('winston');
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: winston.format.json(),
+  transports: [new winston.transports.Console()],
+  exceptionHandlers: [
+    new winston.transports.File({ filename: 'exception.log' }),
+  ],
+  rejectionHandlers: [
+    new winston.transports.File({ filename: 'rejections.log' }),
+  ],
+});
+The logger above is configured to log uncaught exceptions to an exception.log file, 
+while uncaught promise rejections are placed in a rejections.log file. 
+You can try this out by throwing an error somewhere in your code without catching it.
+
+throw new Error('An uncaught error');
+You'll notice that the entire stack trace is included in the log entry for the exception, 
+along with the date and message.
+
+ 
+cat exception.log
+ Output
+{"date":"Mon Jun 06 2022 14:00:03 GMT+0100 (West Africa Standard Time)","error":{},"exception":true,"level":"error","message":"uncaughtException: An uncaught error\nError: An uncaught error\n    at Object.<anonymous> (/home/ayo/dev/betterstack/betterstack-community/demo/snippets/main.js:15:7)\n    at Module._compile (node:internal/modules/cjs/loader:1105:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Module._load (node:internal/modules/cjs/loader:827:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47","os":{"loadavg":[1.75,0.82,0.95],"uptime":271655.58},"process":{"argv":[". . ."],"cwd":"/home/ayo/dev/betterstack/betterstack-community/demo/snippets","execPath":"/home/ayo/.volta/tools/image/node/18.1.0/bin/node","gid":1000,"memoryUsage":{"arrayBuffers":110487,"external":465350,"heapTotal":11141120,"heapUsed":7620128,"rss":47464448},"pid":421995,"uid":1000,"version":"v18.1.0"},"stack":". . .","trace":[. . .]}
+Winston will also cause the process to exit with a non-zero status code once it logs an uncaught exception. You can change this by setting the exitOnError property on the logger to false as shown below:
+
+ 
+
+const winston = require('winston');
+const logger = winston.createLogger({ exitOnError: false });
+
+// or
+
+logger.exitOnError = false;
+Note that the accepted best practice is 
+to exit immediately after an uncaught error is detected 
+as the program will be in an undefined state, 
+so the above configuration is not recommended. 
+Instead, you should let your program crash and set up a Node.js process manager (such as PM2) 
+to restart it immediately while setting up some alerting mechanism 
+to notify you of the problem (see section on Centralizing Logs below).
+
+
+
+[]
+12. Profiling your Node.js code with Winston
+Winston also provides basic profiling capabilities 
+on any logger through the profile() method. 
+You can use it to collect some basic performance data 
+in your application hotspots in the absence of specialized tools.
+
+ 
+
+// start a timer
+logger.profile('test');
+
+setTimeout(() => {
+  // End the timer and log the duration
+  logger.profile('test');
+}, 1000);
+The code above produces the following output:
+
+ Output
+{"durationMs":1001,"level":"info","message":"test"}
+You can also use the startTimer() method 
+on a logger instance to create a new timer and store a reference 
+to it in a variable. 
+Then use the done() method on the timer to halt it and log the duration:
+
+ 
+
+// start a timer
+const profiler = logger.startTimer();
+
+setTimeout(() => {
+  // End the timer and log the duration
+  profiler.done({ message: 'Logging message' });
+}, 1000);
+ Output
+{"durationMs":1001,"level":"info","message":"Logging message"}
+The durationMs property contains the timers' duration in milliseconds. 
+Also, log entries produced by the Winston profiler are set to the info level by default, 
+but you can change this by setting the level property 
+in the argument to profiler.done() or logger.profile():
+
+ 
+
+profiler.done({ message: 'Logging message', level: 'debug' });
+// or
+logger.profile('test', { level: 'debug' });
+
+
+
+
+[]
+13. Working with multiple loggers in Winston
+A large application will often have multiple loggers 
+with different settings for logging in different areas of the application. 
+This is exposed in Winston through winston.loggers:
+
+loggers.js
+
+const winston = require('winston');
+
+winston.loggers.add('serviceALogger', {
+  level: process.env.LOG_LEVEL || 'info',
+  defaultMeta: {
+    service: 'service-a',
+  },
+  format: winston.format.logstash(),
+  transports: [
+    new winston.transports.File({
+      filename: 'service-a.log',
+    }),
+  ],
+});
+
+winston.loggers.add('serviceBLogger', {
+  level: process.env.LOG_LEVEL || 'info',
+  defaultMeta: {
+    service: 'service-b',
+  },
+  format: winston.format.json(),
+  transports: [new winston.transports.Console()],
+});
+The serviceALogger shown above logs to a service-a.log file 
+using the built-in Logstash format, 
+while serviceBLogger logs to the console using the JSON format. 
+Once you've configured the loggers for each service, 
+you can access them in any file using the winston.loggers.get() provided 
+that you import the configuration preferably in the entry file of the application:
+
+main.js
+
+require('./loggers.js');
+
+const winston = require('winston');
+
+const serviceALogger = winston.loggers.get('serviceALogger');
+const serviceBLogger = winston.loggers.get('serviceBLogger');
+
+serviceALogger.error('logging to a file');
+serviceBLogger.warn('logging to the console');
+ 
+
+node main.js
+ Output
+{"level":"warn","message":"logging to the console","service":"service-b"}
+ 
+
+cat service-a.log
+ Output
+{"@fields":{"level":"error","service":"service-a"},"@message":"logging to a file"}
+
+
+
+
+[### i]
+https://betterstack.com/community/guides/logging/log-levels-explained/
+Log Levels in descending order based on severity
+[1. Emergency (emerg): 
+    indicates that the system is unusable and 
+    requires immediate attention.]
+[2. Alert (alert): 
+    indicates that immediate action is necessary 
+    to resolve a critical issue.]
+[3. Critical (crit): 
+    signifies critical conditions in the program 
+    that demand intervention to prevent system failure.]
+4. Error (error): 
+    indicates error conditions 
+    that impair some operation 
+    but are less severe than critical situations.
+5. Warning (warn): 
+    signifies potential issues 
+    that may lead to errors or unexpected behavior 
+    in the future if not addressed.
+[6. Notice (notice): 
+    applies to normal 
+    but significant conditions 
+    that may require monitoring.]
+7. Informational (info): 
+    includes messages 
+    that provide a record of the normal operation of the system.
+8. Debug (debug): 
+    intended for logging detailed information 
+    about the system for debugging purposes.
+    
+https://datatracker.ietf.org/doc/html/rfc5424#page-11
+Numerical         Severity
+Code
+
+0       Emergency: system is unusable
+1       Alert: action must be taken immediately
+2       Critical: critical conditions
+3       Error: error conditions
+4       Warning: warning conditions
+5       Notice: normal but significant condition
+6       Informational: informational messages
+7       Debug: debug-level messages

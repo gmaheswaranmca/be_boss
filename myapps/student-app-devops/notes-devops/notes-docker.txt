@@ -1,0 +1,284 @@
+*** docker and docker componse *** 
+--- Study Resources: ---
+1. Docker Compose in 6 minutes! Mongo, Express, React, Node (MERN) Application Tutorial
+    #Youtube Channel: "DevOps Directive"
+    https://www.youtube.com/watch?v=0B2raYYH2fE
+    #github account: "sidpalas"
+    https://github.com/sidpalas/devops-directive/tree/master/2020-08-31-docker-compose
+    #Web Site: .
+    https://devopsdirective.com
+2. Docker setup for MERN application step by step 2022 | Dockerizing your MERN application
+    # "@crewcodesolutions"
+    https://www.youtube.com/watch?v=PhmIsxkskhY&t=12s
+    # https://crew-code.com/docker-setup-for-express-react-mongodb-application/
+3.  
+    #
+    https://www.bezkoder.com/docker-mern
+
+
+
+------------------------------------------------------
+student-app-devops/api
+    Dockerfile
+------------------------------------------------------
+FROM node
+
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+CMD node index
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--- Notes: ---
+    FROM node       
+        install the image of the Node.js version.
+    WORKDIR /app    
+        path of the working directory is "/app"
+    COPY package.json .       
+        copy package.json file to the container
+    RUN npm install
+        runs the command "npm install"
+        which is actually installs the uninstalled packages '"package.json"->"dependencies"'
+    COPY . .
+        copies all the files inside the project directory
+            which ignores ".dockeringnore" mentioned files / folders 
+    CMD node index
+         runs script "node index" after the image is built
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+------------------------------------------------------
+student-app-devops/appr
+    Dockerfile
+------------------------------------------------------
+FROM node
+
+WORKDIR /app
+COPY ./package.json ./
+RUN npm install
+COPY . .
+CMD [ "npm", "start" ]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--- Notes: ---
+    FROM node       
+        ! install the image of the Node.js version.
+    WORKDIR /app    
+        ! path of the working directory is "/app"
+    COPY package.json .       
+        ! copy package.json file to the container
+    RUN npm install
+        ! runs the command "npm install"
+        ! which is actually installs the uninstalled packages '"package.json"->"dependencies"'        
+    COPY . .
+        ! copies all the files inside the project directory
+            ! which ignores ".dockeringnore" mentioned files / folders 
+    CMD npm start
+        ! runs script "npm start" after the image is built
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+         
+------------------------------------------------------
+student-app-devops/
+    dockercompose
+------------------------------------------------------
+version: "3.8"
+services:
+  mydb:
+    image: mongo:5.0.2
+    command: mongod --port 7017
+    ports:
+      - "27017:7017"
+    volumes:
+      - db:/data/db
+  myapi:
+    depends_on:
+      - mydb
+    build: ./api
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
+  myapp:
+    depends_on:
+      - myapi 
+    build: ./appr
+    ports: 
+      - "3000:3000"  
+    stdin_open: true
+    tty: true
+volumes:
+  db:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+version: 
+    ! Docker Compose file format version will be used.
+services: 
+    ! individual services in isolated containers. 
+    ! Our application has three services: 
+        mydb (mongo)
+        myapi (express backend app)
+        myapp (react frontend app)
+volumes: 
+    ! named volumes that keeps our data alive after restart
+networks: 
+    ! facilitate communication between containers
+--- For service "mydb": ---
+...
+services:
+  mydb:
+    image: mongo:5.0.2
+    command: mongod --port 7017
+    ports:
+      - "27017:7017"
+    volumes:
+      - db:/data/db
+...  
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+image:          official Docker image
+restart:        configure the restart policy
+env_file:       specify our .env path that we will create later
+environment:    specify environment variables
+ports:          specify ports will be used
+volumes:        map volume folders
+networks:       join the network 'student-api' 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--- For service "mydb": ---
+services:
+  myapi:
+    depends_on:
+      - mydb
+    build: ./api
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+...
+depends_on:     dependency order, 
+                'mydb' service is started before 'myapi'
+build:          "relative path" of the Dockerfile 
+                which is used to build the container 
+environment:    specify environmental variables 
+networks:       join the network 'student-api'
+                join the network 'student-app'
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+--- For service "myapp": ---
+services:
+  myapp:
+    depends_on:
+      - myapi 
+    build: ./appr
+    ports: 
+      - "3000:3000"  
+    stdin_open: true
+    tty: true
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+...          
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To run the mongo shell:
+    $docker exec -it student-app-devops-mydb-1 mongosh --port 7017
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#
+To create and start containers defined 
+in the compose file 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$docker compose up
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#
+To create and start containers, 
+which are defined in the compose file,
+in the 'detached mode' (ie in the background)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$docker compose up -d
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#
+To down the dockers that were started  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$docker compose down
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#
+To down the dockers that were started 
+and to remove all the components of dockers 
+such as containers, networks, volumes etc 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$docker compose down -rmi all
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#
+To run only specified services,
+group them under "profiles" 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example "docker.yml"
+............................................
+version: "3.8"
+services:
+  mydb:
+    image: mongo:5.0.2
+    command: mongod --port 7017
+    ports:
+      - "27017:7017"
+    volumes:
+      - db:/data/db
+    profiles:
+      - box-all
+      - box-db
+      - box-backends
+  myapi:
+    depends_on:
+      - mydb
+    build: ./api
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-all
+      - box-api      
+      - box-backends
+  myapp:
+    depends_on:
+      - myapi 
+    build: ./appr
+    ports: 
+      - "3000:3000"  
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-all
+      - box-app
+volumes:
+  db:
+............................................
+To up the servoice under the profile "box-db"
+$docker compose --profile box-db up -d
+
+To up the servoice under the profile "box-all", which represents all the services 
+$docker compose --profile box-all up -d
+
+and so on 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To see the logs of service "mydb"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$docker compose logs mydb 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+What is 'Docker Compose' and 'Docker Compose' file format?
+1. Docker Compose is a tool 
+   for defining and running multi-container applications
+2. Docker Compose relies on a YAML configuration file, 
+   usually named 'compose.yaml'
+3. 'compose-file' specification
+    https://docs.docker.com/compose/compose-file/
+    - Version and name top-level elements
+    - Services top-level elements
+    etc
+
+command
+    command overrides the default command declared by the container image, for example by Dockerfile's CMD     

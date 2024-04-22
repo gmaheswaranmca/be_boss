@@ -1,0 +1,211 @@
+1. Install npm package "mongoose-paginate-v2" in the project folder 
+$npm install mongoose-paginate-v2
+2. Import package "mongoose-paginate-v2" as "mongoosePaginate" 
+   into node program.
+----------------------"properties.js"----------------------
+
+...
+const mongoosePaginate = require("mongoose-paginate-v2");
+...
+
+...
+const app_properties = {
+    ...,
+    imports :  { ..., mongoosePaginate},
+    ...
+}
+...
+--------------------------------------------------------------
+
+3. PaginatedStudentController
+https://www.bezkoder.com/node-js-mongodb-pagination/
+i. Client Side Pagination 
+    If there are only few pages, 
+    we can fetch all items and paginate on the client side. 
+    It gives us benefit of faster subsequent page loads.
+ii. Server Side Pagination 
+    But in case we have large number of pages, 
+    make paging on client side will make our client app 
+    download all the data at first which might not be needed. 
+    So let the server do the work.
+
+    Server side pagination is better for:
+    o Large data set
+    o Faster initial page load
+    o Accessibility for those not running JavaScript
+    o Complex view business logic
+
+    Node.js Pagination with MongoDB overview
+    This is structure of the result that we want to get from the APIs:
+    {
+        "totalDocsCount":     8,
+        "students":             [...], /* name based on collection */
+        "docsCountPerPages":    3,
+        "currentPageNumber":    1
+    }
+    Here, currentPageNumber is the zero-based index, here 0 / 1 / 2
+    So the pages:
+        page_0  : 3 items
+        page_1  : 3 items
+        page_2  : 2 items
+
+    API URL (few examples):
+        baseUrl?page=1&size=5       Here, page index = 1, per page docs count = 5
+        baseUrl?size=5              Here, page index = 0, per page docs count = 5
+        baseUrl?size=5&branch=CSE   Here, page index = 0, per page docs count = 5, branch based filter
+
+"mongoose-paginate-v2" for MongoDB pagination
+    has properties:
+        offset  : quantity of items to skip
+        limit   : quantity of items to fetch
+
+    Examples:
+        Let "total items" be 8
+        – { offset: 3 }             : skip first 3 items, fetch 5 remaining items.
+        – { limit: 2 }              : fetch first 2 items.
+        – { offset: 3, limit: 2 }   : skip first 3 items, fetch 4th and 5th items.
+
+Add plugin to the Schema and use Model's paginate() method:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    const mongoose = require("mongoose");
+    const mongoosePaginate = require("mongoose-paginate-v2");
+    
+    const schema = new mongoose.Schema({
+        /* student schema definition */
+    });
+    
+    schema.plugin(mongoosePaginate);
+    
+    const Student = mongoose.model("student", schema);
+    
+    Student.paginate(query, options)
+            .then(result => {})
+            .catch(error => {}); 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Some of the examples:
+    #with offset and limit:
+
+    Student.paginate({}, { offset: 3, limit: 2 })
+    .then(result => {
+        
+        // result:
+        /*
+        {
+        "docs": [
+            {
+            "usn"     : "1001",
+            "name"    : "dravid",
+            "sem"     : 1,
+            "branch"  : "CSE",
+            "cgpa"    : 9.7
+            },
+            {
+            "usn"     : "1002",
+            "name"    : "ganguly",
+            "sem"     : 2,
+            "branch"  : "EEE",
+            "cgpa"    : 3.3
+            }
+        ],
+        "totalDocs": 8,
+        "offset": 3,
+        "limit": 2,
+        "totalPages": 4,
+        "page": 2,
+        "pagingCounter": 3,
+        "hasPrevPage": true,
+        "hasNextPage": true,
+        "prevPage": 1,
+        "nextPage": 3
+        }
+        */
+    });
+
+    # Select only fields 'usn' and 'name'
+    Student.paginate({}, { select: 'usn name', offset: 3, limit: 2 })
+
+
+    # filter by branch 
+    Student.paginate({ branch: "CSE" }, { offset: 3, limit: 2 })
+
+
+    #custom Labels
+    const myCustomLabels = {
+        totalDocs: 'totalItems',
+        docs: 'students',
+        limit: 'pageSize',
+        page: 'currentPage',
+        nextPage: 'next',
+        prevPage: 'prev',
+        totalPages: 'totalPages',
+        pagingCounter: 'slNo',
+        meta: 'paginator'
+        };
+
+
+    Student.paginate(condition, 
+        { offset: 3, limit: 2, customLabels: myCustomLabels }
+        )
+    .then((result) => {
+        // result:
+        /*
+        {
+        "students": [
+            {
+            "name": "dravid",
+            ...
+            },
+            {
+            "name": "ganguly",
+            ...
+            }
+        ],
+        "paginator": {
+            "totalItems": 8,
+            "offset": 3,
+            "pageSize": 2,
+            "totalPages": 4,
+            "currentPage": 2,
+            "slNo": 3,
+            "hasPrevPage": true,
+            "hasNextPage": true,
+            "prev": 1,
+            "next": 3
+        }
+        }
+        */
+    });
+
+
+findAll
+    const getPagination = (page, size) => {
+        const limit = size ? +size : 3;
+        const offset = page ? page * limit : 0;
+
+        return { limit, offset };
+    };
+
+    exports.findAll = (req, res) => {
+        const { size, title } = req.query;
+        var condition = {  };
+
+        const { limit, offset } = getPagination(page, size);
+
+        Student.paginate(condition, { offset, limit })
+            .then((data) => {
+                const rbody = {
+                    totalDocsCount: data.totalDocs,
+                    students: data.docs,
+                    docsCountPerPages: data.totalPages,
+                    currentPageNumber: data.page - 1,
+                };
+                res.send(rbody);
+            })
+            .catch((err) => {
+                const rbody = {
+                    message:
+                    err.message || "Some error occurred while retrieving tutorials.",
+                };
+                res.status(500).send(rbody);
+            });
+    };

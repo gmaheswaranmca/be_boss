@@ -1,0 +1,6 @@
+1. mongo db notes
+    fast track
+    advanced level 
+2. mongoose notes 
+    basics
+    advanced -> one-one, one-many, many-many

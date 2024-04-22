@@ -1,0 +1,16 @@
+1. modules dependencies are centralized
+    - app-properties
+    - module-properties 
+2. app properties - through 
+    - .env
+    - environment variables 
+    $npm install dotenv
+    Resources:
+        https://www.bezkoder.com/docker-mern/
+        https://github.com/bezkoder/docker-mern-nginx
+3. introducing logger 
+    winston
+    winston-daily-rotate-file   !total, 32 packages added
+
+    https://github.com/deepakchandola717/morgan-winston-example
+    

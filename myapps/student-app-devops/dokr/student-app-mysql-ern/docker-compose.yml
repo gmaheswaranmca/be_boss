@@ -1,0 +1,55 @@
+version: "3.8"
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    ports:
+      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+    volumes:
+      - db:/var/lib/mysql
+    profiles:
+      - box-all
+      - box-db
+      - box-backends
+  myapi:
+    depends_on:
+      - mysqldb
+    build: ./../../api-mysql
+    env_file: ./.env    
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT 
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-all
+      - box-api      
+      - box-backends
+  myapp:
+    depends_on:
+      - myapi 
+    env_file: ./.env 
+    build: 
+      context: ./../../appr
+      args:
+        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL    
+    ports: 
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-all
+      - box-app
+  node_app:    
+    env_file: ./.env 
+    build: 
+      context: ./api-crack
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-crack   
+volumes:
+  db:

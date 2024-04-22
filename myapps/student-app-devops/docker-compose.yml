@@ -1,0 +1,52 @@
+version: "3.8"
+services:
+  mydb:
+    image: mongo:5.0.2
+    command: mongod --port $MONGODB_DOCKER_PORT
+    env_file: ./.env
+    ports:
+      - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
+    volumes:
+      - db:/data/db
+    profiles:
+      - box-all
+      - box-db
+      - box-backends
+  myapi:
+    depends_on:
+      - mydb
+    build: ./api
+    env_file: ./.env    
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT 
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-all
+      - box-api      
+      - box-backends
+  myapp:
+    depends_on:
+      - myapi 
+    env_file: ./.env 
+    build: 
+      context: ./appr
+      args:
+        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL    
+    ports: 
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-all
+      - box-app
+  node_app:    
+    env_file: ./.env 
+    build: 
+      context: ./api-crack
+    stdin_open: true
+    tty: true
+    profiles:
+      - box-crack   
+volumes:
+  db:

@@ -1,3 +1,11 @@
+========================================================
+    MySQL 
+        - Database creation 
+        - Table creation 
+        - SQL Sub Languages 
+        - DML / Transaction - CRUD operations 
+        - Selectors 
+========================================================
 1. Database  
     1.1 Create Database "EmployeeManagementDb"
         ```

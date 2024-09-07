@@ -1,15 +1,15 @@
 1. Database  
-    a. Create Database "EmployeeManagementDb"
+    1.1 Create Database "EmployeeManagementDb"
         ```
         Create Database "EmployeeManagementDb";
         ```
-    b. Select Database
+    1.2 S.elect Database
         ```
         Use "EmployeeManagementDb";
         ```
 
 2. Table
-    a. Drop Table "departments" and Create Table "departments"
+    2.1. Drop Table "departments" and Create Table "departments"
         ```
         DROP TABLE IF EXISTS departments;
         CREATE TABLE departments (
@@ -17,7 +17,7 @@
             name VARCHAR(255) NOT NULL
         );
         ```
-    b. Drop Table "employees" and Create Table "employees"
+    2.2. Drop Table "employees" and Create Table "employees"
         ```
         DROP TABLE IF EXISTS employees;
         CREATE TABLE employees (
@@ -30,7 +30,7 @@
             FOREIGN KEY (dept_id) REFERENCES Department(id)
         );
         ```
-    c. Drop Table "projects" and Create Table "projects"
+    2.3. Drop Table "projects" and Create Table "projects"
         ```
         DROP TABLE projects;
         CREATE TABLE projects (
@@ -39,7 +39,7 @@
             budget DECIMAL(15, 2) NOT NULL
         );
         ```
-    d. Drop Table "assignments" and Create Table "assignments"
+    2.4. Drop Table "assignments" and Create Table "assignments"
         ```
         DROP TABLE assignments;
         CREATE TABLE assignments (

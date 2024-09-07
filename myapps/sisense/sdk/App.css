@@ -1,0 +1,95 @@
+/* App.css */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+h1 {
+  margin-bottom: 1rem; /* Reduce margin bottom */
+  padding-bottom: 0.5rem; /* Reduce padding bottom */
+  border-bottom: 1px solid #ccc; /* Add a bottom border for separation */
+  text-align: center; /* Align text to the center */
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between charts */
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Add margin bottom */
+}
+
+.chart-wrapper {
+  flex: 1;
+  max-width: calc(50% - 10px); /* Half of the container width minus the gap */
+  height: 300px; /* Set a fixed height for all chart wrappers */
+}
+
+.chart-wrapper:nth-child(n + 4) {
+  max-width: calc(33.33% - 10px); /* One-third of the container width minus the gap */
+}
+
+.chart {
+  width: 100%;
+  height: 100%; /* Allow height to adjust based on content */
+  padding: 1.5em;
+  border: 1px solid #ccc;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .chart-wrapper {
+    max-width: calc(100% - 20px); /* Full width minus the gap */
+  }
+  
+  .chart {
+    padding: 1em;
+    font-size: 0.8em; /* Reduce font size on smaller screens */
+  }
+}

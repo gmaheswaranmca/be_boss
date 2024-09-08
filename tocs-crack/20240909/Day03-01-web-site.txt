@@ -1,0 +1,401 @@
+Website for "MyManufacturing" 
+    with five pages: 
+        Home,
+        About, 
+        Services, 
+        Careers, and 
+        Contact, 
+    using basic HTML, CSS, and JavaScript. 
+The website will include various 
+    HTML elements and 
+    a contact form for submitting car orders.
+
+Folder Structure:
+
+```
+my_manufacturing/
+├── index.html (Home page)
+├── about.html (About page)
+├── services.html (Services page)
+├── careers.html (Careers page)
+├── contact.html (Contact page)
+├── styles.css (CSS for the entire site)
+├── script.js (JavaScript for form validation)
+└── assets/
+    ├── images/
+    └── media/
+```
+
+1. `index.html` - Home Page
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyManufacturing - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Welcome to MyManufacturing</h1>
+        <p>At MyManufacturing, we deliver state-of-the-art car manufacturing services tailored to your needs. From design to delivery, we ensure top-notch quality.</p>
+
+        <h2>Latest Models</h2>
+        <ol>
+            <li>Sedan</li>
+            <li>SUV</li>
+            <li>Electric Cars</li>
+        </ol>
+
+        <h3>Our Features</h3>
+        <ul>
+            <li>Eco-friendly manufacturing</li>
+            <li>High-performance engines</li>
+            <li>Top-tier safety standards</li>
+        </ul>
+
+        <h4>Media</h4>
+        <p>Watch our latest advertisement:</p>
+        <video controls>
+            <source src="assets/media/ad.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h5>Customer Testimonials</h5>
+        <dl>
+            <dt>John Doe</dt>
+            <dd>“Amazing service and top-quality cars!”</dd>
+            <dt>Jane Smith</dt>
+            <dd>“Reliable and efficient, I’m impressed.”</dd>
+        </dl>
+
+        <h6>Contact Us for More Information</h6>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyManufacturing Inc.</p>
+    </footer>
+</body>
+</html>
+```
+
+2. `about.html` - About Page
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyManufacturing - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>About MyManufacturing</h1>
+        <p>Founded in 2020, MyManufacturing has become a leader in car manufacturing through cutting-edge technology and a commitment to innovation.</p>
+
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Milestone</th>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>Company Founded</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>First Electric Car Released</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>International Expansion</td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyManufacturing Inc.</p>
+    </footer>
+</body>
+</html>
+```
+
+3. `services.html` - Services Page
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyManufacturing - Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Our Services</h1>
+        <ul>
+            <li>Car Manufacturing</li>
+            <li>Automotive Design</li>
+            <li>Research and Development</li>
+        </ul>
+
+        <h2>Customizable Models</h2>
+        <img src="assets/images/car-models.png" alt="Car Models" width="400">
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyManufacturing Inc.</p>
+    </footer>
+</body>
+</html>
+```
+
+4. `careers.html` - Careers Page
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyManufacturing - Careers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Careers at MyManufacturing</h1>
+        <p>Join us in shaping the future of car manufacturing.</p>
+        <ol>
+            <li>Automotive Engineer</li>
+            <li>Marketing Specialist</li>
+            <li>Quality Assurance Analyst</li>
+        </ol>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyManufacturing Inc.</p>
+    </footer>
+</body>
+</html>
+```
+
+5. `contact.html` - Contact Page (Car Order Form)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyManufacturing - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Order Your Custom Car</h1>
+        <form id="orderForm" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required
+
+><br>
+
+            <label for="carModel">Car Model:</label>
+            <select id="carModel" name="carModel" required>
+                <option value="">Select a model</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="electric">Electric</option>
+            </select><br>
+
+            <label>Additional Features:</label><br>
+            <input type="checkbox" name="features" value="sunroof"> Sunroof<br>
+            <input type="checkbox" name="features" value="leatherSeats"> Leather Seats<br>
+            <input type="checkbox" name="features" value="gps"> GPS Navigation<br>
+
+            <label>Preferred Payment Method:</label><br>
+            <input type="radio" name="payment" value="credit" required> Credit Card<br>
+            <input type="radio" name="payment" value="paypal"> PayPal<br>
+
+            <label for="quantity">Number of Cars:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br>
+
+            <label for="message">Additional Comments:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+
+            <label for="upload">Upload a reference file (optional):</label>
+            <input type="file" id="upload" name="upload"><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyManufacturing Inc.</p>
+    </footer>
+</body>
+</html>
+```
+
+6. `styles.css` - Basic Styles
+```css
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav ul {
+    background-color: #333;
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, textarea {
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"], input[type="reset"] {
+    width: auto;
+    padding: 10px 20px;
+}
+```
+
+7. `script.js` - Form Validation (JavaScript)
+```javascript
+function validateForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const carModel = document.getElementById("carModel").value;
+
+    if (name === "" || email === "" || phone === "" || carModel === "") {
+        alert("Please fill in all required fields.");
+        return false;
+    }
+
+    return true;
+}
+```
+
+This version does not use Bootstrap yet. The next step will involve integrating Bootstrap for improved styling and responsiveness.

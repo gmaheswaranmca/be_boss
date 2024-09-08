@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyManufacturing - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Order Your Custom Car</h1>
+        <form id="orderForm" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required
+
+><br>
+
+            <label for="carModel">Car Model:</label>
+            <select id="carModel" name="carModel" required>
+                <option value="">Select a model</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="electric">Electric</option>
+            </select><br>
+
+            <label>Additional Features:</label><br>
+            <input type="checkbox" name="features" value="sunroof"> Sunroof<br>
+            <input type="checkbox" name="features" value="leatherSeats"> Leather Seats<br>
+            <input type="checkbox" name="features" value="gps"> GPS Navigation<br>
+
+            <label>Preferred Payment Method:</label><br>
+            <input type="radio" name="payment" value="credit" required> Credit Card<br>
+            <input type="radio" name="payment" value="paypal"> PayPal<br>
+
+            <label for="quantity">Number of Cars:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br>
+
+            <label for="message">Additional Comments:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+
+            <label for="upload">Upload a reference file (optional):</label>
+            <input type="file" id="upload" name="upload"><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyManufacturing Inc.</p>
+    </footer>
+</body>
+</html>

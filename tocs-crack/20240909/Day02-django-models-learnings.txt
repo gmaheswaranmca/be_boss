@@ -30,8 +30,18 @@
         ```
 
 2. Database Setup (MySQL)
-    In the `myproject/settings.py` file, configure the database settings for MySQL:
+    In the `myproject/settings.py` file, 
+    configure 
+        the project and 
+        database settings for MySQL:
     ```python
+    # Application definition
+
+    INSTALLED_APPS = [
+        #...
+        'employees'
+    ]
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',

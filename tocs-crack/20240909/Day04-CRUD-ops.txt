@@ -1,0 +1,238 @@
+Django project  : `ClinicalProject` 
+    using MySQL and 
+    perform CRUD operations 
+    for the `Doctor` model.
+
+1. Install MySQL Client for Django
+Make sure you have MySQL installed on your system. 
+Install the MySQL Python package:
+
+```bash
+pip install mysqlclient
+```
+
+2. 
+2.1 Create the MySQL Database
+Log into your MySQL server and 
+create a database for your project:
+
+```sql
+CREATE DATABASE clinical_project_db;
+```
+2.2 Create the Django Project and App
+```bash
+django-admin startproject ClinicalProject
+cd ClinicalProject
+python manage.py startapp DoctorApp
+```
+
+3. Update Database Settings in Django
+In `ClinicalProject/settings.py`, 
+configure your MySQL database:
+
+```python
+INSTALLED_APPS = [
+    # Other apps...
+    'DoctorApp',
+]
+#...
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'clinical_project_db',  # Your database name
+        'USER': 'your_mysql_user',       # Your MySQL user
+        'PASSWORD': 'your_mysql_password', # Your MySQL password
+        'HOST': 'localhost',             # Or your DB host
+        'PORT': '3306',                  # Default MySQL port
+    }
+}
+```
+
+4. Define the `Doctor` Model
+In `DoctorApp/models.py`, define the `Doctor` model:
+```python
+from django.db import models
+
+class Doctor(models.Model):
+    name = models.CharField(max_length=200)
+    specialization = models.CharField(max_length=200)
+    years_of_experience = models.IntegerField()
+
+    def __str__(self):
+        return f'[id={self.id}, name={self.name}, specialization={self.specialization}, years_of_experience={self.years_of_experience}]'
+```
+
+5. Create and Apply Migrations
+Run the following commands to create the database schema:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+6. Create Views for CRUD Operations
+In `DoctorApp/views.py`, define the views 
+    for listing, creating, updating, and deleting doctors:
+
+```python
+from django.shortcuts import render, redirect
+from .models import Doctor
+
+# List all doctors
+def doctor_list(request):
+    doctors = Doctor.objects.all()
+    return render(request, 'doctor_list.html', {'doctors': doctors})
+
+# Create a new doctor
+def doctor_create(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        specialization = request.POST['specialization']
+        years_of_experience = request.POST['years_of_experience']
+        Doctor.objects.create(name=name, specialization=specialization, years_of_experience=years_of_experience)
+        return redirect('doctor_list')
+    return render(request, 'doctor_form.html')
+
+# Update an existing doctor
+def doctor_update(request, id):
+    doctor = Doctor.objects.get(id=id)
+    if request.method == 'POST':
+        doctor.name = request.POST['name']
+        doctor.specialization = request.POST['specialization']
+        doctor.years_of_experience = request.POST['years_of_experience']
+        doctor.save()
+        return redirect('doctor_list')
+    return render(request, 'doctor_form.html', {'doctor': doctor})
+
+# Delete a doctor
+def doctor_delete(request, id):
+    doctor = Doctor.objects.get(id=id)
+    doctor.delete()
+    return redirect('doctor_list')
+```
+
+7. Define URL Patterns
+
+In `DoctorApp/urls.py`, define URL patterns for CRUD operations:
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.doctor_list, name='doctor_list'),
+    path('create/', views.doctor_create, name='doctor_create'),
+    path('update/<int:id>/', views.doctor_update, name='doctor_update'),
+    path('delete/<int:id>/', views.doctor_delete, name='doctor_delete'),
+]
+```
+
+In `ClinicalProject/urls.py`, include the `DoctorApp` URLs:
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('doctors/', include('DoctorApp.urls')),
+]
+```
+
+8. Create Templates for the CRUD Operations
+Create a `templates` directory inside `DoctorApp` and 
+create the following HTML files.
+
+#`doctor_list.html`
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1>Doctors List</h1>
+    <a href="{% url 'doctor_create' %}" class="btn btn-primary mb-3">Add Doctor</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Years of Experience</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in doctors %}
+            <tr>
+                <td>{{ doctor.name }}</td>
+                <td>{{ doctor.specialization }}</td>
+                <td>{{ doctor.years_of_experience }}</td>
+                <td>
+                    <a href="{% url 'doctor_update' doctor.id %}" class="btn btn-warning">Edit</a>
+                    <a href="{% url 'doctor_delete' doctor.id %}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+```
+
+#`doctor_form.html`
+
+```html
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1>{{ doctor.id|default:"Add" }} Doctor</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{ doctor.name|default:'' }}">
+        </div>
+        <div class="form-group">
+            <label for="specialization">Specialization</label>
+            <input type="text" class="form-control" id="specialization" name="specialization" value="{{ doctor.specialization|default:'' }}">
+        </div>
+        <div class="form-group">
+            <label for="years_of_experience">Years of Experience</label>
+            <input type="number" class="form-control" id="years_of_experience" name="years_of_experience" value="{{ doctor.years_of_experience|default:'' }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}
+```
+
+#`base.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Clinical Project</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'doctor_list' %}">Clinical Management</a>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+```
+
+9. Run the Django Project
+Finally, run the development server:
+
+```bash
+python manage.py runserver
+```
+
+Now, you can navigate to `http://localhost:8000/doctors/` 
+to view the list of doctors and perform CRUD operations. 
+The interface uses Bootstrap for styling.

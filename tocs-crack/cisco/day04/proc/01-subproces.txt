@@ -54,7 +54,9 @@ result = subprocess.run('echo Hello from shell', shell=True, capture_output=True
 print(result.stdout)
 ```
 
-Note: Using `shell=True` can pose a security risk if you're accepting input from untrusted users, as it allows shell injection. Only use it if necessary and ensure that inputs are sanitized.
+Note: Using `shell=True` can pose a security risk 
+if you're accepting input from untrusted users, as it allows shell injection. 
+Only use it if necessary and ensure that inputs are sanitized.
 
 Example 4: Running a Command and Checking the Return Code
 

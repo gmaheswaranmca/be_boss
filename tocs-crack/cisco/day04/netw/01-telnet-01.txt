@@ -45,7 +45,7 @@ print(response)
 tn.close()
 ```
 
-Key Points:
+Key Points: 
 - Connecting: 
     Create a `Telnet` object 
     with the server's address and port.
